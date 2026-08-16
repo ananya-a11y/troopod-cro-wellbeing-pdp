@@ -27,11 +27,10 @@ The redesign optimizes the user journey through five distinct states:
 
 ### Visual & UX Structural Redesign Highlights
 
-1. **In-Buy-Box "Explore Similar Products" Module (Matching Source Image 1)**:
+1. **In-Buy-Box "Explore Similar Products" Module (Strictly 2 Products)**:
    - Positioned directly inside the Hero Buy Box below the primary Add to Cart CTA & Reassurance row.
-   - Displays 3 side-by-side products matching exact user-provided tub images:
+   - Displays strictly the 2 products shared by the user:
      - *Glow Korean Marine Collagen Peptides Valencia Orange Flavour*
-     - *Beauty Collagen Strawberry Watermelon Flavour*
      - *Glow Korean Marine Collagen Peptides with Liposomal Glutathione & Vitamin C | Tropical Bliss Flavour | 250g*
 2. **6-Badge Product Quality Strip (Matching Source Image 2)**:
    - Soft ice-blue background tint (`#F0F7FF`) with 6 exact linework badges:
@@ -43,10 +42,11 @@ The redesign optimizes the user journey through five distinct states:
      - `Non GMO` (Test tube with leaf & diagonal slash)
 3. **Pinteresty 3-Step Daily Routine Cards ("Scoop, Mix, Drink")**:
    - Features exact user-provided photography (`step1_scoop.png`, `step2_mix.png`, `step3_drink.png`) in rounded card containers with smooth image scale hover micro-effects (`transform: scale(1.08)`).
-4. **Pinteresty Science Flow Infographic Canvas ("Want to Go Deeper into the Science?")**:
-   - Inspired by molecular flow infographics: Features a central core droplet node (`PURE KOREAN MARINE COLLAGEN`) encircled by 6 orbital flow nodes explaining Type I/III ratio, 1.5x bioavailability, dermal moisture, deep-sea purity, Vitamin C synergy, and unflavored heat stability.
-5. **Interactive Testimonial Carousel Slider**:
-   - Smooth review carousel with Prev (`←`) and Next (`→`) navigation controls, pagination dots, category filter tabs (`Taste`, `Skin`, `Hair & Nails`, `Daily Mixability`), and smooth slide transitions.
+4. **DNA Science Backdrop for Peer-Reviewed Studies (Zero Orange Traces)**:
+   - Replaced solid green backdrop with a custom ice-blue DNA helix background image (`images/science_bg.png`) using an optimized semi-transparent overlay (`#EEF6FF` / `#F0F7FF`).
+   - Removed all orange traces from the study journal headers (`#006699` deep ocean blue linework).
+5. **Pinteresty Science Flow Infographic Canvas ("Want to Go Deeper into the Science?")**:
+   - Inspired by molecular flow infographics: Features a central core droplet node (`PURE KOREAN MARINE COLLAGEN`) encircled by 6 orbital flow nodes.
 
 ---
 
@@ -58,9 +58,8 @@ The redesign optimizes the user journey through five distinct states:
 2. **WHITE (`#FFFFFF`):** Main page background canvas, buy box container, review cards, FAQ background, and recommendation cards.
 3. **ORANGE (`#E65100`):** Offer badges, savings tags, active navigation indicators, filled star ratings, and highlight accents.
 4. **GREEN (`#2E7D32` / `#1B5E20`):** Trust verification checkmarks, clinical authority section background, and verified badges.
-5. **ICE-BLUE TINT (`#F0F7FF`):** Dedicated background tint for the 6-badge Product Quality Strip matching source design.
-6. **MINT/TEAL CANVAS TINT (`#EFF8F8`):** Soft pastel canvas background for the Science Flow Infographic.
-7. **Typography:** **Poppins** (Google Fonts) — Enforced across 700–800 (Title/Price), 700 (Headings/CTA), 600 (Subheadings/Badges), 400–500 (Body/Metadata).
+5. **ICE-BLUE SCIENCE TINT (`#EEF6FF` / `#F0F7FF`):** Dedicated background tint & DNA graphic backdrop for Product Quality Strip and Clinical Evidence section.
+6. **Typography:** **Poppins** (Google Fonts) — Enforced across 700–800 (Title/Price), 700 (Headings/CTA), 600 (Subheadings/Badges), 400–500 (Body/Metadata).
 
 ---
 
@@ -69,11 +68,9 @@ The redesign optimizes the user journey through five distinct states:
 | Change | User Friction Addressed | Design Response & Hypothesis | Primary Metric | Guardrail Metric |
 |--------|-------------------------|------------------------------|----------------|------------------|
 | **1. Buy-Box Clarity** | Price strikethroughs and variant choices create decision friction. | High-contrast price formatting + clear pack selector cards simplify selection. | **Add-to-Cart Rate** | Variant selection rate |
-| **2. In-Buy-Box Product Discovery** | Shoppers scroll past bottom recommendations without noticing alternative flavors. | Placing 3 distinct product flavor cards inside the Buy Box drives immediate cross-selling. | **Related Product CTR** | Hero bounce rate |
-| **3. Decision-Point Proof Strip** | Clinical evidence and quality certifications are buried deep below the fold. | Placing 6 concise quality badges (Clinically Proven, Mercury Free, etc.) in a soft ice-blue bar reduces uncertainty. | **Add-to-Cart Rate** | Exit rate from hero |
+| **2. In-Buy-Box Product Discovery** | Shoppers scroll past bottom recommendations without noticing alternative flavors. | Placing 2 distinct product flavor cards inside the Buy Box drives immediate cross-selling. | **Related Product CTR** | Hero bounce rate |
+| **3. DNA Science Backdrop** | Dark green solid blocks feel heavy and disrupt visual flow. | Ethereal ice-blue DNA background with zero orange traces creates an authoritative clinical atmosphere. | **Science Section Engagement** | Scroll depth |
 | **4. Pinteresty 3-Step Routine** | Plain text routines do not inspire habit adoption. | Real photography + hover micro-effects (Scoop, Mix, Drink) lower habit adoption friction. | **Routine Section Engagement** | Exit rate |
-| **5. Science Flow Infographic** | Dense text accordions cause cognitive fatigue for science seekers. | Interactive orbital flow diagram visually communicates 6 core science mechanisms at a glance. | **Science Section Engagement** | Scroll depth |
-| **6. Interactive Testimonial Slider** | Static review blocks overload page scroll. | Interactive carousel slider with Prev/Next controls and category filters increases review engagement. | **Review Slider Engagement** | Bounce rate |
 
 ---
 
@@ -94,7 +91,7 @@ The redesign optimizes the user journey through five distinct states:
 | **Brand Proof** | Innovation Meets Integrity, 5 Million, 20+ Clinical Studies, US FDA | Displayed in Brand Proof Section | Verified Exact Wording |
 | **Clinical Studies** | 4 Peer-Reviewed Publications | J. Cosmet. Dermatol. (2015, 2021), J. Med. Food (2022), Orthop. Rev. (2025) | Verified Exact Citations |
 | **Testimonials** | Real source reviews | Shrushti ("No Fishy Taste"), Ashutosh J, Avni R, Priya D, Reena S | Verified Verbatim |
-| **Recommendation Assets**| Real Wellbeing Nutrition products | Valencia Orange, Strawberry Watermelon, Tropical Bliss Glutathione | Verified Real Sourced Assets |
+| **Recommendation Assets**| Real Wellbeing Nutrition products | Valencia Orange, Tropical Bliss Glutathione | Verified Real Sourced Assets |
 
 ---
 
@@ -104,7 +101,7 @@ The redesign optimizes the user journey through five distinct states:
 troopod-cro-wellbeing-pdp/
 ├── index.html          # Complete PDP HTML with global header, Poppins & 4-color palette
 ├── css/
-│   └── styles.css      # Locked 4-color design system & visual science flow infographic styles
+│   └── styles.css      # Locked 4-color design system & DNA science backdrop styles
 ├── js/
 │   └── script.js       # Pack selection, quantity, accordions, gallery, review slider & AI assistant
 ├── README.md           # CRO decision framework, visual redesign & fact audit documentation
