@@ -1,15 +1,14 @@
 /* ================================================================
    WELLBEING NUTRITION — KOREAN MARINE COLLAGEN PDP
-   CRO Prototype — Locked 4-Color Visual System & Poppins Typography
+   CRO Prototype — Visual System & UX Redesign (Final Frozen Pass)
    
-   LOCKED COLOR SYSTEM (NO TEAL UI, NO YELLOW):
+   COLOR PALETTE (4-Color System):
      1. BLACK / CHARCOAL: #1D1D1B (Headings, primary text, navigation, Primary CTA, price)
-     2. WHITE:            #FFFFFF (Canvas, Buy box, cards, review area, FAQ, footer canvas)
-     3. ORANGE:           #E65100 / #FF6F00 (Offer badges, ratings, savings, active states, highlights)
-     4. GREEN:            #2E7D32 / #1B5E20 / #E8F5E9 (Trust, verification, clinical section, quality)
-     Neutral Borders:     #EFECE6 / #E0E0E0
+     2. WHITE:            #FFFFFF (Canvas, Buy box, cards, review area, FAQ)
+     3. ORANGE:           #E65100 (Offer badges, filled rating stars, active indicators, step numbers)
+     4. GREEN:            #2E7D32 / #1B5E20 / #E8F5E9 (Trust badges, verification icons, science section)
+     Neutral Border:      #EFECE6
    
-   TEAL RULE: Teal is restricted ONLY to the real product packaging image.
    Typography: Poppins (Google Fonts)
    ================================================================ */
 
@@ -461,7 +460,7 @@ ul, ol {
   line-height: 1.55;
 }
 
-/* Rating — Exact 4.74 / 571 reviews */
+/* Rating — Visually Filled Stars (4.74 / 571 reviews) */
 .buy-box__rating {
   display: flex;
   align-items: center;
@@ -479,6 +478,11 @@ ul, ol {
   display: inline-flex;
   gap: 2px;
   color: #E65100;
+}
+
+.stars-svg svg {
+  fill: #E65100;
+  stroke: none;
 }
 
 .rating-number {
@@ -544,7 +548,7 @@ ul, ol {
   justify-content: center;
 }
 
-/* Decision-Point Proof Strip — P0-1 (White with Green Icons) */
+/* Proof Strip (White Card + Green Icons) */
 .proof-strip {
   display: flex;
   align-items: center;
@@ -626,7 +630,7 @@ ul, ol {
   font-weight: 500;
 }
 
-/* Member Discount / EMI Note */
+/* Member Discount Note */
 .buy-box__member-note {
   font-size: 12px;
   color: #1D1D1B;
@@ -647,7 +651,7 @@ ul, ol {
 
 /* Pack Selector Cards */
 .pack-selector {
-  margin-bottom: 22px;
+  margin-bottom: 18px;
 }
 
 .pack-selector__header {
@@ -715,36 +719,27 @@ ul, ol {
   margin-top: 4px;
 }
 
-.pack-card__badge {
-  position: absolute;
-  top: -9px;
-  right: 10px;
-  background: #E65100;
-  color: #FFFFFF;
-  font-size: 10px;
-  font-weight: 700;
-  padding: 1px 7px;
-  border-radius: 4px;
-  text-transform: uppercase;
-}
-
-/* Dosage Information Box */
+/* Dosage Callout — Visually Subordinate Containment */
 .buy-box__dosage {
-  font-size: 13px;
-  color: #4A4A4A;
-  margin-bottom: 20px;
-  padding: 12px 14px;
-  background: #FAFAFA;
-  border-radius: 8px;
+  font-size: 12px;
+  color: #555555;
+  margin-bottom: 18px;
+  padding: 8px 12px;
+  background: #FFFFFF;
+  border-radius: 6px;
+  border: 1px solid #EFECE6;
   border-left: 3px solid #2E7D32;
-  line-height: 1.5;
+  line-height: 1.45;
   display: flex;
   align-items: flex-start;
-  gap: 10px;
+  gap: 8px;
 }
 
 .buy-box__dosage .icon-svg {
   color: #2E7D32;
+  width: 15px;
+  height: 15px;
+  margin-top: 2px;
 }
 
 /* Quantity Selector */
@@ -795,7 +790,7 @@ ul, ol {
   color: #1D1D1B;
 }
 
-/* PRIMARY CTA BUTTON (Black with White Text, Orange Hover) */
+/* PRIMARY CTA BUTTON */
 .cta-primary {
   width: 100%;
   padding: 18px 32px;
@@ -906,7 +901,7 @@ ul, ol {
 }
 
 /* ================================================================
-   04 — PRODUCT QUALITY TRUST STRIP (White Canvas + Green Icons)
+   04 — PRODUCT QUALITY TRUST STRIP
    ================================================================ */
 .quality-strip {
   background: #FFFFFF;
@@ -944,84 +939,85 @@ ul, ol {
 }
 
 /* ================================================================
-   05 — WHY KOREAN MARINE COLLAGEN (White Background)
+   05 — WHY KOREAN MARINE COLLAGEN (Editorial 2-Column Layout)
    ================================================================ */
 .why-section {
-  padding: 68px 0;
+  padding: 76px 0;
   background: #FFFFFF;
 }
 
-.section-heading {
-  font-size: 26px;
-  font-weight: 700;
-  color: #1D1D1B;
-  text-align: center;
-  margin-bottom: 8px;
-  letter-spacing: -0.01em;
-}
-
-.section-subheading {
-  font-size: 15px;
-  color: #555555;
-  text-align: center;
-  margin-bottom: 44px;
-  max-width: 600px;
-  margin-left: auto;
-  margin-right: auto;
-  line-height: 1.5;
-}
-
-.why-story-grid {
+.why-layout {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 28px;
+  grid-template-columns: 440px 1fr;
+  gap: 52px;
   align-items: center;
+  margin-top: 40px;
 }
 
-.why-story-card {
-  display: flex;
-  gap: 20px;
-  padding: 24px;
-  background: #FFFFFF;
+.why-visual-anchor {
+  background: #FAFAFA;
+  border-radius: 20px;
+  padding: 32px;
+  border: 1px solid #EFECE6;
+  box-shadow: 0 10px 32px rgba(0,0,0,0.04);
+  text-align: center;
+}
+
+.why-visual-anchor img {
+  width: 100%;
+  max-width: 320px;
+  margin: 0 auto;
   border-radius: 12px;
-  border-left: 4px solid #2E7D32;
-  border-top: 1px solid #EFECE6;
-  border-right: 1px solid #EFECE6;
+}
+
+.why-editorial-list {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.why-editorial-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+  padding-bottom: 20px;
   border-bottom: 1px solid #EFECE6;
-  transition: transform 0.2s ease;
 }
 
-.why-story-card:hover {
-  transform: translateY(-2px);
+.why-editorial-item:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
 }
 
-.why-story-card__icon {
-  color: #2E7D32;
-  background: #E8F5E9;
-  width: 48px;
-  height: 48px;
-  border-radius: 10px;
+.why-num {
+  font-size: 18px;
+  font-weight: 800;
+  color: #E65100;
+  background: #FFF3E0;
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-shrink: 0;
 }
 
-.why-story-card__title {
-  font-size: 16px;
+.why-item-title {
+  font-size: 17px;
   font-weight: 700;
   color: #1D1D1B;
-  margin-bottom: 6px;
+  margin-bottom: 4px;
 }
 
-.why-story-card__text {
-  font-size: 13px;
+.why-item-desc {
+  font-size: 13.5px;
   color: #555555;
   line-height: 1.55;
 }
 
 /* ================================================================
-   06 — TARGETED BEAUTY & WELLNESS OUTCOMES (White Background + Orange Icons)
+   06 — TARGETED BEAUTY & WELLNESS OUTCOMES
    ================================================================ */
 .benefits-section {
   padding: 68px 0;
@@ -1096,109 +1092,76 @@ ul, ol {
 }
 
 /* ================================================================
-   07 — HOW TO USE (White Canvas + Green Steps)
+   07 — THREE-STEP ROUTINE (Connected Horizontal Flow)
    ================================================================ */
 .how-to-section {
-  padding: 72px 0;
+  padding: 76px 0;
   background: #FFFFFF;
 }
 
-.how-to-layout {
+.routine-flow {
   display: grid;
-  grid-template-columns: 360px 1fr;
-  gap: 48px;
-  align-items: center;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+  margin-top: 44px;
+  position: relative;
 }
 
-.how-to-product-visual {
+.routine-card {
   background: #FFFFFF;
+  border: 1px solid #EFECE6;
   border-radius: 16px;
-  padding: 24px;
-  border: 1px solid #EFECE6;
-  box-shadow: 0 6px 24px rgba(0,0,0,0.04);
+  padding: 32px 24px;
   text-align: center;
-}
-
-.how-to-product-visual img {
-  width: 100%;
-  max-width: 260px;
-  margin: 0 auto 16px;
-  border-radius: 8px;
-}
-
-.how-to-product-badge {
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-  background: #E8F5E9;
-  color: #2E7D32;
-  font-size: 12px;
-  font-weight: 600;
-  padding: 6px 14px;
-  border-radius: 20px;
-  border: 1px solid #C8E6C9;
-}
-
-.how-to-steps {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-}
-
-.step-card {
-  background: #FFFFFF;
-  padding: 22px 24px;
-  border-radius: 14px;
-  border: 1px solid #EFECE6;
-  border-left: 4px solid #2E7D32;
   box-shadow: 0 4px 16px rgba(0,0,0,0.02);
-  display: flex;
-  align-items: flex-start;
-  gap: 20px;
-  transition: transform 0.2s ease;
+  transition: transform 0.2s ease, border-color 0.2s ease;
+  position: relative;
 }
 
-.step-card:hover {
-  transform: translateX(4px);
-  border-left-color: #E65100;
+.routine-card:hover {
+  transform: translateY(-4px);
+  border-color: #E65100;
 }
 
-.step-card__icon-box {
-  width: 48px;
-  height: 48px;
-  border-radius: 12px;
+.routine-step-badge {
+  font-size: 12px;
+  font-weight: 800;
+  color: #E65100;
+  background: #FFF3E0;
+  padding: 3px 12px;
+  border-radius: 14px;
+  display: inline-block;
+  margin-bottom: 16px;
+  letter-spacing: 0.05em;
+}
+
+.routine-icon-container {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
   background: #E8F5E9;
   color: #2E7D32;
   display: flex;
   align-items: center;
   justify-content: center;
-  flex-shrink: 0;
+  margin: 0 auto 16px;
 }
 
-.step-card__num {
-  font-size: 11px;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
-  color: #E65100;
-  margin-bottom: 2px;
-}
-
-.step-card__title {
-  font-size: 16px;
+.routine-title {
+  font-size: 18px;
   font-weight: 700;
   color: #1D1D1B;
-  margin-bottom: 4px;
+  margin-bottom: 8px;
 }
 
-.step-card__text {
-  font-size: 13px;
+.routine-desc {
+  font-size: 13.5px;
   color: #555555;
   line-height: 1.55;
 }
 
 /* ================================================================
-   08 — BRAND PROOF: INNOVATION MEETS INTEGRITY (White Background)
+   08 — BRAND PROOF: INNOVATION MEETS INTEGRITY
    ================================================================ */
 .brand-proof-section {
   padding: 64px 0;
@@ -1302,8 +1265,7 @@ ul, ol {
 }
 
 /* ================================================================
-   10 — REVIEWS / SOCIAL PROOF (White Background)
-   Exact Rating: 4.74 / 571 reviews
+   10 — REVIEWS / SOCIAL PROOF
    ================================================================ */
 .reviews-section {
   padding: 72px 0;
@@ -1336,6 +1298,11 @@ ul, ol {
   margin-bottom: 4px;
   display: flex;
   gap: 2px;
+}
+
+.reviews-header__stars svg {
+  fill: #E65100;
+  stroke: none;
 }
 
 .reviews-header__count {
@@ -1417,6 +1384,11 @@ ul, ol {
   gap: 2px;
 }
 
+.review-card__stars svg {
+  fill: #E65100;
+  stroke: none;
+}
+
 .review-card__title {
   font-size: 15px;
   font-weight: 700;
@@ -1445,7 +1417,7 @@ ul, ol {
 }
 
 /* ================================================================
-   11 — DEEP-DIVE EDUCATION (White Canvas & Green Header Badge)
+   11 — DEEP-DIVE SCIENCE
    ================================================================ */
 .deepdive-section {
   padding: 72px 0;
@@ -1454,21 +1426,8 @@ ul, ol {
   border-bottom: 1px solid #EFECE6;
 }
 
-.deepdive-header-tag {
-  display: table;
-  margin: 0 auto 12px;
-  background: #E8F5E9;
-  color: #2E7D32;
-  font-size: 11px;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 0.1em;
-  padding: 4px 12px;
-  border-radius: 20px;
-}
-
 /* ================================================================
-   12 — FREQUENTLY ASKED QUESTIONS (White Background)
+   12 — FREQUENTLY ASKED QUESTIONS
    ================================================================ */
 .faq-section {
   padding: 72px 0;
@@ -1534,7 +1493,7 @@ ul, ol {
 }
 
 /* ================================================================
-   13 — EXPLORE SIMILAR PRODUCTS (Commerce Recommendation Module)
+   13 — EXPLORE SIMILAR PRODUCTS (Redesigned Equal-Height Grid)
    ================================================================ */
 .related-section {
   padding: 72px 0;
@@ -1551,7 +1510,7 @@ ul, ol {
 
 .related-card {
   background: #FFFFFF;
-  border-radius: 14px;
+  border-radius: 16px;
   border: 1px solid #EFECE6;
   overflow: hidden;
   transition: transform 0.2s ease, box-shadow 0.2s ease;
@@ -1566,15 +1525,20 @@ ul, ol {
 
 .related-card__img {
   width: 100%;
-  aspect-ratio: 1.1;
+  height: 240px;
   background: #FAFAFA;
   overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  border-bottom: 1px solid #EFECE6;
 }
 
 .related-card__img img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
 }
 
 .related-card__content {
@@ -1589,7 +1553,7 @@ ul, ol {
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.05em;
-  margin-bottom: 4px;
+  margin-bottom: 6px;
 }
 
 .related-card__title {
@@ -1604,10 +1568,15 @@ ul, ol {
   font-size: 12px;
   font-weight: 600;
   color: #1D1D1B;
-  margin-bottom: 12px;
+  margin-bottom: 14px;
   display: flex;
   align-items: center;
   gap: 4px;
+}
+
+.related-card__rating svg {
+  fill: #E65100;
+  stroke: none;
 }
 
 .related-card__price-row {
@@ -1615,7 +1584,7 @@ ul, ol {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding-top: 12px;
+  padding-top: 14px;
   border-top: 1px solid #EFECE6;
 }
 
@@ -1630,7 +1599,7 @@ ul, ol {
   color: #FFFFFF;
   font-size: 12px;
   font-weight: 600;
-  padding: 8px 16px;
+  padding: 9px 18px;
   border-radius: 6px;
   text-transform: uppercase;
   transition: background 0.2s;
@@ -1640,13 +1609,13 @@ ul, ol {
   background: #E65100;
 }
 
-/* Category Accent Styles for Packaging Fidelity */
-.related-card--pink .related-card__category { color: #D81B60; }
+/* Category Accent Styles */
 .related-card--orange .related-card__category { color: #E65100; }
+.related-card--pink .related-card__category { color: #D81B60; }
 .related-card--green .related-card__category { color: #2E7D32; }
 
 /* ================================================================
-   14 — FINAL CTA (White Background with Black CTA)
+   14 — FINAL CTA
    ================================================================ */
 .final-cta {
   padding: 72px 0;
@@ -1677,7 +1646,7 @@ ul, ol {
 }
 
 /* ================================================================
-   15 — FOOTER (Neutral Black/Charcoal)
+   15 — FOOTER
    ================================================================ */
 .site-footer {
   background: #1D1D1B;
@@ -1749,23 +1718,18 @@ ul, ol {
   .hero .container {
     gap: 32px;
   }
+
+  .why-layout {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
   
   .benefits-layout {
     grid-template-columns: 1fr;
     gap: 32px;
   }
 
-  .how-to-layout {
-    grid-template-columns: 1fr;
-    gap: 32px;
-  }
-
-  .how-to-product-visual {
-    max-width: 360px;
-    margin: 0 auto;
-  }
-  
-  .why-story-grid {
+  .routine-flow {
     grid-template-columns: 1fr;
     gap: 20px;
   }

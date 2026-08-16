@@ -25,18 +25,21 @@ The original product page contains strong proof and product information, but the
 The redesign optimizes the user journey through five distinct states:
 `UNDERSTAND → TRUST → CHOOSE → BUY → EXPLORE`
 
-### Defensible Design & UX Rationale (Baymard Institute Grounding)
+### Visual & UX Structural Redesign
 
-The visual system was simplified to improve visual hierarchy, maintain brand/ecosystem compatibility, and create stronger semantic distinction between primary actions, trust signals, and content sections:
-
-1. **Primary CTA Prominence & Buy Section Usability:**
-   Baymard’s e-commerce research emphasizes that the Add to Cart button and price must remain visually distinct and uncluttered by competing elements. Placing high-contrast Charcoal (`#1D1D1B`) on the primary CTA ensures immediate visual scanning.
-2. **Progressive Disclosure Architecture:**
-   Baymard specifically recommends collapsed accordion sections for long PDP content to prevent cognitive overload. Storing deep educational content behind expandable accordions allows shoppers seeking science to explore without slowing down primary buyers.
-3. **Objection-Led Reviews:**
-   Surfacing real customer testimonials filtered by key purchase themes (Taste, Skin, Hair/Nails, Mixability) addresses hesitations at the decision point.
-4. **Supplementary Product Discovery:**
-   Baymard identifies alternative and supplementary product recommendation modules as a critical PDP discoverability pattern, preventing the PDP from becoming a dead-end.
+1. **Editorial 2-Column Staggered Layout for "Why Korean Marine Collagen?"**:
+   - Replaced generic template boxes with an editorial 2-column composition: Left visual anchor (Korean Marine tub) + Right staggered numbered differentiator rows (`01`, `02`, `03`, `04`).
+   - Allows shoppers to scan the 4 key product differentiators in under 5 seconds.
+2. **Connected 3-Step Routine Flow ("Scoop, Mix, Drink")**:
+   - Replaced plain bordered boxes with a connected horizontal routine flow (`STEP 01 SCOOP`, `STEP 02 MIX`, `STEP 03 DRINK`) with subtle green icon containers and orange step badges.
+3. **Subordinate Dosage Callout Hierarchy**:
+   - Positioned below the Pack Selector and before Quantity / CTA with lightweight containment (`#FFFFFF` background, thin border, green accent) so it supports the decision without competing with the primary CTA.
+4. **Commerce Recommendation Module ("Explore Similar Products")**:
+   - Built equal-height, compact D2C recommendation cards displaying 3 distinct real Wellbeing Nutrition products:
+     - *Beauty Korean Marine Collagen Peptides (Mango Peach Flavour)*
+     - *Beauty Collagen Peptides (Strawberry Watermelon Flavour)*
+     - *Glow Korean Marine Collagen (Tropical Bliss with Liposomal Glutathione & Vitamin C)*
+   - Images use `object-fit: contain` in clean `#FAFAFA` containers, allowing each product's authentic packaging colors to shine naturally.
 
 ---
 
@@ -44,11 +47,9 @@ The visual system was simplified to improve visual hierarchy, maintain brand/eco
 
 > **Principle: THE PRODUCT IS TEAL. THE WEBSITE INTERFACE IS NOT TEAL.**
 
-The website UI is strictly disciplined across four semantic colors, letting the actual product packaging stand out as the primary visual hero:
-
 1. **BLACK / CHARCOAL (`#1D1D1B`):** Primary typography, headings, navigation links, price, and Primary Add-to-Cart CTA.
 2. **WHITE (`#FFFFFF`):** Main page background canvas, buy box container, review cards, FAQ background, and recommendation cards.
-3. **ORANGE (`#E65100`):** Offer badges, savings tags, active navigation indicators, star rating fills, and highlight accents.
+3. **ORANGE (`#E65100`):** Offer badges, savings tags, active navigation indicators, filled star ratings, and highlight accents.
 4. **GREEN (`#2E7D32` / `#1B5E20`):** Trust verification checkmarks, product quality strip icons, clinical authority section background, and verified badges.
 5. **Typography:** **Poppins** (Google Fonts) — Enforced across 700–800 (Title/Price), 700 (Headings/CTA), 600 (Subheadings/Badges), 400–500 (Body/Metadata).
 
@@ -60,11 +61,11 @@ The website UI is strictly disciplined across four semantic colors, letting the 
 |--------|-------------------------|------------------------------|----------------|------------------|
 | **1. Buy-Box Clarity** | Price strikethroughs and variant choices create decision friction. | High-contrast price formatting + clear pack selector cards simplify selection. | **Add-to-Cart Rate** | Variant selection rate |
 | **2. Decision-Point Proof Strip** | Clinical evidence and quality certifications are buried deep below the fold. | Placing concise proof (Clinically Tested, Third-Party Tested, FSSAI) near the Buy Box reduces uncertainty. | **Add-to-Cart Rate** | Exit rate from hero |
-| **3. Progressive Disclosure Architecture** | Dense scientific copy causes information overload on mobile. | Separating primary shopping flow from deep-dive education via accordions reduces drop-off. | **Primary Flow Completion** | Scroll depth / Exit rate |
-| **4. Verified Customer Reviews** | Generic praise does not resolve taste or mixability doubts. | Structuring real reviews by key themes (Taste, Skin, Hair/Nails, Mixability) resolves doubt. | **Review Filter Engagement** | Bounce rate |
-| **5. AI Product Assistant Card** | Shoppers abandon the page to search for quick factual answers. | Providing an inline AI assistance entry point with instant verified answer chips reduces research bounce. | **AI Engagement Rate** | Add-to-Cart Rate |
-| **6. Global Header + PDP Anchor Nav** | Text-only nav isolates PDP from the website ecosystem. | Global commerce header + sticky PDP section anchors enable smooth ecosystem navigation. | **Navigation CTR** | Time to ATC |
-| **7. Related Product Discovery** | The PDP becomes a conversion dead-end for complementary products. | A lower-page discovery section using authentic CDN product images and packaging colors drives cross-selling. | **Related Product CTR** | Primary PDP conversion |
+| **3. Subordinate Dosage Callout** | Heavy warning-style dosage note competes with the CTA. | Subordinated dosage note sits cleanly before CTA without visual distraction. | **Add-to-Cart Rate** | Time to CTA click |
+| **4. Editorial Why Section** | Generic feature boxes fail to communicate product differentiation. | Staggered 2-column editorial layout highlights 4 key differentiators in ~5s scan time. | **Scroll Progression** | Bounce rate |
+| **5. Connected Routine Flow** | Plain instructions don't feel like an accessible habit. | Connected 3-step routine flow (Scoop, Mix, Drink) lowers habit adoption friction. | **Feature Engagement** | Exit rate |
+| **6. Verified Customer Reviews** | Generic praise does not resolve taste or mixability doubts. | Structuring real reviews by key themes (Taste, Skin, Hair/Nails, Mixability) resolves doubt. | **Review Filter Engagement** | Bounce rate |
+| **7. Related Product Discovery** | The PDP becomes a conversion dead-end for complementary products. | Compact D2C recommendation cards displaying 3 distinct real products drive cross-selling. | **Related Product CTR** | Primary PDP conversion |
 | **8. Visual Hierarchy Restraint** | Overly colourful UI dilutes primary CTA focus. | Restrained 4-color palette (Black/White/Orange/Green) creates strong semantic scanning. | **Session Engagement** | Overall session duration |
 
 ---
@@ -86,7 +87,7 @@ The website UI is strictly disciplined across four semantic colors, letting the 
 | **Brand Proof** | Innovation Meets Integrity, 5 Million, 20+ Clinical Studies, US FDA | Restored in Brand Proof Section | Verified Exact Wording |
 | **Clinical Studies** | 4 Peer-Reviewed Publications | J. Cosmet. Dermatol. (2015, 2021), J. Med. Food (2022), Orthop. Rev. (2025) | Verified Exact Citations |
 | **Testimonials** | Real source reviews | Shrushti ("No Fishy Taste"), Ashutosh J, Avni R, Reena S, Priya D | Verified Verbatim |
-| **Recommendation Assets**| Real Wellbeing Nutrition products | Slow Multivitamin for Women, Melts Hair, Daily Greens | Verified Real CDN Assets |
+| **Recommendation Assets**| Real Wellbeing Nutrition products | Mango Peach, Strawberry Watermelon, Tropical Bliss Glutathione | Verified Real Sourced Assets |
 
 ---
 
@@ -96,10 +97,10 @@ The website UI is strictly disciplined across four semantic colors, letting the 
 troopod-cro-wellbeing-pdp/
 ├── index.html          # Complete PDP HTML with global header, Poppins & 4-color palette
 ├── css/
-│   └── styles.css      # Locked 4-color design system (No yellow, no UI teal) & responsive rules
+│   └── styles.css      # Locked 4-color design system & UX structural styles
 ├── js/
 │   └── script.js       # Pack selection, quantity, accordions, gallery, filters & AI assistant
-├── README.md           # CRO decision framework, Baymard grounding & fact audit documentation
+├── README.md           # CRO decision framework, visual redesign & fact audit documentation
 └── .gitignore
 ```
 
