@@ -1306,21 +1306,23 @@ ul, ol {
 }
 
 /* ================================================================
-   09 — CLINICAL EVIDENCE (DNA Science Background & Ice-Blue Transparency)
+   09 — CLINICAL EVIDENCE (DNA Science Background & Light Blue Overlay)
    ================================================================ */
 .science-section {
-  padding: 76px 0;
-  background: linear-gradient(rgba(238, 246, 255, 0.88), rgba(240, 247, 255, 0.92)), url('../images/science_bg.png') center/cover no-repeat;
+  padding: 80px 0;
+  background: linear-gradient(rgba(235, 245, 255, 0.45), rgba(240, 247, 255, 0.55)), url('../images/science_bg.png') center/cover no-repeat fixed;
   color: #1D1D1B;
   position: relative;
 }
 
 .science-section .section-heading {
   color: #1D1D1B;
+  font-weight: 800;
 }
 
 .science-section .section-subheading {
-  color: #445566;
+  color: #224466;
+  font-weight: 600;
 }
 
 .studies-grid {
@@ -1332,19 +1334,21 @@ ul, ol {
 }
 
 .study-card {
-  background: rgba(255, 255, 255, 0.94);
+  background: rgba(255, 255, 255, 0.88);
   backdrop-filter: blur(12px);
-  border: 1px solid #D0E3F5;
-  border-radius: 16px;
+  -webkit-backdrop-filter: blur(12px);
+  border: 1.5px solid #BDDAF5;
+  border-radius: 18px;
   padding: 28px;
-  box-shadow: 0 8px 24px rgba(0, 50, 100, 0.05);
+  box-shadow: 0 10px 30px rgba(0, 50, 110, 0.08);
   transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
 }
 
 .study-card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 12px 32px rgba(0, 80, 160, 0.12);
-  border-color: #006699;
+  transform: translateY(-5px);
+  box-shadow: 0 14px 36px rgba(0, 80, 160, 0.16);
+  border-color: #005580;
+  background: rgba(255, 255, 255, 0.96);
 }
 
 .study-card__journal {
@@ -1352,7 +1356,7 @@ ul, ol {
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.06em;
-  color: #006699;
+  color: #005580;
   margin-bottom: 10px;
   display: flex;
   align-items: center;
@@ -1360,7 +1364,7 @@ ul, ol {
 }
 
 .study-card__journal .icon-svg {
-  color: #006699;
+  color: #005580;
 }
 
 .study-card__title {
@@ -1372,7 +1376,7 @@ ul, ol {
 
 .study-card__year {
   font-size: 12px;
-  color: #556677;
+  color: #445566;
   margin-top: 14px;
   font-weight: 600;
 }
@@ -1597,21 +1601,21 @@ ul, ol {
 }
 
 /* ================================================================
-   11 — DEEP-DIVE SCIENCE (Pinteresty Flow Infographic Canvas)
+   11 — DEEP-DIVE SCIENCE (Light Greenish Background Canvas)
    ================================================================ */
 .deepdive-section {
   padding: 76px 0;
-  background: #FFFFFF;
-  border-top: 2px solid #EFECE6;
-  border-bottom: 1px solid #EFECE6;
+  background: #EAF4EA;
+  border-top: 1px solid #D4E8D3;
+  border-bottom: 1px solid #D4E8D3;
 }
 
 .science-infographic-card {
-  background: linear-gradient(145deg, #EFF8F8 0%, #F8FCFC 50%, #FFFDF7 100%);
-  border: 1px solid #D8ECEC;
+  background: linear-gradient(145deg, #FFFFFF 0%, #F4FBF4 60%, #EBF6EB 100%);
+  border: 1.5px solid #C4E3C3;
   border-radius: 24px;
   padding: 44px 36px;
-  box-shadow: 0 12px 36px rgba(46,125,50,0.06);
+  box-shadow: 0 12px 36px rgba(46,125,50,0.08);
   margin-bottom: 40px;
   position: relative;
   overflow: hidden;

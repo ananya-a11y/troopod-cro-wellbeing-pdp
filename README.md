@@ -43,10 +43,10 @@ The redesign optimizes the user journey through five distinct states:
 3. **Pinteresty 3-Step Daily Routine Cards ("Scoop, Mix, Drink")**:
    - Features exact user-provided photography (`step1_scoop.png`, `step2_mix.png`, `step3_drink.png`) in rounded card containers with smooth image scale hover micro-effects (`transform: scale(1.08)`).
 4. **DNA Science Backdrop for Peer-Reviewed Studies (Zero Orange Traces)**:
-   - Replaced solid green backdrop with a custom ice-blue DNA helix background image (`images/science_bg.png`) using an optimized semi-transparent overlay (`#EEF6FF` / `#F0F7FF`).
-   - Removed all orange traces from the study journal headers (`#006699` deep ocean blue linework).
-5. **Pinteresty Science Flow Infographic Canvas ("Want to Go Deeper into the Science?")**:
-   - Inspired by molecular flow infographics: Features a central core droplet node (`PURE KOREAN MARINE COLLAGEN`) encircled by 6 orbital flow nodes.
+   - Replaced solid green backdrop with user's exact attached DNA helix background image (`images/science_bg.png`) using an optimized semi-transparent light blue overlay (`rgba(235, 245, 255, 0.45)`) so the DNA helix and water droplets shine through vividly.
+   - Removed all orange traces from the study journal headers (`#005580` deep ocean blue linework).
+5. **Light Greenish Canvas for "Want to Go Deeper into the Science?"**:
+   - Updated `.deepdive-section` to a soft light greenish background canvas (`#EAF4EA`) featuring the Pinteresty Science Flow Infographic.
 
 ---
 
@@ -57,8 +57,8 @@ The redesign optimizes the user journey through five distinct states:
 1. **BLACK / CHARCOAL (`#1D1D1B`):** Primary typography, headings, navigation links, price, and Primary Add-to-Cart CTA.
 2. **WHITE (`#FFFFFF`):** Main page background canvas, buy box container, review cards, FAQ background, and recommendation cards.
 3. **ORANGE (`#E65100`):** Offer badges, savings tags, active navigation indicators, filled star ratings, and highlight accents.
-4. **GREEN (`#2E7D32` / `#1B5E20`):** Trust verification checkmarks, clinical authority section background, and verified badges.
-5. **ICE-BLUE SCIENCE TINT (`#EEF6FF` / `#F0F7FF`):** Dedicated background tint & DNA graphic backdrop for Product Quality Strip and Clinical Evidence section.
+4. **GREEN (`#2E7D32` / `#1B5E20`):** Trust verification checkmarks, clinical authority badges, and light greenish deep-dive background (`#EAF4EA`).
+5. **ICE-BLUE TINT (`#EEF6FF` / `#F0F7FF`):** Dedicated background tint & DNA graphic backdrop for Product Quality Strip and Clinical Evidence section.
 6. **Typography:** **Poppins** (Google Fonts) — Enforced across 700–800 (Title/Price), 700 (Headings/CTA), 600 (Subheadings/Badges), 400–500 (Body/Metadata).
 
 ---
@@ -69,8 +69,8 @@ The redesign optimizes the user journey through five distinct states:
 |--------|-------------------------|------------------------------|----------------|------------------|
 | **1. Buy-Box Clarity** | Price strikethroughs and variant choices create decision friction. | High-contrast price formatting + clear pack selector cards simplify selection. | **Add-to-Cart Rate** | Variant selection rate |
 | **2. In-Buy-Box Product Discovery** | Shoppers scroll past bottom recommendations without noticing alternative flavors. | Placing 2 distinct product flavor cards inside the Buy Box drives immediate cross-selling. | **Related Product CTR** | Hero bounce rate |
-| **3. DNA Science Backdrop** | Dark green solid blocks feel heavy and disrupt visual flow. | Ethereal ice-blue DNA background with zero orange traces creates an authoritative clinical atmosphere. | **Science Section Engagement** | Scroll depth |
-| **4. Pinteresty 3-Step Routine** | Plain text routines do not inspire habit adoption. | Real photography + hover micro-effects (Scoop, Mix, Drink) lower habit adoption friction. | **Routine Section Engagement** | Exit rate |
+| **3. DNA Science Backdrop** | Dark green solid blocks feel heavy and disrupt visual flow. | Ethereal DNA background with zero orange traces creates an authoritative clinical atmosphere. | **Science Section Engagement** | Scroll depth |
+| **4. Light Greenish Science Canvas** | Plain white backgrounds make deep educational sections feel repetitive. | Soft light greenish background (`#EAF4EA`) visually distinguishes deep-dive molecular science. | **Science Section Engagement** | Time on page |
 
 ---
 
