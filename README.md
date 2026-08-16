@@ -2,7 +2,7 @@
 
 ## Executive Summary
 
-Enhanced Product Detail Page (PDP) prototype for **Wellbeing Nutrition's Pure Korean Marine Collagen Peptides**, built for the **Product Intern – AI B2B Sales** role at **Troopod**.
+Enhanced Product Detail Page (PDP) prototype for **Wellbeing Nutrition's Pure Korean Marine Collagen Peptides**.
 
 This prototype translates a CRO audit into a decision-first PDP experience. It demonstrates how restructuring existing product information — without altering product facts, claims, or pricing — creates a clearer path from understanding to purchase.
 
