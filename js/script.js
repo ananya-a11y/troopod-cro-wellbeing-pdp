@@ -1,6 +1,6 @@
 /* ================================================================
    WELLBEING NUTRITION — KOREAN MARINE COLLAGEN PDP
-   CRO Prototype — Interactions (Source-Fidelity Pass)
+   CRO Prototype — Interactions (Craft Pass)
    
    Features:
    - Pack selector (updates price, savings, per-unit)
@@ -151,8 +151,8 @@
     
     btns.forEach(function (btn) {
       btn.addEventListener('click', function () {
-        var original = btn.textContent;
-        btn.textContent = 'Added to Cart ✓';
+        var originalHtml = btn.innerHTML;
+        btn.innerHTML = '<span>ADDED TO CART!</span>';
         btn.classList.add('added');
         btn.disabled = true;
 
@@ -165,7 +165,7 @@
         }
 
         setTimeout(function () {
-          btn.textContent = original;
+          btn.innerHTML = originalHtml;
           btn.classList.remove('added');
           btn.disabled = false;
         }, 2000);
@@ -210,7 +210,6 @@
         var img = thumb.querySelector('img');
         if (!img) return;
         var src = img.src;
-        // Upgrade size parameter
         mainImg.src = src.replace(/width=\d+/, 'width=900');
         
         thumbs.forEach(function (t) { t.classList.remove('active'); });

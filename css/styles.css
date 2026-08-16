@@ -1,6 +1,6 @@
 /* ================================================================
    WELLBEING NUTRITION — KOREAN MARINE COLLAGEN PDP
-   CRO Prototype — Design System & Visual Polish Pass
+   CRO Prototype — Visual & Structural Craft Pass
    
    Color Palette System:
      Deep Teal: #007065 (Authority, Headings, Dark Science Section)
@@ -8,9 +8,9 @@
      Warm Peach:#F5C181 (Key accents, Benefits, Energy cues, Badges)
      Cream:     #FFEECF (Warm section backgrounds, Trust strips)
      White:     #FFFFFF (Buy box, Card surfaces)
-     Neutral:   #2D2D2D (Text), #666666 (Muted text), #EFECE6 (Subtle borders)
+     Neutral:   #2D2D2D (Text), #555555 (Muted text), #EFECE6 (Subtle borders)
    
-   Typography: Manrope (Google Fonts)
+   Typography: Manrope (Google Fonts) — Enforced Consistently
    ================================================================ */
 
 /* ---- RESET & BASE ---- */
@@ -26,7 +26,7 @@ html {
 }
 
 body {
-  font-family: 'Manrope', sans-serif;
+  font-family: 'Manrope', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
   font-weight: 400;
   font-size: 16px;
   line-height: 1.6;
@@ -53,8 +53,8 @@ a:hover, a:focus {
   color: #007065;
 }
 
-button {
-  font-family: 'Manrope', sans-serif;
+button, input, select, textarea {
+  font-family: 'Manrope', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
   cursor: pointer;
   border: none;
   background: none;
@@ -84,8 +84,32 @@ ul, ol {
   border: 0;
 }
 
+/* LINEWORK SVG ICON STYLES */
+.icon-svg {
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  flex-shrink: 0;
+  vertical-align: middle;
+}
+
+.icon-svg--lg {
+  width: 24px;
+  height: 24px;
+}
+
+.icon-svg--xl {
+  width: 32px;
+  height: 32px;
+}
+
 /* ================================================================
-   01 — ANNOUNCEMENT BAR (Refined Top Offer Header)
+   01 — ANNOUNCEMENT BAR
    ================================================================ */
 .announcement-bar {
   background: linear-gradient(90deg, #007065 0%, #00877a 100%);
@@ -104,7 +128,7 @@ ul, ol {
 
 .announcement-bar__badge {
   background: #F5C181;
-  color: #004D46;
+  color: #4D2D00;
   font-size: 11px;
   font-weight: 800;
   padding: 2px 8px;
@@ -124,12 +148,12 @@ ul, ol {
 }
 
 /* ================================================================
-   02 — NAVIGATION
+   02 — NAVIGATION (Real Brand Logo)
    ================================================================ */
 .site-nav {
   background: #FFFFFF;
   border-bottom: 1px solid #EFECE6;
-  padding: 14px 0;
+  padding: 12px 0;
   position: sticky;
   top: 0;
   z-index: 100;
@@ -143,13 +167,22 @@ ul, ol {
 }
 
 .site-nav__logo {
-  font-size: 20px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+}
+
+.site-nav__logo-img {
+  height: 32px;
+  width: auto;
+}
+
+.site-nav__logo-text {
+  font-size: 18px;
   font-weight: 800;
   color: #007065;
   letter-spacing: -0.02em;
-  display: flex;
-  align-items: center;
-  gap: 8px;
 }
 
 .site-nav__actions {
@@ -176,9 +209,10 @@ ul, ol {
   font-size: 14px;
   font-weight: 600;
   color: #007065;
-  gap: 6px;
+  gap: 8px;
   background: #FFEECF;
-  padding: 6px 14px;
+  border: 1px solid #F5C181;
+  padding: 7px 16px;
   border-radius: 20px;
   transition: background 0.2s;
 }
@@ -216,7 +250,7 @@ ul, ol {
   align-items: start;
 }
 
-/* -- Image Gallery -- */
+/* -- Gallery -- */
 .gallery {
   position: sticky;
   top: 88px;
@@ -289,7 +323,6 @@ ul, ol {
   margin-bottom: 8px;
 }
 
-/* Exact Full Product Title */
 .buy-box__title {
   font-size: 26px;
   font-weight: 800;
@@ -303,8 +336,9 @@ ul, ol {
   display: inline-block;
   font-size: 13px;
   font-weight: 700;
-  color: #855319;
+  color: #613C00;
   background: #FFEECF;
+  border: 1px solid #F5C181;
   padding: 3px 10px;
   border-radius: 4px;
   margin-bottom: 12px;
@@ -318,7 +352,7 @@ ul, ol {
   line-height: 1.55;
 }
 
-/* Rating — Exact Source Value: 4.74 / 571 reviews */
+/* Rating — Exact 4.74 / 571 reviews */
 .buy-box__rating {
   display: flex;
   align-items: center;
@@ -326,15 +360,16 @@ ul, ol {
   margin-bottom: 16px;
   flex-wrap: wrap;
   background: #FAF6F0;
-  padding: 8px 12px;
+  border: 1px solid #EFECE6;
+  padding: 8px 14px;
   border-radius: 8px;
   width: fit-content;
 }
 
-.stars {
+.stars-svg {
+  display: inline-flex;
+  gap: 2px;
   color: #E69B24;
-  font-size: 16px;
-  letter-spacing: 2px;
 }
 
 .rating-number {
@@ -346,6 +381,7 @@ ul, ol {
 .review-count {
   font-size: 13px;
   color: #555555;
+  font-weight: 500;
 }
 
 .review-count a {
@@ -355,22 +391,22 @@ ul, ol {
   text-underline-offset: 2px;
 }
 
-/* Marine Source & Dietary Badge */
+/* Marine Source & Dietary Qualification */
 .buy-box__source {
   display: inline-flex;
   align-items: center;
-  gap: 6px;
+  gap: 8px;
   font-size: 12px;
   font-weight: 700;
   color: #007065;
   background: rgba(0,112,101,0.07);
-  border: 1px solid rgba(0,112,101,0.15);
-  padding: 4px 10px;
+  border: 1px solid rgba(0,112,101,0.18);
+  padding: 5px 12px;
   border-radius: 6px;
   margin-bottom: 18px;
 }
 
-/* Concise benefit tags */
+/* Benefit tags */
 .buy-box__benefits {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -397,8 +433,6 @@ ul, ol {
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 12px;
-  font-weight: 800;
 }
 
 /* Decision Point Proof Strip — P0-1 */
@@ -431,6 +465,9 @@ ul, ol {
   text-decoration: underline;
   text-underline-offset: 2px;
   cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
 }
 
 .proof-strip__link:hover {
@@ -483,10 +520,13 @@ ul, ol {
   color: #007065;
   background: rgba(0,112,101,0.05);
   border-left: 3px solid #007065;
-  padding: 6px 12px;
+  padding: 8px 12px;
   border-radius: 0 6px 6px 0;
   margin-bottom: 20px;
   font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 8px;
 }
 
 /* Pack Selector Cards */
@@ -555,7 +595,7 @@ ul, ol {
 .pack-card__savings {
   font-size: 11px;
   font-weight: 700;
-  color: #B56C00;
+  color: #945700;
   margin-top: 4px;
 }
 
@@ -577,14 +617,17 @@ ul, ol {
   font-size: 13px;
   color: #4A4A4A;
   margin-bottom: 20px;
-  padding: 10px 14px;
+  padding: 12px 14px;
   background: #FAF6F0;
   border-radius: 8px;
   border-left: 3px solid #F5C181;
   line-height: 1.5;
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
 }
 
-/* Quantity selector */
+/* Quantity Selector */
 .quantity-row {
   display: flex;
   align-items: center;
@@ -639,13 +682,17 @@ ul, ol {
   background: #00A79D;
   color: #FFFFFF;
   font-size: 16px;
-  font-weight: 800;
+  font-weight: 700;
   letter-spacing: 0.05em;
   border-radius: 10px;
   text-transform: uppercase;
   transition: all 0.2s ease;
   margin-bottom: 10px;
   box-shadow: 0 4px 16px rgba(0,167,157,0.3);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
 }
 
 .cta-primary:hover {
@@ -668,21 +715,25 @@ ul, ol {
   color: #777777;
   margin-top: 6px;
   font-weight: 500;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  flex-wrap: wrap;
 }
 
 .buy-box__reassurance span {
-  margin: 0 6px;
   opacity: 0.4;
 }
 
 /* ================================================================
-   04 — TRUST COUNTER BAR
+   04 — TRUST BAR COUNTERS (Cream Background)
    ================================================================ */
 .trust-bar {
   background: #FFEECF;
   border-top: 1px solid #F5C181;
   border-bottom: 1px solid #F5C181;
-  padding: 36px 0;
+  padding: 38px 0;
 }
 
 .trust-bar .container {
@@ -696,12 +747,19 @@ ul, ol {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 6px;
+  gap: 8px;
 }
 
 .trust-item__icon {
-  font-size: 26px;
   color: #007065;
+  background: #FFFFFF;
+  border: 1px solid #F5C181;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .trust-item__text {
@@ -712,15 +770,15 @@ ul, ol {
 
 .trust-item__sub {
   font-size: 12px;
-  color: #664210;
+  color: #593500;
   font-weight: 500;
 }
 
 /* ================================================================
-   05 — VISUAL STORYTELLING: WHY KOREAN MARINE COLLAGEN
+   05 — WHY KOREAN MARINE COLLAGEN (White Background)
    ================================================================ */
 .why-section {
-  padding: 64px 0;
+  padding: 68px 0;
   background: #FFFFFF;
 }
 
@@ -737,28 +795,30 @@ ul, ol {
   font-size: 15px;
   color: #555555;
   text-align: center;
-  margin-bottom: 40px;
+  margin-bottom: 44px;
   max-width: 600px;
   margin-left: auto;
   margin-right: auto;
   line-height: 1.5;
 }
 
-/* Differentiated Varied Layout for Why Section */
 .why-story-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 36px;
+  gap: 28px;
   align-items: center;
 }
 
 .why-story-card {
   display: flex;
-  gap: 18px;
+  gap: 20px;
   padding: 24px;
   background: #FAF6F0;
   border-radius: 12px;
   border-left: 4px solid #F5C181;
+  border-top: 1px solid #EFECE6;
+  border-right: 1px solid #EFECE6;
+  border-bottom: 1px solid #EFECE6;
   transition: transform 0.2s ease;
 }
 
@@ -767,7 +827,15 @@ ul, ol {
 }
 
 .why-story-card__icon {
-  font-size: 32px;
+  color: #007065;
+  background: #FFEECF;
+  border: 1px solid #F5C181;
+  width: 48px;
+  height: 48px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   flex-shrink: 0;
 }
 
@@ -785,11 +853,13 @@ ul, ol {
 }
 
 /* ================================================================
-   06 — BENEFITS (Split Layout with Image Visual)
+   06 — TARGETED OUTCOMES / BENEFITS (Cream Background)
    ================================================================ */
 .benefits-section {
-  padding: 64px 0;
-  background: #FAF6F0;
+  padding: 68px 0;
+  background: #FFEECF;
+  border-top: 1px solid #F5C181;
+  border-bottom: 1px solid #F5C181;
 }
 
 .benefits-layout {
@@ -822,18 +892,24 @@ ul, ol {
   background: #FFFFFF;
   padding: 24px;
   border-radius: 12px;
-  border: 1px solid #EFECE6;
+  border: 1px solid #F5C181;
   transition: box-shadow 0.2s ease, border-color 0.2s ease;
 }
 
 .benefit-card:hover {
   box-shadow: 0 6px 24px rgba(0,0,0,0.06);
-  border-color: #F5C181;
 }
 
 .benefit-card__icon {
-  font-size: 30px;
-  margin-bottom: 10px;
+  color: #00A79D;
+  background: rgba(0,167,157,0.1);
+  width: 44px;
+  height: 44px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 12px;
 }
 
 .benefit-card__title {
@@ -850,50 +926,100 @@ ul, ol {
 }
 
 /* ================================================================
-   07 — HOW TO USE (3-Step Daily Routine Timeline)
+   07 — HOW TO USE (Redesigned Split Layout with Product Visual)
    ================================================================ */
 .how-to-section {
-  padding: 64px 0;
+  padding: 72px 0;
+  background: #FAF6F0;
+}
+
+.how-to-layout {
+  display: grid;
+  grid-template-columns: 360px 1fr;
+  gap: 48px;
+  align-items: center;
+}
+
+.how-to-product-visual {
+  background: #FFFFFF;
+  border-radius: 16px;
+  padding: 24px;
+  border: 2px solid #F5C181;
+  box-shadow: 0 6px 24px rgba(0,0,0,0.04);
+  text-align: center;
+}
+
+.how-to-product-visual img {
+  width: 100%;
+  max-width: 260px;
+  margin: 0 auto 16px;
+  border-radius: 8px;
+}
+
+.how-to-product-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
   background: #FFEECF;
+  color: #007065;
+  font-size: 12px;
+  font-weight: 700;
+  padding: 6px 14px;
+  border-radius: 20px;
+  border: 1px solid #F5C181;
 }
 
 .how-to-steps {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 28px;
-  max-width: 900px;
-  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }
 
 .step-card {
   background: #FFFFFF;
-  padding: 28px 20px;
+  padding: 22px 24px;
   border-radius: 14px;
-  text-align: center;
-  border: 1px solid #F5C181;
-  box-shadow: 0 4px 16px rgba(245,193,129,0.2);
-  position: relative;
+  border: 1px solid #EFECE6;
+  border-left: 4px solid #00A79D;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.02);
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+  transition: transform 0.2s ease, border-color 0.2s ease;
 }
 
-.step-card__number {
-  width: 44px;
-  height: 44px;
-  border-radius: 50%;
-  background: #007065;
-  color: #FFFFFF;
-  font-size: 18px;
-  font-weight: 800;
+.step-card:hover {
+  transform: translateX(4px);
+  border-left-color: #F5C181;
+}
+
+.step-card__icon-box {
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  background: #FFEECF;
+  border: 1px solid #F5C181;
+  color: #007065;
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: 0 auto 14px;
+  flex-shrink: 0;
+}
+
+.step-card__num {
+  font-size: 11px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #00A79D;
+  margin-bottom: 2px;
 }
 
 .step-card__title {
-  font-size: 17px;
+  font-size: 16px;
   font-weight: 800;
   color: #007065;
-  margin-bottom: 6px;
+  margin-bottom: 4px;
 }
 
 .step-card__text {
@@ -903,11 +1029,11 @@ ul, ol {
 }
 
 /* ================================================================
-   08 — SCIENCE & CLINICAL EVIDENCE (Deep Teal Authority Section)
-   CRO Priority P0-2: Progressive disclosure for deep evidence
+   08 — CLINICAL EVIDENCE (Deep Teal Authority Section)
+   CRO Priority P0-2: High contrast evidence disclosure
    ================================================================ */
 .science-section {
-  padding: 68px 0;
+  padding: 72px 0;
   background: #007065;
   color: #FFFFFF;
 }
@@ -917,59 +1043,62 @@ ul, ol {
 }
 
 .science-section .section-subheading {
-  color: rgba(255,255,255,0.8);
+  color: rgba(255,255,255,0.85);
 }
 
 .studies-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 20px;
-  max-width: 1000px;
+  gap: 24px;
+  max-width: 1040px;
   margin: 0 auto;
 }
 
 .study-card {
   background: rgba(255,255,255,0.08);
-  border: 1px solid rgba(255,255,255,0.15);
-  border-radius: 12px;
-  padding: 24px;
-  transition: background 0.2s ease;
+  border: 1px solid rgba(255,255,255,0.18);
+  border-radius: 14px;
+  padding: 28px;
+  transition: background 0.2s ease, border-color 0.2s ease;
 }
 
 .study-card:hover {
-  background: rgba(255,255,255,0.12);
+  background: rgba(255,255,255,0.13);
+  border-color: #F5C181;
 }
 
 .study-card__journal {
   font-size: 12px;
   font-weight: 800;
   text-transform: uppercase;
-  letter-spacing: 0.05em;
+  letter-spacing: 0.06em;
   color: #F5C181;
-  margin-bottom: 8px;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
 }
 
 .study-card__title {
-  font-size: 14px;
+  font-size: 15px;
   font-weight: 500;
   color: #FFFFFF;
-  line-height: 1.55;
+  line-height: 1.6;
 }
 
 .study-card__year {
   font-size: 12px;
-  color: rgba(255,255,255,0.6);
-  margin-top: 10px;
+  color: rgba(255,255,255,0.65);
+  margin-top: 14px;
   font-weight: 600;
 }
 
 /* ================================================================
-   09 — REVIEWS / SOCIAL PROOF
-   CRO Priority P0-3: Objection-led real social proof
-   Exact Rating: 4.74 / 571 reviews
+   09 — REVIEWS / SOCIAL PROOF (White Background)
+   CRO Priority P0-3: Objection-led verified reviews
    ================================================================ */
 .reviews-section {
-  padding: 68px 0;
+  padding: 72px 0;
   background: #FFFFFF;
 }
 
@@ -978,15 +1107,16 @@ ul, ol {
   align-items: center;
   justify-content: center;
   gap: 20px;
-  margin-bottom: 16px;
+  margin-bottom: 18px;
   flex-wrap: wrap;
 }
 
 .reviews-header__score {
-  font-size: 52px;
+  font-size: 56px;
   font-weight: 800;
   color: #007065;
   letter-spacing: -0.03em;
+  line-height: 1;
 }
 
 .reviews-header__meta {
@@ -995,9 +1125,9 @@ ul, ol {
 
 .reviews-header__stars {
   color: #E69B24;
-  font-size: 22px;
-  letter-spacing: 2px;
-  margin-bottom: 2px;
+  margin-bottom: 4px;
+  display: flex;
+  gap: 2px;
 }
 
 .reviews-header__count {
@@ -1010,7 +1140,7 @@ ul, ol {
   display: flex;
   gap: 10px;
   justify-content: center;
-  margin-bottom: 36px;
+  margin-bottom: 40px;
   flex-wrap: wrap;
 }
 
@@ -1036,7 +1166,7 @@ ul, ol {
 .reviews-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 20px;
+  gap: 24px;
   max-width: 1000px;
   margin: 0 auto;
 }
@@ -1044,20 +1174,20 @@ ul, ol {
 .review-card {
   border: 1px solid #EFECE6;
   background: #FAF6F0;
-  border-radius: 12px;
-  padding: 24px;
+  border-radius: 14px;
+  padding: 26px;
   transition: box-shadow 0.2s ease;
 }
 
 .review-card:hover {
-  box-shadow: 0 4px 18px rgba(0,0,0,0.06);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.06);
 }
 
 .review-card__header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-bottom: 10px;
+  margin-bottom: 12px;
 }
 
 .review-card__name {
@@ -1075,7 +1205,8 @@ ul, ol {
 
 .review-card__stars {
   color: #E69B24;
-  font-size: 14px;
+  display: flex;
+  gap: 2px;
 }
 
 .review-card__title {
@@ -1092,7 +1223,9 @@ ul, ol {
 }
 
 .review-card__theme {
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
   font-size: 11px;
   font-weight: 700;
   color: #007065;
@@ -1100,29 +1233,44 @@ ul, ol {
   border: 1px solid #F5C181;
   padding: 3px 10px;
   border-radius: 4px;
-  margin-top: 12px;
+  margin-top: 14px;
 }
 
 /* ================================================================
-   10 — DEEP DIVE EDUCATION (Accordion Progressive Disclosure)
+   10 — DEEP-DIVE EDUCATION (Cream Background & Explicit Header Badge)
+   CRO Priority P0-2: Progressive Disclosure
    ================================================================ */
 .deepdive-section {
-  padding: 64px 0;
-  background: #FAF6F0;
-  border-top: 1px solid #EFECE6;
+  padding: 72px 0;
+  background: #FFEECF;
+  border-top: 2px solid #F5C181;
+  border-bottom: 1px solid #F5C181;
+}
+
+.deepdive-header-tag {
+  display: table;
+  margin: 0 auto 12px;
+  background: #007065;
+  color: #FFFFFF;
+  font-size: 11px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  padding: 4px 12px;
+  border-radius: 20px;
 }
 
 /* ================================================================
-   11 — FAQ SECTION
+   11 — FREQUENTLY ASKED QUESTIONS (White Background)
    ================================================================ */
 .faq-section {
-  padding: 64px 0;
+  padding: 72px 0;
   background: #FFFFFF;
 }
 
 /* Shared Accordion Styling */
 .accordion {
-  max-width: 840px;
+  max-width: 860px;
   margin: 0 auto;
 }
 
@@ -1135,14 +1283,14 @@ ul, ol {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 18px 0;
+  padding: 20px 0;
   font-size: 16px;
   font-weight: 700;
   color: #2D2D2D;
   text-align: left;
   cursor: pointer;
   transition: color 0.2s ease;
-  gap: 14px;
+  gap: 16px;
 }
 
 .accordion-trigger:hover {
@@ -1173,17 +1321,17 @@ ul, ol {
 }
 
 .accordion-content__inner {
-  padding: 0 0 18px;
+  padding: 0 0 20px;
   font-size: 14px;
   color: #555555;
   line-height: 1.65;
 }
 
 /* ================================================================
-   12 — FINAL CTA
+   12 — FINAL CTA (Cream Background)
    ================================================================ */
 .final-cta {
-  padding: 64px 0;
+  padding: 72px 0;
   background: #FFEECF;
   border-top: 1px solid #F5C181;
   text-align: center;
@@ -1200,7 +1348,7 @@ ul, ol {
   font-size: 15px;
   color: #555555;
   margin-bottom: 28px;
-  max-width: 540px;
+  max-width: 560px;
   margin-left: auto;
   margin-right: auto;
 }
@@ -1216,7 +1364,7 @@ ul, ol {
 .site-footer {
   background: #007065;
   color: rgba(255,255,255,0.75);
-  padding: 36px 0;
+  padding: 38px 0;
   text-align: center;
   font-size: 13px;
 }
@@ -1288,9 +1436,14 @@ ul, ol {
     grid-template-columns: 1fr;
     gap: 32px;
   }
-  
-  .benefits-media {
-    max-width: 400px;
+
+  .how-to-layout {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+
+  .how-to-product-visual {
+    max-width: 360px;
     margin: 0 auto;
   }
   
@@ -1325,11 +1478,6 @@ ul, ol {
 
   .reviews-grid {
     grid-template-columns: 1fr;
-  }
-
-  .how-to-steps {
-    grid-template-columns: 1fr;
-    gap: 20px;
   }
   
   .site-nav__link {
@@ -1392,7 +1540,7 @@ ul, ol {
   }
 
   .reviews-header__score {
-    font-size: 42px;
+    font-size: 44px;
   }
 }
 
