@@ -34,7 +34,7 @@ The visual system was simplified to improve visual hierarchy, maintain brand/eco
 2. **Progressive Disclosure Architecture:**
    Baymard specifically recommends collapsed accordion sections for long PDP content to prevent cognitive overload. Storing deep educational content behind expandable accordions allows shoppers seeking science to explore without slowing down primary buyers.
 3. **Objection-Led Reviews:**
-   Surfacing real customer testimonials filtered by key friction themes (Taste, Skin, Hair/Nails, Mixability) addresses hesitations at the decision point.
+   Surfacing real customer testimonials filtered by key purchase themes (Taste, Skin, Hair/Nails, Mixability) addresses hesitations at the decision point.
 4. **Supplementary Product Discovery:**
    Baymard identifies alternative and supplementary product recommendation modules as a critical PDP discoverability pattern, preventing the PDP from becoming a dead-end.
 
@@ -61,7 +61,7 @@ The website UI is strictly disciplined across four semantic colors, letting the 
 | **1. Buy-Box Clarity** | Price strikethroughs and variant choices create decision friction. | High-contrast price formatting + clear pack selector cards simplify selection. | **Add-to-Cart Rate** | Variant selection rate |
 | **2. Decision-Point Proof Strip** | Clinical evidence and quality certifications are buried deep below the fold. | Placing concise proof (Clinically Tested, Third-Party Tested, FSSAI) near the Buy Box reduces uncertainty. | **Add-to-Cart Rate** | Exit rate from hero |
 | **3. Progressive Disclosure Architecture** | Dense scientific copy causes information overload on mobile. | Separating primary shopping flow from deep-dive education via accordions reduces drop-off. | **Primary Flow Completion** | Scroll depth / Exit rate |
-| **4. Objection-Led Verified Reviews** | Generic praise does not resolve taste or mixability doubts. | Structuring real reviews by objection themes (Taste, Skin, Hair/Nails, Mixability) resolves doubt. | **Review Filter Engagement** | Bounce rate |
+| **4. Verified Customer Reviews** | Generic praise does not resolve taste or mixability doubts. | Structuring real reviews by key themes (Taste, Skin, Hair/Nails, Mixability) resolves doubt. | **Review Filter Engagement** | Bounce rate |
 | **5. AI Product Assistant Card** | Shoppers abandon the page to search for quick factual answers. | Providing an inline AI assistance entry point with instant verified answer chips reduces research bounce. | **AI Engagement Rate** | Add-to-Cart Rate |
 | **6. Global Header + PDP Anchor Nav** | Text-only nav isolates PDP from the website ecosystem. | Global commerce header + sticky PDP section anchors enable smooth ecosystem navigation. | **Navigation CTR** | Time to ATC |
 | **7. Related Product Discovery** | The PDP becomes a conversion dead-end for complementary products. | A lower-page discovery section using authentic CDN product images and packaging colors drives cross-selling. | **Related Product CTR** | Primary PDP conversion |
@@ -80,9 +80,10 @@ The website UI is strictly disciplined across four semantic colors, letting the 
 | **Pack of 2** | ₹3,418 (MRP ₹3,598) | ₹3,418 (MRP ₹3,598) — Save ₹180 | Verified Exact |
 | **Pack of 3** | ₹5,019 (MRP ₹5,397) | ₹5,019 (MRP ₹5,397) — Save ₹378 | Verified Exact |
 | **Pack of 4** | ₹6,476 (MRP ₹7,196) | ₹6,476 (MRP ₹7,196) — Save ₹720 | Verified Exact |
+| **Member Price** | Member Price ₹1,658 (Save 8%) | Member Price ₹1,658 (Save 8%) | Verified Exact |
 | **Description** | *Boost your body's collagen levels naturally...* | Preserved verbatim from PDP | Verified Verbatim |
 | **Trust Facts** | Clinically Proven, Mercury-Free, Heavy Metal Tested, No Added Sugar | Displayed in Product Quality Strip | Verified Exact Wording |
-| **Brand Proof** | Innovation Meets Integrity, 5 Million, 20+, US FDA | Restored in Brand Proof Section | Verified Exact Wording |
+| **Brand Proof** | Innovation Meets Integrity, 5 Million, 20+ Clinical Studies, US FDA | Restored in Brand Proof Section | Verified Exact Wording |
 | **Clinical Studies** | 4 Peer-Reviewed Publications | J. Cosmet. Dermatol. (2015, 2021), J. Med. Food (2022), Orthop. Rev. (2025) | Verified Exact Citations |
 | **Testimonials** | Real source reviews | Shrushti ("No Fishy Taste"), Ashutosh J, Avni R, Reena S, Priya D | Verified Verbatim |
 | **Recommendation Assets**| Real Wellbeing Nutrition products | Slow Multivitamin for Women, Melts Hair, Daily Greens | Verified Real CDN Assets |
