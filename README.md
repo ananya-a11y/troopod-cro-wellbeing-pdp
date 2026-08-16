@@ -2,11 +2,16 @@
 
 ## Project
 
-Enhanced product detail page (PDP) prototype for **Wellbeing Nutrition's Korean Marine Collagen Peptides**, built as a take-home assignment for the **Product Intern – AI B2B Sales** role at **Troopod**.
+Enhanced product detail page (PDP) prototype for **Wellbeing Nutrition's Pure Korean Marine Collagen Peptides**, built for the **Product Intern – AI B2B Sales** role at **Troopod**.
 
 ## Objective
 
-This prototype translates a CRO audit into a decision-first PDP experience. It demonstrates how restructuring existing product information — without changing the product itself — can create a clearer path from understanding to purchase.
+This prototype translates a CRO audit into a decision-first PDP experience. It demonstrates how restructuring existing product information — without altering product facts, claims, or pricing — creates a clearer path from understanding to purchase.
+
+## Source Page Locked
+
+- **Product Page:** [Wellbeing Nutrition Korean Marine Collagen Peptides](https://wellbeingnutrition.com/products/korean-marine-collagen-peptides)
+- **Variant ID:** `40790287614032` (Pack of 1, ₹1,745 / MRP ₹1,799)
 
 ## CRO Thesis
 
@@ -14,98 +19,73 @@ This prototype translates a CRO audit into a decision-first PDP experience. It d
 
 The original product page contains strong proof and product information, but the current experience does not consistently deliver that information at the moment it is needed.
 
-## Prioritized Hypotheses (P0)
+## Prioritized CRO Hypotheses (P0)
 
-### 1. Decision-Point Proof Architecture
-The original page places strong trust assets (clinical studies, certifications, reviews) far below the buy box. The prototype brings concise, verified proof closer to the purchase decision — without turning the buy box into a research paper.
+### 1. Decision-Point Proof Architecture (P0-1)
+Brings minimum viable proof near the purchase decision without cluttering the buy box:
+- **Exact Source Rating:** 4.74 / 5 (based on 571 verified reviews)
+- **Proof Strip:** Clinically Tested, Third-Party Tested, FSSAI Registered + direct anchor to "View 4 Clinical Studies".
 
-**Implementation:** Rating (4.9 / 571 reviews), proof strip (clinically tested, third-party tested, FSSAI registered), and "View clinical evidence" anchor placed near the CTA.
+### 2. Information Sequencing & Progressive Disclosure (P0-2)
+Separates the **Primary Shopping Journey** from **Secondary Education**:
+- **Primary:** Top Announcement → Hero / Buy Box → Trust Bar → Visual Storytelling → Outcome Benefits → How to Use → Clinical Evidence → Verified Reviews → Purchase Action
+- **Secondary:** Accordion-based Deep-Dive Education & 8 prioritized FAQs for shoppers seeking deeper scientific content.
 
-### 2. Information Sequencing
-The original page combines the primary shopping journey and secondary educational content into one continuous scroll. The prototype separates these:
+### 3. Objection-Led Verified Social Proof (P0-3)
+Social proof formatted around real purchase objections using verified testimonials:
+- **Taste:** Shrushti ("No Fishy Taste" - "By far the best marine collagen I have tasted")
+- **Skin Results:** Ashutosh J (Gurgaon), Avni R (Chennai), Priya D (Mumbai)
+- **Hair & Nails:** Reena S (Bangalore)
+- **Mixability:** Priya D (dissolves in coffee without a weird taste)
+- **Distribution:** Implausible 74/26/0/0/0 distribution omitted; headline score 4.74 / 571 preserved.
 
-- **Primary journey:** Hero → Benefits → Trust → Product selection → Reviews → CTA
-- **Secondary education:** Deep-dive accordion section with progressive disclosure
+## Secondary Enhancements (P1)
 
-A shopper ready to buy can act without reading the entire page. A shopper who wants more detail can access it through expandable sections.
+- **Dosage Clarity:** 5–10g daily recommended dose clearly displayed near the purchase box.
+- **Marine / Non-Vegetarian Qualification:** Prominently tagged (`Marine-Derived Collagen · Non-Vegetarian Source`) before commitment.
+- **Member / EMI Commercial Reassurance:** Extra 5% Member Discount and Snapmint interest-free EMI notes preserved.
 
-### 3. Review Integrity + Objection-Led Social Proof
-Instead of displaying reviews as generic praise, the prototype organizes real customer testimonials around purchase objections:
+## Source Fact Audit & Compliance Verification
 
-- **Taste** — "No Fishy Taste" (Shrushti)
-- **Visible skin results** — Ashutosh, Avni, Priya
-- **Hair & nails** — Reena
-- **Ease of daily use** — Priya (dissolves in coffee)
+| Element | Source Value | Prototype Value | Status |
+|---------|--------------|-----------------|--------|
+| **Product Title** | Pure Korean Marine Collagen Peptides \| Unflavored \| Combat Signs of Ageing | Pure Korean Marine Collagen Peptides (Unflavored \| Combat Signs of Ageing) | Verified Exact |
+| **Rating** | 4.74 / 5 | 4.74 / 5 | Verified Exact (Fixed from 4.9) |
+| **Review Count** | 571 verified reviews | 571 verified reviews | Verified Exact |
+| **Pack of 1** | ₹1,745 (MRP ₹1,799) | ₹1,745 (MRP ₹1,799) | Verified Exact |
+| **Pack of 2** | ₹3,418 (MRP ₹3,598) | ₹3,418 (MRP ₹3,598) | Verified Exact |
+| **Pack of 3** | ₹5,019 (MRP ₹5,397) | ₹5,019 (MRP ₹5,397) | Verified Exact |
+| **Pack of 4** | ₹6,476 (MRP ₹7,196) | ₹6,476 (MRP ₹7,196) | Verified Exact |
+| **Description** | Boost your body's collagen levels naturally with scientifically-researched Type 1 & Type 3 Korean marine collagen peptides... | Preserved verbatim from PDP | Verified Exact |
+| **Clinical Studies** | 4 Peer-Reviewed Citations | Journal of Cosmetic Dermatology (2015, 2021), J Med Food (2022), Orthopedic Reviews (2025) | Verified Exact |
+| **Testimonials** | Real customer reviews | Shrushti, Ashutosh J, Avni R, Reena S, Priya D | Verified Exact |
 
-The 4.9 / 571 rating is used. The suspicious rating distribution (74/26/0/0/0) is intentionally not reproduced.
+## Visual Design System & Aesthetics
 
-## Secondary Improvements (P1)
+- **Deep Teal (`#007065`):** Brand authority, headings, dark science section
+- **Teal (`#00A79D`):** Primary interaction, CTAs, links
+- **Warm Peach (`#F5C181`):** Benefit storytelling, energy cues, savings badges
+- **Cream (`#FFEECF`):** Warm background sections, proof strips
+- **White (`#FFFFFF`):** Buy box container, crisp card surfaces
+- **Typography:** Manrope (Google Fonts)
 
-- **Dosage clarity:** Recommended daily dose (5–10g) presented clearly near the buy box
-- **Marine / non-veg disclosure:** "Marine-Derived Collagen · Non-Vegetarian" badge visible before purchase decision
-- **Credible urgency:** No artificial stock counters or fake scarcity. Purchase reassurance through verified claims only.
-
-## Key UX Changes
-
-| Change | CRO Rationale |
-|--------|---------------|
-| Proof strip near CTA | Reduces uncertainty at the decision point |
-| Pack selector cards | Replaces dense form with scannable visual selection |
-| Objection-led reviews | Social proof answers real purchase questions |
-| Progressive disclosure | Education content doesn't block the purchase path |
-| Sticky mobile CTA | Maintains purchase access during scroll |
-| Marine source badge | Product qualification visible before commitment |
-| Clinical evidence section | Deeper proof available through anchor navigation |
-
-## Clinical Studies Referenced
-
-All from the assigned product page:
-
-1. Journal of Cosmetic Dermatology, 2015 — skin moisture and dermal collagen network
-2. Journal of Cosmetic Dermatology, 2021 — triple-blind placebo-controlled study, wrinkles and elasticity
-3. Journal of Medicinal Food, 2022 — low-molecular-weight collagen peptides, skin wrinkles
-4. Orthopedic Reviews, 2025 — Type I collagen hydrolysate, bones, muscles and joints
-
-## Tech
-
-- **HTML5** — Semantic markup, accessibility attributes
-- **CSS3** — Custom design system, responsive (375px–1440px)
-- **JavaScript** — Vanilla JS, no external dependencies
-- **Manrope** — Google Fonts
-- **Responsive design** — tested at 375px, 390px, 430px, 768px, 1024px, 1280px, 1440px
-
-## File Structure
+## File Architecture
 
 ```
 troopod-cro-wellbeing-pdp/
-├── index.html          # Complete PDP prototype
+├── index.html          # Complete PDP HTML
 ├── css/
-│   └── styles.css      # Design system + all component styles
+│   └── styles.css      # Design system & responsive styles
 ├── js/
-│   └── script.js       # Interactive functionality
-├── README.md           # This file
+│   └── script.js       # Pack selection, quantity, accordions, gallery & filters
+├── README.md           # Documentation
 └── .gitignore
 ```
 
-## Running Locally
+## Local Setup & Testing
 
-Open `index.html` in any modern browser. No build step or server required.
-
-Product images are loaded from the Wellbeing Nutrition CDN (requires internet connection).
-
-## Source Data Integrity
-
-All product data in this prototype is extracted directly from the assigned product page:
-
-- **Pricing:** Exact values from Shopify product JSON (₹1,745 / ₹3,418 / ₹5,019 / ₹6,476)
-- **Rating:** 4.9 average, 571 reviews (from rendered page)
-- **Reviews:** Real testimonials from the product page (Shrushti, Ashutosh J, Avni R, Reena S, Priya D)
-- **Clinical studies:** 4 peer-reviewed references from the product page
-- **FAQs:** 8 prioritized from 19 verified FAQs in the page's structured data
-- **Product claims:** All from the assigned PDP — nothing invented
+Open `index.html` in any modern web browser. Fully responsive across desktop (1440px, 1280px), tablet (768px), and mobile (390px, 375px) viewpoints.
 
 ## Disclaimer
 
-This is a prototype created for the Troopod interview assignment. It is **not** an official Wellbeing Nutrition redesign, and no affiliation with Wellbeing Nutrition is claimed. All product information is sourced from the publicly available product page for demonstration purposes only.
-
-No claims are made about expected conversion impact. This prototype represents a **testable CRO hypothesis**, not a guaranteed performance improvement.
+Created for the Troopod interview assignment. Not an official Wellbeing Nutrition page. All product facts, prices, and images are sourced from the official product page for CRO evaluation purposes.

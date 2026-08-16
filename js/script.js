@@ -1,6 +1,6 @@
 /* ================================================================
    WELLBEING NUTRITION — KOREAN MARINE COLLAGEN PDP
-   CRO Prototype — Interactions
+   CRO Prototype — Interactions (Source-Fidelity Pass)
    
    Features:
    - Pack selector (updates price, savings, per-unit)
@@ -11,13 +11,13 @@
    - Anchor navigation (smooth scroll)
    - Sticky mobile CTA (tracks selected pack)
    - Image gallery thumbnails
-   - Review theme filter
+   - Review objection theme filter
    ================================================================ */
 
 (function () {
   'use strict';
 
-  /* ---- PRODUCT DATA (verified from source) ---- */
+  /* ---- PRODUCT DATA (exact verified source pricing) ---- */
   const variants = [
     {
       id: 40790287614032,
@@ -25,8 +25,8 @@
       price: 1745,
       mrp: 1799,
       savings: 54,
-      savingsPercent: '3%',
-      servings: '~25 servings'
+      savingsPercent: '3% OFF',
+      servings: '~25 servings (200g tub)'
     },
     {
       id: 40790287646800,
@@ -34,8 +34,8 @@
       price: 3418,
       mrp: 3598,
       savings: 180,
-      savingsPercent: '5%',
-      servings: '~50 servings'
+      savingsPercent: '5% OFF',
+      servings: '~50 servings (2x 200g tubs)'
     },
     {
       id: 40790287679568,
@@ -43,8 +43,8 @@
       price: 5019,
       mrp: 5397,
       savings: 378,
-      savingsPercent: '7%',
-      servings: '~75 servings'
+      savingsPercent: '7% OFF',
+      servings: '~75 servings (3x 200g tubs)'
     },
     {
       id: 40790287712336,
@@ -52,8 +52,8 @@
       price: 6476,
       mrp: 7196,
       savings: 720,
-      savingsPercent: '10%',
-      servings: '~100 servings'
+      savingsPercent: '10% OFF',
+      servings: '~100 servings (4x 200g tubs)'
     }
   ];
 
@@ -119,7 +119,7 @@
     var stickyMrp = document.getElementById('sticky-mrp');
 
     if (stickyPrice) stickyPrice.textContent = formatPrice(v.price);
-    if (stickyMrp) stickyMrp.textContent = formatPrice(v.mrp);
+    if (stickyMrp) stickyMrp.textContent = 'MRP ' + formatPrice(v.mrp);
   }
 
   /* ---- QUANTITY SELECTOR ---- */
@@ -161,7 +161,7 @@
         if (cartCount) {
           var current = parseInt(cartCount.textContent) || 0;
           cartCount.textContent = current + quantity;
-          cartCount.style.display = 'flex';
+          cartCount.style.display = 'inline-flex';
         }
 
         setTimeout(function () {
@@ -180,7 +180,6 @@
     triggers.forEach(function (trigger) {
       trigger.addEventListener('click', function () {
         var item = trigger.closest('.accordion-item');
-        var content = item.querySelector('.accordion-content');
         var isOpen = item.classList.contains('open');
 
         // Close all siblings in same accordion
@@ -208,8 +207,10 @@
 
     thumbs.forEach(function (thumb) {
       thumb.addEventListener('click', function () {
-        var src = thumb.querySelector('img').src;
-        // Upgrade to larger size
+        var img = thumb.querySelector('img');
+        if (!img) return;
+        var src = img.src;
+        // Upgrade size parameter
         mainImg.src = src.replace(/width=\d+/, 'width=900');
         
         thumbs.forEach(function (t) { t.classList.remove('active'); });
@@ -229,7 +230,6 @@
       theme.addEventListener('click', function () {
         var filter = theme.getAttribute('data-theme');
 
-        // Toggle active
         var wasActive = theme.classList.contains('active');
         themes.forEach(function (t) { t.classList.remove('active'); });
 
@@ -237,7 +237,6 @@
           theme.classList.add('active');
         }
 
-        // Filter cards
         cards.forEach(function (card) {
           if (wasActive || !filter) {
             card.style.display = '';
@@ -258,9 +257,7 @@
 
     function checkVisibility() {
       var rect = hero.getBoundingClientRect();
-      var heroBottom = rect.bottom;
-      
-      if (heroBottom < 0) {
+      if (rect.bottom < 0) {
         sticky.style.transform = 'translateY(0)';
       } else {
         sticky.style.transform = 'translateY(100%)';
@@ -284,7 +281,7 @@
         var target = document.querySelector(targetId);
         if (target) {
           e.preventDefault();
-          var offset = 70;
+          var offset = 80;
           var position = target.getBoundingClientRect().top + window.pageYOffset - offset;
           window.scrollTo({ top: position, behavior: 'smooth' });
         }
@@ -292,7 +289,7 @@
     });
   }
 
-  /* ---- INIT ---- */
+  /* ---- INITIALIZATION ---- */
   function init() {
     initPackSelector();
     initQuantitySelector();
