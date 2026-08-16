@@ -1,16 +1,15 @@
 /* ================================================================
    WELLBEING NUTRITION — KOREAN MARINE COLLAGEN PDP
-   CRO Prototype — New UI Color System & Poppins Typography
+   CRO Prototype — Locked 4-Color Visual System & Poppins Typography
    
-   COLOR PALETTE ROLE SYSTEM (No Teal UI! Teal = Product Asset Only):
-     Warm Ivory / Canvas: #FFFDF7 (Main page canvas & section background)
-     Soft Light Yellow:   #FFF1C7 (Offers, announcement bar, brand proof)
-     Sage Green:          #DCE8D5 (Trust, clinical evidence, quality)
-     Warm Peach / Orange: #F4B183 (Beauty outcomes, savings tags, stars)
-     Charcoal / Black:    #1D1D1B (Headings, primary text, Primary CTA)
-     White:               #FFFFFF (Cards, Buy Box container, content surfaces)
-     Border / Neutral:    #EFECE6 (Subtle borders)
+   LOCKED COLOR SYSTEM (NO TEAL UI, NO YELLOW):
+     1. BLACK / CHARCOAL: #1D1D1B (Headings, primary text, navigation, Primary CTA, price)
+     2. WHITE:            #FFFFFF (Canvas, Buy box, cards, review area, FAQ, footer canvas)
+     3. ORANGE:           #E65100 / #FF6F00 (Offer badges, ratings, savings, active states, highlights)
+     4. GREEN:            #2E7D32 / #1B5E20 / #E8F5E9 (Trust, verification, clinical section, quality)
+     Neutral Borders:     #EFECE6 / #E0E0E0
    
+   TEAL RULE: Teal is restricted ONLY to the real product packaging image.
    Typography: Poppins (Google Fonts)
    ================================================================ */
 
@@ -32,7 +31,7 @@ body {
   font-size: 15px;
   line-height: 1.6;
   color: #1D1D1B;
-  background-color: #FFFDF7;
+  background-color: #FFFFFF;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   overflow-x: hidden;
@@ -115,16 +114,15 @@ ul, ol {
 }
 
 /* ================================================================
-   01 — ANNOUNCEMENT BAR (Soft Light Yellow)
+   01 — ANNOUNCEMENT BAR (Black / White / Orange)
    ================================================================ */
 .announcement-bar {
-  background: #FFF1C7;
-  color: #1D1D1B;
-  border-bottom: 1px solid #F4B183;
+  background: #1D1D1B;
+  color: #FFFFFF;
   text-align: center;
   padding: 9px 16px;
   font-size: 13px;
-  font-weight: 600;
+  font-weight: 500;
   letter-spacing: 0.02em;
   display: flex;
   align-items: center;
@@ -134,8 +132,8 @@ ul, ol {
 }
 
 .announcement-bar__badge {
-  background: #F4B183;
-  color: #1D1D1B;
+  background: #E65100;
+  color: #FFFFFF;
   font-size: 11px;
   font-weight: 700;
   padding: 2px 8px;
@@ -155,7 +153,7 @@ ul, ol {
 }
 
 /* ================================================================
-   02 — GLOBAL WEBSITE HEADER (Neutral White/Ivory Canvas)
+   02 — GLOBAL WEBSITE HEADER (White / Black)
    ================================================================ */
 .global-header {
   background: #FFFFFF;
@@ -223,7 +221,7 @@ ul, ol {
 .global-header__search {
   display: flex;
   align-items: center;
-  background: #FFFDF7;
+  background: #FAFAFA;
   border: 1px solid #EFECE6;
   border-radius: 20px;
   padding: 6px 14px;
@@ -263,19 +261,19 @@ ul, ol {
   font-weight: 600;
   color: #1D1D1B;
   gap: 8px;
-  background: #FFF1C7;
-  border: 1px solid #F4B183;
+  background: #FAFAFA;
+  border: 1px solid #EFECE6;
   padding: 7px 16px;
   border-radius: 20px;
-  transition: background 0.2s;
+  transition: all 0.2s;
 }
 
 .global-header__cart:hover {
-  background: #F4B183;
+  border-color: #1D1D1B;
 }
 
 .cart-count {
-  background: #1D1D1B;
+  background: #E65100;
   color: #FFFFFF;
   font-size: 11px;
   font-weight: 700;
@@ -291,7 +289,7 @@ ul, ol {
    SECONDARY PDP ANCHOR BAR
    ================================================================ */
 .pdp-anchor-bar {
-  background: #FFFDF7;
+  background: #FFFFFF;
   border-bottom: 1px solid #EFECE6;
   padding: 10px 0;
   position: sticky;
@@ -317,12 +315,24 @@ ul, ol {
   font-weight: 500;
   color: #555555;
   transition: color 0.2s;
+  position: relative;
+  padding-bottom: 2px;
 }
 
 .pdp-anchor-link:hover,
 .pdp-anchor-link.active {
   color: #1D1D1B;
   font-weight: 700;
+}
+
+.pdp-anchor-link.active::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: #E65100;
 }
 
 .pdp-anchor-bar__quick-rating {
@@ -360,7 +370,7 @@ ul, ol {
   aspect-ratio: 1;
   border-radius: 16px;
   overflow: hidden;
-  background: #FFFDF7;
+  background: #FAFAFA;
   margin-bottom: 14px;
   border: 1px solid #EFECE6;
   box-shadow: 0 4px 16px rgba(0,0,0,0.03);
@@ -389,12 +399,12 @@ ul, ol {
   cursor: pointer;
   flex-shrink: 0;
   transition: all 0.2s ease;
-  background: #FFFDF7;
+  background: #FAFAFA;
 }
 
 .gallery__thumb:hover,
 .gallery__thumb:focus {
-  border-color: #F4B183;
+  border-color: #E65100;
 }
 
 .gallery__thumb.active {
@@ -436,8 +446,8 @@ ul, ol {
   font-size: 13px;
   font-weight: 600;
   color: #1D1D1B;
-  background: #FFF1C7;
-  border: 1px solid #F4B183;
+  background: #FAFAFA;
+  border: 1px solid #E0E0E0;
   padding: 3px 10px;
   border-radius: 4px;
   margin-bottom: 12px;
@@ -458,7 +468,7 @@ ul, ol {
   gap: 10px;
   margin-bottom: 16px;
   flex-wrap: wrap;
-  background: #FFFDF7;
+  background: #FAFAFA;
   border: 1px solid #EFECE6;
   padding: 8px 14px;
   border-radius: 8px;
@@ -468,7 +478,7 @@ ul, ol {
 .stars-svg {
   display: inline-flex;
   gap: 2px;
-  color: #F4B183;
+  color: #E65100;
 }
 
 .rating-number {
@@ -490,16 +500,16 @@ ul, ol {
   text-underline-offset: 2px;
 }
 
-/* Marine Source Qualification */
+/* Marine Source Qualification (Green Accent) */
 .buy-box__source {
   display: inline-flex;
   align-items: center;
   gap: 8px;
   font-size: 12px;
   font-weight: 600;
-  color: #1D1D1B;
-  background: #DCE8D5;
-  border: 1px solid #b5ccaa;
+  color: #2E7D32;
+  background: #E8F5E9;
+  border: 1px solid #C8E6C9;
   padding: 5px 12px;
   border-radius: 6px;
   margin-bottom: 18px;
@@ -527,22 +537,22 @@ ul, ol {
   width: 20px;
   height: 20px;
   border-radius: 50%;
-  background: #DCE8D5;
-  color: #1D1D1B;
+  background: #E8F5E9;
+  color: #2E7D32;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-/* Decision-Point Proof Strip — P0-1 (Light Yellow) */
+/* Decision-Point Proof Strip — P0-1 (White with Green Icons) */
 .proof-strip {
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 12px;
   padding: 12px 16px;
-  background: #FFF1C7;
-  border: 1px solid #F4B183;
+  background: #FFFFFF;
+  border: 1px solid #EFECE6;
   border-radius: 10px;
   margin-bottom: 22px;
   flex-wrap: wrap;
@@ -557,10 +567,14 @@ ul, ol {
   color: #1D1D1B;
 }
 
+.proof-strip__item .icon-svg {
+  color: #2E7D32;
+}
+
 .proof-strip__link {
   font-size: 12px;
   font-weight: 700;
-  color: #1D1D1B;
+  color: #E65100;
   text-decoration: underline;
   text-underline-offset: 2px;
   cursor: pointer;
@@ -570,7 +584,7 @@ ul, ol {
 }
 
 .proof-strip__link:hover {
-  color: #E65100;
+  color: #1D1D1B;
 }
 
 /* Pricing Display */
@@ -599,8 +613,8 @@ ul, ol {
 .price-savings {
   font-size: 13px;
   font-weight: 700;
-  color: #1D1D1B;
-  background: #F4B183;
+  color: #FFFFFF;
+  background: #E65100;
   padding: 3px 10px;
   border-radius: 4px;
 }
@@ -616,8 +630,8 @@ ul, ol {
 .buy-box__member-note {
   font-size: 12px;
   color: #1D1D1B;
-  background: #FFF1C7;
-  border-left: 3px solid #F4B183;
+  background: #FAFAFA;
+  border-left: 3px solid #E65100;
   padding: 8px 12px;
   border-radius: 0 6px 6px 0;
   margin-bottom: 20px;
@@ -625,6 +639,10 @@ ul, ol {
   display: flex;
   align-items: center;
   gap: 8px;
+}
+
+.buy-box__member-note .icon-svg {
+  color: #E65100;
 }
 
 /* Pack Selector Cards */
@@ -662,12 +680,12 @@ ul, ol {
 }
 
 .pack-card:hover {
-  border-color: #F4B183;
+  border-color: #E65100;
 }
 
 .pack-card.active {
   border-color: #1D1D1B;
-  background: #FFFDF7;
+  background: #FFFFFF;
   box-shadow: 0 2px 10px rgba(0,0,0,0.08);
 }
 
@@ -701,8 +719,8 @@ ul, ol {
   position: absolute;
   top: -9px;
   right: 10px;
-  background: #F4B183;
-  color: #1D1D1B;
+  background: #E65100;
+  color: #FFFFFF;
   font-size: 10px;
   font-weight: 700;
   padding: 1px 7px;
@@ -716,13 +734,17 @@ ul, ol {
   color: #4A4A4A;
   margin-bottom: 20px;
   padding: 12px 14px;
-  background: #FFFDF7;
+  background: #FAFAFA;
   border-radius: 8px;
-  border-left: 3px solid #DCE8D5;
+  border-left: 3px solid #2E7D32;
   line-height: 1.5;
   display: flex;
   align-items: flex-start;
   gap: 10px;
+}
+
+.buy-box__dosage .icon-svg {
+  color: #2E7D32;
 }
 
 /* Quantity Selector */
@@ -757,12 +779,12 @@ ul, ol {
   font-size: 18px;
   font-weight: 600;
   color: #1D1D1B;
-  background: #FFFDF7;
+  background: #FAFAFA;
   transition: background 0.15s;
 }
 
 .qty-btn:hover {
-  background: #FFF1C7;
+  background: #EFECE6;
 }
 
 .qty-value {
@@ -773,7 +795,7 @@ ul, ol {
   color: #1D1D1B;
 }
 
-/* PRIMARY CTA BUTTON (Charcoal / Black with White Text) */
+/* PRIMARY CTA BUTTON (Black with White Text, Orange Hover) */
 .cta-primary {
   width: 100%;
   padding: 18px 32px;
@@ -794,8 +816,8 @@ ul, ol {
 }
 
 .cta-primary:hover {
-  background: #333333;
-  box-shadow: 0 6px 20px rgba(0,0,0,0.25);
+  background: #E65100;
+  box-shadow: 0 6px 20px rgba(230,81,0,0.3);
 }
 
 .cta-primary:active {
@@ -843,6 +865,10 @@ ul, ol {
   margin-bottom: 8px;
 }
 
+.ai-assistant-card__header .icon-svg {
+  color: #E65100;
+}
+
 .ai-assistant-card__chips {
   display: flex;
   gap: 6px;
@@ -853,7 +879,7 @@ ul, ol {
   font-size: 11px;
   font-weight: 500;
   color: #1D1D1B;
-  background: #FFFDF7;
+  background: #FAFAFA;
   border: 1px solid #EFECE6;
   padding: 4px 10px;
   border-radius: 14px;
@@ -862,13 +888,14 @@ ul, ol {
 }
 
 .ai-chip:hover {
-  background: #FFF1C7;
-  border-color: #F4B183;
+  background: #FFF3E0;
+  border-color: #E65100;
+  color: #E65100;
 }
 
 .ai-answer-box {
   margin-top: 10px;
-  background: #FFFDF7;
+  background: #FAFAFA;
   border: 1.5px solid #1D1D1B;
   border-radius: 8px;
   padding: 10px 14px;
@@ -879,10 +906,10 @@ ul, ol {
 }
 
 /* ================================================================
-   04 — PRODUCT QUALITY TRUST STRIP (Warm Ivory Canvas)
+   04 — PRODUCT QUALITY TRUST STRIP (White Canvas + Green Icons)
    ================================================================ */
 .quality-strip {
-  background: #FFFDF7;
+  background: #FFFFFF;
   border-top: 1px solid #EFECE6;
   border-bottom: 1px solid #EFECE6;
   padding: 24px 0;
@@ -909,11 +936,11 @@ ul, ol {
   width: 36px;
   height: 36px;
   border-radius: 50%;
-  background: #DCE8D5;
+  background: #E8F5E9;
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #1D1D1B;
+  color: #2E7D32;
 }
 
 /* ================================================================
@@ -955,9 +982,9 @@ ul, ol {
   display: flex;
   gap: 20px;
   padding: 24px;
-  background: #FFFDF7;
+  background: #FFFFFF;
   border-radius: 12px;
-  border-left: 4px solid #DCE8D5;
+  border-left: 4px solid #2E7D32;
   border-top: 1px solid #EFECE6;
   border-right: 1px solid #EFECE6;
   border-bottom: 1px solid #EFECE6;
@@ -969,8 +996,8 @@ ul, ol {
 }
 
 .why-story-card__icon {
-  color: #1D1D1B;
-  background: #DCE8D5;
+  color: #2E7D32;
+  background: #E8F5E9;
   width: 48px;
   height: 48px;
   border-radius: 10px;
@@ -994,13 +1021,13 @@ ul, ol {
 }
 
 /* ================================================================
-   06 — TARGETED OUTCOMES / BENEFITS (Soft Light Yellow)
+   06 — TARGETED BEAUTY & WELLNESS OUTCOMES (White Background + Orange Icons)
    ================================================================ */
 .benefits-section {
   padding: 68px 0;
-  background: #FFF1C7;
-  border-top: 1px solid #F4B183;
-  border-bottom: 1px solid #F4B183;
+  background: #FFFFFF;
+  border-top: 1px solid #EFECE6;
+  border-bottom: 1px solid #EFECE6;
 }
 
 .benefits-layout {
@@ -1014,7 +1041,7 @@ ul, ol {
   border-radius: 16px;
   overflow: hidden;
   box-shadow: 0 8px 30px rgba(0,0,0,0.06);
-  border: 4px solid #FFFFFF;
+  border: 1px solid #EFECE6;
 }
 
 .benefits-media img {
@@ -1033,18 +1060,19 @@ ul, ol {
   background: #FFFFFF;
   padding: 24px;
   border-radius: 12px;
-  border: 1px solid #F4B183;
-  transition: box-shadow 0.2s ease;
+  border: 1px solid #EFECE6;
+  transition: box-shadow 0.2s ease, border-color 0.2s ease;
 }
 
 .benefit-card:hover {
   box-shadow: 0 6px 24px rgba(0,0,0,0.06);
+  border-color: #E65100;
 }
 
 .benefit-card__icon {
-  color: #1D1D1B;
-  background: #FFF1C7;
-  border: 1px solid #F4B183;
+  color: #E65100;
+  background: #FFF3E0;
+  border: 1px solid #FFE0B2;
   width: 44px;
   height: 44px;
   border-radius: 10px;
@@ -1068,11 +1096,11 @@ ul, ol {
 }
 
 /* ================================================================
-   07 — HOW TO USE (Warm Ivory Canvas)
+   07 — HOW TO USE (White Canvas + Green Steps)
    ================================================================ */
 .how-to-section {
   padding: 72px 0;
-  background: #FFFDF7;
+  background: #FFFFFF;
 }
 
 .how-to-layout {
@@ -1102,13 +1130,13 @@ ul, ol {
   display: inline-flex;
   align-items: center;
   gap: 6px;
-  background: #FFF1C7;
-  color: #1D1D1B;
+  background: #E8F5E9;
+  color: #2E7D32;
   font-size: 12px;
   font-weight: 600;
   padding: 6px 14px;
   border-radius: 20px;
-  border: 1px solid #F4B183;
+  border: 1px solid #C8E6C9;
 }
 
 .how-to-steps {
@@ -1122,7 +1150,7 @@ ul, ol {
   padding: 22px 24px;
   border-radius: 14px;
   border: 1px solid #EFECE6;
-  border-left: 4px solid #DCE8D5;
+  border-left: 4px solid #2E7D32;
   box-shadow: 0 4px 16px rgba(0,0,0,0.02);
   display: flex;
   align-items: flex-start;
@@ -1132,15 +1160,15 @@ ul, ol {
 
 .step-card:hover {
   transform: translateX(4px);
-  border-left-color: #F4B183;
+  border-left-color: #E65100;
 }
 
 .step-card__icon-box {
   width: 48px;
   height: 48px;
   border-radius: 12px;
-  background: #DCE8D5;
-  color: #1D1D1B;
+  background: #E8F5E9;
+  color: #2E7D32;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1152,7 +1180,7 @@ ul, ol {
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.08em;
-  color: #555555;
+  color: #E65100;
   margin-bottom: 2px;
 }
 
@@ -1170,13 +1198,13 @@ ul, ol {
 }
 
 /* ================================================================
-   08 — BRAND PROOF: INNOVATION MEETS INTEGRITY (Soft Light Yellow)
+   08 — BRAND PROOF: INNOVATION MEETS INTEGRITY (White Background)
    ================================================================ */
 .brand-proof-section {
   padding: 64px 0;
-  background: #FFF1C7;
-  border-top: 1px solid #F4B183;
-  border-bottom: 1px solid #F4B183;
+  background: #FFFFFF;
+  border-top: 1px solid #EFECE6;
+  border-bottom: 1px solid #EFECE6;
   text-align: center;
 }
 
@@ -1190,7 +1218,8 @@ ul, ol {
 
 .brand-proof-card {
   background: #FFFFFF;
-  border: 1px solid #F4B183;
+  border: 1px solid #EFECE6;
+  border-top: 3px solid #2E7D32;
   padding: 28px 20px;
   border-radius: 14px;
 }
@@ -1210,22 +1239,20 @@ ul, ol {
 }
 
 /* ================================================================
-   09 — CLINICAL EVIDENCE (Sage Green Authority Section)
+   09 — CLINICAL EVIDENCE (Green Section Authority)
    ================================================================ */
 .science-section {
   padding: 72px 0;
-  background: #DCE8D5;
-  color: #1D1D1B;
-  border-top: 1px solid #b5ccaa;
-  border-bottom: 1px solid #b5ccaa;
+  background: #1B5E20;
+  color: #FFFFFF;
 }
 
 .science-section .section-heading {
-  color: #1D1D1B;
+  color: #FFFFFF;
 }
 
 .science-section .section-subheading {
-  color: #333333;
+  color: rgba(255,255,255,0.85);
 }
 
 .studies-grid {
@@ -1238,7 +1265,6 @@ ul, ol {
 
 .study-card {
   background: #FFFFFF;
-  border: 1px solid #b5ccaa;
   border-radius: 14px;
   padding: 28px;
   transition: transform 0.2s ease, box-shadow 0.2s ease;
@@ -1246,7 +1272,7 @@ ul, ol {
 
 .study-card:hover {
   transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(0,0,0,0.05);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.15);
 }
 
 .study-card__journal {
@@ -1254,7 +1280,7 @@ ul, ol {
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.06em;
-  color: #1D1D1B;
+  color: #E65100;
   margin-bottom: 10px;
   display: flex;
   align-items: center;
@@ -1306,7 +1332,7 @@ ul, ol {
 }
 
 .reviews-header__stars {
-  color: #F4B183;
+  color: #E65100;
   margin-bottom: 4px;
   display: flex;
   gap: 2px;
@@ -1340,9 +1366,9 @@ ul, ol {
 
 .review-theme:hover,
 .review-theme.active {
-  border-color: #1D1D1B;
-  color: #1D1D1B;
-  background: #FFF1C7;
+  border-color: #E65100;
+  color: #FFFFFF;
+  background: #E65100;
 }
 
 .reviews-grid {
@@ -1355,7 +1381,7 @@ ul, ol {
 
 .review-card {
   border: 1px solid #EFECE6;
-  background: #FFFDF7;
+  background: #FFFFFF;
   border-radius: 14px;
   padding: 26px;
   transition: box-shadow 0.2s ease;
@@ -1386,7 +1412,7 @@ ul, ol {
 }
 
 .review-card__stars {
-  color: #F4B183;
+  color: #E65100;
   display: flex;
   gap: 2px;
 }
@@ -1410,20 +1436,20 @@ ul, ol {
   gap: 4px;
   font-size: 11px;
   font-weight: 600;
-  color: #1D1D1B;
-  background: #FFF1C7;
-  border: 1px solid #F4B183;
+  color: #2E7D32;
+  background: #E8F5E9;
+  border: 1px solid #C8E6C9;
   padding: 3px 10px;
   border-radius: 4px;
   margin-top: 14px;
 }
 
 /* ================================================================
-   11 — DEEP-DIVE EDUCATION (Warm Ivory Canvas & Header Badge)
+   11 — DEEP-DIVE EDUCATION (White Canvas & Green Header Badge)
    ================================================================ */
 .deepdive-section {
   padding: 72px 0;
-  background: #FFFDF7;
+  background: #FFFFFF;
   border-top: 2px solid #EFECE6;
   border-bottom: 1px solid #EFECE6;
 }
@@ -1431,8 +1457,8 @@ ul, ol {
 .deepdive-header-tag {
   display: table;
   margin: 0 auto 12px;
-  background: #DCE8D5;
-  color: #1D1D1B;
+  background: #E8F5E9;
+  color: #2E7D32;
   font-size: 11px;
   font-weight: 700;
   text-transform: uppercase;
@@ -1508,11 +1534,11 @@ ul, ol {
 }
 
 /* ================================================================
-   13 — EXPLORE SIMILAR PRODUCTS (Preserve Real Packaging Colors)
+   13 — EXPLORE SIMILAR PRODUCTS (Commerce Recommendation Module)
    ================================================================ */
 .related-section {
   padding: 72px 0;
-  background: #FFFDF7;
+  background: #FFFFFF;
   border-top: 1px solid #EFECE6;
 }
 
@@ -1540,8 +1566,8 @@ ul, ol {
 
 .related-card__img {
   width: 100%;
-  aspect-ratio: 1;
-  background: #FFFDF7;
+  aspect-ratio: 1.1;
+  background: #FAFAFA;
   overflow: hidden;
 }
 
@@ -1611,7 +1637,7 @@ ul, ol {
 }
 
 .related-card__btn:hover {
-  background: #333333;
+  background: #E65100;
 }
 
 /* Category Accent Styles for Packaging Fidelity */
@@ -1620,12 +1646,12 @@ ul, ol {
 .related-card--green .related-card__category { color: #2E7D32; }
 
 /* ================================================================
-   14 — FINAL CTA (Soft Light Yellow)
+   14 — FINAL CTA (White Background with Black CTA)
    ================================================================ */
 .final-cta {
   padding: 72px 0;
-  background: #FFF1C7;
-  border-top: 1px solid #F4B183;
+  background: #FFFFFF;
+  border-top: 1px solid #EFECE6;
   text-align: center;
 }
 
@@ -1651,7 +1677,7 @@ ul, ol {
 }
 
 /* ================================================================
-   15 — FOOTER (Neutral Charcoal)
+   15 — FOOTER (Neutral Black/Charcoal)
    ================================================================ */
 .site-footer {
   background: #1D1D1B;
@@ -1662,7 +1688,7 @@ ul, ol {
 }
 
 .site-footer a {
-  color: #F4B183;
+  color: #E65100;
 }
 
 .site-footer__disclaimer {

@@ -16,7 +16,7 @@ This prototype translates a CRO audit into a decision-first PDP experience. It d
 
 ---
 
-## Strategic CRO Thesis
+## Strategic CRO Thesis & Evidence Base
 
 > **Wellbeing Nutrition doesn't have an information shortage. It has an information-sequencing and decision-friction problem.**
 
@@ -25,36 +25,47 @@ The original product page contains strong proof and product information, but the
 The redesign optimizes the user journey through five distinct states:
 `UNDERSTAND → TRUST → CHOOSE → BUY → EXPLORE`
 
+### Defensible Design & UX Rationale (Baymard Institute Grounding)
+
+The visual system was simplified to improve visual hierarchy, maintain brand/ecosystem compatibility, and create stronger semantic distinction between primary actions, trust signals, and content sections:
+
+1. **Primary CTA Prominence & Buy Section Usability:**
+   Baymard’s e-commerce research emphasizes that the Add to Cart button and price must remain visually distinct and uncluttered by competing elements. Placing high-contrast Charcoal (`#1D1D1B`) on the primary CTA ensures immediate visual scanning.
+2. **Progressive Disclosure Architecture:**
+   Baymard specifically recommends collapsed accordion sections for long PDP content to prevent cognitive overload. Storing deep educational content behind expandable accordions allows shoppers seeking science to explore without slowing down primary buyers.
+3. **Objection-Led Reviews:**
+   Surfacing real customer testimonials filtered by key friction themes (Taste, Skin, Hair/Nails, Mixability) addresses hesitations at the decision point.
+4. **Supplementary Product Discovery:**
+   Baymard identifies alternative and supplementary product recommendation modules as a critical PDP discoverability pattern, preventing the PDP from becoming a dead-end.
+
 ---
 
-## Visual Design System & Palette Direction
+## Locked 4-Color UI Design System
 
-> **Principle: THE PRODUCT IS TEAL. THE WEBSITE UI IS NOT TEAL.**
+> **Principle: THE PRODUCT IS TEAL. THE WEBSITE INTERFACE IS NOT TEAL.**
 
-The redesigned interface sits on a **Warm Neutral D2C Commerce Palette**, letting the actual product packaging stand out as the primary visual hero:
+The website UI is strictly disciplined across four semantic colors, letting the actual product packaging stand out as the primary visual hero:
 
-- **Warm Ivory Canvas (`#FFFDF7`):** Primary page background & clean container canvas.
-- **Soft Light Yellow (`#FFF1C7`):** Announcement offer bar, brand proof, and decision-point proof strip.
-- **Sage Green (`#DCE8D5`):** Product quality commitments, natural ingredients, and clinical authority section.
-- **Warm Peach / Orange (`#F4B183`):** Beauty/wellness outcomes, savings tags, and star ratings.
-- **Charcoal / Black (`#1D1D1B`):** Global header, primary typography, and **Primary Add-to-Cart CTA**.
-- **White (`#FFFFFF`):** Buy box container, content cards, reviews, FAQs, and related products.
-- **Typography:** **Poppins** (Google Fonts) — Enforced across 700-800 (Title/Price), 700 (Headings/CTA), 600 (Subheadings/Badges), 400-500 (Body/Metadata).
+1. **BLACK / CHARCOAL (`#1D1D1B`):** Primary typography, headings, navigation links, price, and Primary Add-to-Cart CTA.
+2. **WHITE (`#FFFFFF`):** Main page background canvas, buy box container, review cards, FAQ background, and recommendation cards.
+3. **ORANGE (`#E65100`):** Offer badges, savings tags, active navigation indicators, star rating fills, and highlight accents.
+4. **GREEN (`#2E7D32` / `#1B5E20`):** Trust verification checkmarks, product quality strip icons, clinical authority section background, and verified badges.
+5. **Typography:** **Poppins** (Google Fonts) — Enforced across 700–800 (Title/Price), 700 (Headings/CTA), 600 (Subheadings/Badges), 400–500 (Body/Metadata).
 
 ---
 
 ## CRO Decision Framework & Hypothesis Mapping
 
-| Change | User Friction Addressed | Experiment Hypothesis | Primary Metric | Guardrail Metric |
-|--------|-------------------------|-----------------------|----------------|------------------|
-| **1. Decision-Point Proof Strip** | Clinical evidence and quality certifications are buried deep below the fold, creating hesitation at the buy box. | Placing concise proof (Clinically Tested, Third-Party Tested, FSSAI) directly above the purchase decision reduces uncertainty. | **Add-to-Cart Rate** | Exit rate from hero |
-| **2. Clear Commercial Price Hierarchy** | Complex member discounts and MRP strikethroughs confuse per-unit value. | Formatting price as Primary (Current), Secondary (MRP/Discount), and Tertiary (Member 5% OFF) reduces price comprehension friction. | **Add-to-Cart Rate** | Variant selection rate |
-| **3. Progressive Disclosure Architecture** | Dense scientific copy mixes with primary purchase flows, inducing cognitive fatigue. | Separating the primary shopping flow from deep-dive education via expandable accordions reduces drop-off. | **Primary Flow Completion** | Scroll depth / Exit rate |
-| **4. Objection-Led Verified Reviews** | Generic 5-star praise does not resolve specific purchase hesitations (e.g., fishy taste). | Structuring real reviews by objection themes (Taste, Skin, Hair/Nails, Mixability) directly resolves doubt. | **Review Filter Engagement** | Bounce rate |
-| **5. AI Product Assistant Card** | Shoppers abandon the page to search for quick factual answers (dosage, marine source). | Providing an inline AI assistance entry point with instant verified answer chips reduces research bounce. | **AI Engagement Rate** | Add-to-Cart Rate |
-| **6. Global Header + PDP Anchor Nav** | Text-only nav isolates the PDP from the website ecosystem; shoppers lack quick anchor jumps. | Combining global commerce header (Shop All, Search, Cart) with secondary PDP anchors enables smooth site & section navigation. | **Navigation CTR** | Time to ATC |
-| **7. Related Product Discovery** | The PDP becomes a conversion dead-end for users seeking complementary health items. | Adding a lower-page discovery section using authentic CDN product images and packaging colors drives multi-product consideration. | **Related Product CTR** | Primary PDP conversion |
-| **8. Restored Quality & Brand Proof** | Brand-level credibility (5M+ customers, US FDA facility) is disconnected from product quality facts. | Separating product quality facts (Mercury-Free, No Added Sugar) from brand-level scale highlights builds full-funnel trust. | **Cart Initiation** | Overall session duration |
+| Change | User Friction Addressed | Design Response & Hypothesis | Primary Metric | Guardrail Metric |
+|--------|-------------------------|------------------------------|----------------|------------------|
+| **1. Buy-Box Clarity** | Price strikethroughs and variant choices create decision friction. | High-contrast price formatting + clear pack selector cards simplify selection. | **Add-to-Cart Rate** | Variant selection rate |
+| **2. Decision-Point Proof Strip** | Clinical evidence and quality certifications are buried deep below the fold. | Placing concise proof (Clinically Tested, Third-Party Tested, FSSAI) near the Buy Box reduces uncertainty. | **Add-to-Cart Rate** | Exit rate from hero |
+| **3. Progressive Disclosure Architecture** | Dense scientific copy causes information overload on mobile. | Separating primary shopping flow from deep-dive education via accordions reduces drop-off. | **Primary Flow Completion** | Scroll depth / Exit rate |
+| **4. Objection-Led Verified Reviews** | Generic praise does not resolve taste or mixability doubts. | Structuring real reviews by objection themes (Taste, Skin, Hair/Nails, Mixability) resolves doubt. | **Review Filter Engagement** | Bounce rate |
+| **5. AI Product Assistant Card** | Shoppers abandon the page to search for quick factual answers. | Providing an inline AI assistance entry point with instant verified answer chips reduces research bounce. | **AI Engagement Rate** | Add-to-Cart Rate |
+| **6. Global Header + PDP Anchor Nav** | Text-only nav isolates PDP from the website ecosystem. | Global commerce header + sticky PDP section anchors enable smooth ecosystem navigation. | **Navigation CTR** | Time to ATC |
+| **7. Related Product Discovery** | The PDP becomes a conversion dead-end for complementary products. | A lower-page discovery section using authentic CDN product images and packaging colors drives cross-selling. | **Related Product CTR** | Primary PDP conversion |
+| **8. Visual Hierarchy Restraint** | Overly colourful UI dilutes primary CTA focus. | Restrained 4-color palette (Black/White/Orange/Green) creates strong semantic scanning. | **Session Engagement** | Overall session duration |
 
 ---
 
@@ -82,12 +93,12 @@ The redesigned interface sits on a **Warm Neutral D2C Commerce Palette**, lettin
 
 ```
 troopod-cro-wellbeing-pdp/
-├── index.html          # Complete PDP HTML with global header, Poppins & Warm Neutral palette
+├── index.html          # Complete PDP HTML with global header, Poppins & 4-color palette
 ├── css/
-│   └── styles.css      # Warm neutral design system (No Teal UI) & responsive rules
+│   └── styles.css      # Locked 4-color design system (No yellow, no UI teal) & responsive rules
 ├── js/
 │   └── script.js       # Pack selection, quantity, accordions, gallery, filters & AI assistant
-├── README.md           # CRO decision framework & fact audit documentation
+├── README.md           # CRO decision framework, Baymard grounding & fact audit documentation
 └── .gitignore
 ```
 
