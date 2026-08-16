@@ -27,6 +27,22 @@ The redesign optimizes the user journey through five distinct states:
 
 ---
 
+## Visual Design System & Palette Direction
+
+> **Principle: THE PRODUCT IS TEAL. THE WEBSITE UI IS NOT TEAL.**
+
+The redesigned interface sits on a **Warm Neutral D2C Commerce Palette**, letting the actual product packaging stand out as the primary visual hero:
+
+- **Warm Ivory Canvas (`#FFFDF7`):** Primary page background & clean container canvas.
+- **Soft Light Yellow (`#FFF1C7`):** Announcement offer bar, brand proof, and decision-point proof strip.
+- **Sage Green (`#DCE8D5`):** Product quality commitments, natural ingredients, and clinical authority section.
+- **Warm Peach / Orange (`#F4B183`):** Beauty/wellness outcomes, savings tags, and star ratings.
+- **Charcoal / Black (`#1D1D1B`):** Global header, primary typography, and **Primary Add-to-Cart CTA**.
+- **White (`#FFFFFF`):** Buy box container, content cards, reviews, FAQs, and related products.
+- **Typography:** **Poppins** (Google Fonts) — Enforced across 700-800 (Title/Price), 700 (Headings/CTA), 600 (Subheadings/Badges), 400-500 (Body/Metadata).
+
+---
+
 ## CRO Decision Framework & Hypothesis Mapping
 
 | Change | User Friction Addressed | Experiment Hypothesis | Primary Metric | Guardrail Metric |
@@ -37,30 +53,8 @@ The redesign optimizes the user journey through five distinct states:
 | **4. Objection-Led Verified Reviews** | Generic 5-star praise does not resolve specific purchase hesitations (e.g., fishy taste). | Structuring real reviews by objection themes (Taste, Skin, Hair/Nails, Mixability) directly resolves doubt. | **Review Filter Engagement** | Bounce rate |
 | **5. AI Product Assistant Card** | Shoppers abandon the page to search for quick factual answers (dosage, marine source). | Providing an inline AI assistance entry point with instant verified answer chips reduces research bounce. | **AI Engagement Rate** | Add-to-Cart Rate |
 | **6. Global Header + PDP Anchor Nav** | Text-only nav isolates the PDP from the website ecosystem; shoppers lack quick anchor jumps. | Combining global commerce header (Shop All, Search, Cart) with secondary PDP anchors enables smooth site & section navigation. | **Navigation CTR** | Time to ATC |
-| **7. Related Product Discovery** | The PDP becomes a conversion dead-end for users seeking complementary health items. | Adding an lower-page discovery section with authentic packaging fidelity drives multi-product consideration. | **Related Product CTR** | Primary PDP conversion |
+| **7. Related Product Discovery** | The PDP becomes a conversion dead-end for users seeking complementary health items. | Adding a lower-page discovery section using authentic CDN product images and packaging colors drives multi-product consideration. | **Related Product CTR** | Primary PDP conversion |
 | **8. Restored Quality & Brand Proof** | Brand-level credibility (5M+ customers, US FDA facility) is disconnected from product quality facts. | Separating product quality facts (Mercury-Free, No Added Sugar) from brand-level scale highlights builds full-funnel trust. | **Cart Initiation** | Overall session duration |
-
----
-
-## Experimentation Metrics & Measurement Plan
-
-### Primary Metrics
-- **Add-to-Cart Rate (ATC %):** Main conversion indicator for the PDP.
-- **Variant Selection Rate:** Engagement with Pack of 1, 2, 3, or 4 selector cards.
-- **CTA Interaction Rate:** Clicks on primary Buy Box CTA and sticky mobile CTA.
-
-### Secondary Metrics
-- **Scroll Depth:** Progression past Hero, Benefits, Science, and Reviews.
-- **Review Theme Engagement:** Interaction with Taste, Skin, Hair/Nails, and Mixability filters.
-- **Clinical Evidence Engagement:** Clicks on "View 4 Clinical Studies" anchor and DOI cards.
-- **AI Assistant Engagement:** Interactions with quick-answer chips.
-- **Related Product CTR:** Clicks to explore Slow Multivitamins, Melts Hair, or Daily Greens.
-- **Revenue per Session (RPS):** Downstream value impact of pack upgrades and cross-sells.
-
-### Guardrail Metrics
-- **Page Exit / Bounce Rate:** Ensuring detailed content does not overwhelm users.
-- **Primary Product ATC Rate:** Ensuring related product cards do not cannibalize the core collagen purchase.
-- **Page Load Performance:** Lightweight CSS/JS ensuring zero render latency.
 
 ---
 
@@ -80,19 +74,7 @@ The redesign optimizes the user journey through five distinct states:
 | **Brand Proof** | Innovation Meets Integrity, 5 Million, 20+, US FDA | Restored in Brand Proof Section | Verified Exact Wording |
 | **Clinical Studies** | 4 Peer-Reviewed Publications | J. Cosmet. Dermatol. (2015, 2021), J. Med. Food (2022), Orthop. Rev. (2025) | Verified Exact Citations |
 | **Testimonials** | Real source reviews | Shrushti ("No Fishy Taste"), Ashutosh J, Avni R, Reena S, Priya D | Verified Verbatim |
-
----
-
-## Visual Design System & Canvas Rules
-
-- **Palette:**
-  - **Deep Teal (`#007065`):** Authority, headings, dark clinical evidence section
-  - **Teal (`#00A79D`):** Primary interaction CTAs, active states, key links
-  - **Warm Peach (`#F5C181`):** Outcome highlights, energy cues, savings badges
-  - **Cream (`#FFEECF`):** Educational sections, warm transitions, proof strips
-  - **White (`#FFFFFF`):** Primary page canvas, Buy Box, card surfaces, reviews, FAQs, related products
-- **Typography:** Manrope (Google Fonts) — Enforced across 800 (Title/Price), 700 (Headings/CTA), 600 (Badges/Links), 400-500 (Body).
-- **Icons:** 100% Emoji-Free. Custom linework SVG icons matching brand stroke density.
+| **Recommendation Assets**| Real Wellbeing Nutrition products | Slow Multivitamin for Women, Melts Hair, Daily Greens | Verified Real CDN Assets |
 
 ---
 
@@ -100,9 +82,9 @@ The redesign optimizes the user journey through five distinct states:
 
 ```
 troopod-cro-wellbeing-pdp/
-├── index.html          # Complete PDP HTML with global nav & ecosystem features
+├── index.html          # Complete PDP HTML with global header, Poppins & Warm Neutral palette
 ├── css/
-│   └── styles.css      # Design system & responsive breakpoint styles
+│   └── styles.css      # Warm neutral design system (No Teal UI) & responsive rules
 ├── js/
 │   └── script.js       # Pack selection, quantity, accordions, gallery, filters & AI assistant
 ├── README.md           # CRO decision framework & fact audit documentation

@@ -1,16 +1,17 @@
 /* ================================================================
    WELLBEING NUTRITION — KOREAN MARINE COLLAGEN PDP
-   CRO Prototype — Final Refinement Pass & Design System
+   CRO Prototype — New UI Color System & Poppins Typography
    
-   Color Palette System:
-     Deep Teal: #007065 (Authority, Headings, Clinical Section)
-     Teal:      #00A79D (Primary CTA, Interactive elements, Links)
-     Warm Peach:#F5C181 (Key accents, Benefits, Energy cues, Badges)
-     Cream:     #FFEECF (Warm section backgrounds, Trust strips)
-     White:     #FFFFFF (Canvas, Buy box, Cards, Reviews, FAQs, Related Products)
-     Neutral:   #FAF6F0 (Subtle canvas shift), #2D2D2D (Text), #555555 (Muted text), #EFECE6 (Borders)
+   COLOR PALETTE ROLE SYSTEM (No Teal UI! Teal = Product Asset Only):
+     Warm Ivory / Canvas: #FFFDF7 (Main page canvas & section background)
+     Soft Light Yellow:   #FFF1C7 (Offers, announcement bar, brand proof)
+     Sage Green:          #DCE8D5 (Trust, clinical evidence, quality)
+     Warm Peach / Orange: #F4B183 (Beauty outcomes, savings tags, stars)
+     Charcoal / Black:    #1D1D1B (Headings, primary text, Primary CTA)
+     White:               #FFFFFF (Cards, Buy Box container, content surfaces)
+     Border / Neutral:    #EFECE6 (Subtle borders)
    
-   Typography: Manrope (Google Fonts) — Strictly Enforced Hierarchy
+   Typography: Poppins (Google Fonts)
    ================================================================ */
 
 /* ---- RESET & BASE ---- */
@@ -26,12 +27,12 @@ html {
 }
 
 body {
-  font-family: 'Manrope', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
   font-weight: 400;
-  font-size: 16px;
+  font-size: 15px;
   line-height: 1.6;
-  color: #2D2D2D;
-  background-color: #FFFFFF;
+  color: #1D1D1B;
+  background-color: #FFFDF7;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   overflow-x: hidden;
@@ -44,17 +45,17 @@ img {
 }
 
 a {
-  color: #00A79D;
+  color: #1D1D1B;
   text-decoration: none;
   transition: color 0.2s ease;
 }
 
 a:hover, a:focus {
-  color: #007065;
+  color: #E65100;
 }
 
 button, input, select, textarea {
-  font-family: 'Manrope', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
   cursor: pointer;
   border: none;
   background: none;
@@ -114,16 +115,17 @@ ul, ol {
 }
 
 /* ================================================================
-   01 — ANNOUNCEMENT BAR
+   01 — ANNOUNCEMENT BAR (Soft Light Yellow)
    ================================================================ */
 .announcement-bar {
-  background: linear-gradient(90deg, #007065 0%, #00877a 100%);
-  color: #FFFFFF;
+  background: #FFF1C7;
+  color: #1D1D1B;
+  border-bottom: 1px solid #F4B183;
   text-align: center;
   padding: 9px 16px;
   font-size: 13px;
   font-weight: 600;
-  letter-spacing: 0.03em;
+  letter-spacing: 0.02em;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -132,10 +134,10 @@ ul, ol {
 }
 
 .announcement-bar__badge {
-  background: #F5C181;
-  color: #4D2D00;
+  background: #F4B183;
+  color: #1D1D1B;
   font-size: 11px;
-  font-weight: 800;
+  font-weight: 700;
   padding: 2px 8px;
   border-radius: 4px;
   text-transform: uppercase;
@@ -153,7 +155,7 @@ ul, ol {
 }
 
 /* ================================================================
-   02 — GLOBAL WEBSITE HEADER (Ecosystem Commerce Navigation)
+   02 — GLOBAL WEBSITE HEADER (Neutral White/Ivory Canvas)
    ================================================================ */
 .global-header {
   background: #FFFFFF;
@@ -190,8 +192,8 @@ ul, ol {
 
 .global-header__logo-text {
   font-size: 19px;
-  font-weight: 800;
-  color: #007065;
+  font-weight: 700;
+  color: #1D1D1B;
   letter-spacing: -0.02em;
 }
 
@@ -203,13 +205,13 @@ ul, ol {
 
 .global-header__link {
   font-size: 14px;
-  font-weight: 600;
-  color: #333333;
+  font-weight: 500;
+  color: #1D1D1B;
   transition: color 0.2s;
 }
 
 .global-header__link:hover {
-  color: #00A79D;
+  color: #E65100;
 }
 
 .global-header__right {
@@ -221,7 +223,7 @@ ul, ol {
 .global-header__search {
   display: flex;
   align-items: center;
-  background: #FAF6F0;
+  background: #FFFDF7;
   border: 1px solid #EFECE6;
   border-radius: 20px;
   padding: 6px 14px;
@@ -233,7 +235,7 @@ ul, ol {
   border: none;
   background: none;
   font-size: 13px;
-  color: #333333;
+  color: #1D1D1B;
   width: 100%;
 }
 
@@ -242,7 +244,7 @@ ul, ol {
 }
 
 .global-header__icon-btn {
-  color: #007065;
+  color: #1D1D1B;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -250,7 +252,7 @@ ul, ol {
 }
 
 .global-header__icon-btn:hover {
-  color: #00A79D;
+  color: #E65100;
 }
 
 .global-header__cart {
@@ -258,25 +260,25 @@ ul, ol {
   display: flex;
   align-items: center;
   font-size: 14px;
-  font-weight: 700;
-  color: #007065;
+  font-weight: 600;
+  color: #1D1D1B;
   gap: 8px;
-  background: #FFEECF;
-  border: 1px solid #F5C181;
+  background: #FFF1C7;
+  border: 1px solid #F4B183;
   padding: 7px 16px;
   border-radius: 20px;
   transition: background 0.2s;
 }
 
 .global-header__cart:hover {
-  background: #f8e1ba;
+  background: #F4B183;
 }
 
 .cart-count {
-  background: #00A79D;
-  color: #fff;
+  background: #1D1D1B;
+  color: #FFFFFF;
   font-size: 11px;
-  font-weight: 800;
+  font-weight: 700;
   width: 20px;
   height: 20px;
   border-radius: 50%;
@@ -286,10 +288,10 @@ ul, ol {
 }
 
 /* ================================================================
-   SECONDARY PDP ANCHOR NAVIGATION (Lightweight Sub-Bar)
+   SECONDARY PDP ANCHOR BAR
    ================================================================ */
 .pdp-anchor-bar {
-  background: #FAF6F0;
+  background: #FFFDF7;
   border-bottom: 1px solid #EFECE6;
   padding: 10px 0;
   position: sticky;
@@ -312,14 +314,14 @@ ul, ol {
 
 .pdp-anchor-link {
   font-size: 13px;
-  font-weight: 600;
+  font-weight: 500;
   color: #555555;
   transition: color 0.2s;
 }
 
 .pdp-anchor-link:hover,
 .pdp-anchor-link.active {
-  color: #007065;
+  color: #1D1D1B;
   font-weight: 700;
 }
 
@@ -329,12 +331,11 @@ ul, ol {
   gap: 6px;
   font-size: 12px;
   font-weight: 700;
-  color: #007065;
+  color: #1D1D1B;
 }
 
 /* ================================================================
-   03 — HERO + BUY BOX
-   CRO Priority P0-1: Decision-point proof & source fidelity
+   03 — HERO + BUY BOX (Product Hero Area)
    ================================================================ */
 .hero {
   padding: 36px 0 52px;
@@ -359,7 +360,7 @@ ul, ol {
   aspect-ratio: 1;
   border-radius: 16px;
   overflow: hidden;
-  background: #FAF6F0;
+  background: #FFFDF7;
   margin-bottom: 14px;
   border: 1px solid #EFECE6;
   box-shadow: 0 4px 16px rgba(0,0,0,0.03);
@@ -388,17 +389,17 @@ ul, ol {
   cursor: pointer;
   flex-shrink: 0;
   transition: all 0.2s ease;
-  background: #FAF6F0;
+  background: #FFFDF7;
 }
 
 .gallery__thumb:hover,
 .gallery__thumb:focus {
-  border-color: #F5C181;
+  border-color: #F4B183;
 }
 
 .gallery__thumb.active {
-  border-color: #00A79D;
-  box-shadow: 0 2px 8px rgba(0,167,157,0.25);
+  border-color: #1D1D1B;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
 }
 
 .gallery__thumb img {
@@ -414,17 +415,17 @@ ul, ol {
 
 .buy-box__category {
   font-size: 12px;
-  font-weight: 700;
+  font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.1em;
-  color: #00A79D;
+  color: #555555;
   margin-bottom: 8px;
 }
 
 .buy-box__title {
   font-size: 26px;
-  font-weight: 800;
-  color: #007065;
+  font-weight: 700;
+  color: #1D1D1B;
   line-height: 1.25;
   margin-bottom: 6px;
   letter-spacing: -0.01em;
@@ -433,10 +434,10 @@ ul, ol {
 .buy-box__subtitle-tag {
   display: inline-block;
   font-size: 13px;
-  font-weight: 700;
-  color: #613C00;
-  background: #FFEECF;
-  border: 1px solid #F5C181;
+  font-weight: 600;
+  color: #1D1D1B;
+  background: #FFF1C7;
+  border: 1px solid #F4B183;
   padding: 3px 10px;
   border-radius: 4px;
   margin-bottom: 12px;
@@ -450,14 +451,14 @@ ul, ol {
   line-height: 1.55;
 }
 
-/* Rating — Exact Source Value: 4.74 / 571 reviews */
+/* Rating — Exact 4.74 / 571 reviews */
 .buy-box__rating {
   display: flex;
   align-items: center;
   gap: 10px;
   margin-bottom: 16px;
   flex-wrap: wrap;
-  background: #FAF6F0;
+  background: #FFFDF7;
   border: 1px solid #EFECE6;
   padding: 8px 14px;
   border-radius: 8px;
@@ -467,13 +468,13 @@ ul, ol {
 .stars-svg {
   display: inline-flex;
   gap: 2px;
-  color: #E69B24;
+  color: #F4B183;
 }
 
 .rating-number {
-  font-weight: 800;
+  font-weight: 700;
   font-size: 15px;
-  color: #007065;
+  color: #1D1D1B;
 }
 
 .review-count {
@@ -483,22 +484,22 @@ ul, ol {
 }
 
 .review-count a {
-  color: #00A79D;
+  color: #1D1D1B;
   font-weight: 600;
   text-decoration: underline;
   text-underline-offset: 2px;
 }
 
-/* Marine Source & Dietary Qualification */
+/* Marine Source Qualification */
 .buy-box__source {
   display: inline-flex;
   align-items: center;
   gap: 8px;
   font-size: 12px;
-  font-weight: 700;
-  color: #007065;
-  background: rgba(0,112,101,0.07);
-  border: 1px solid rgba(0,112,101,0.18);
+  font-weight: 600;
+  color: #1D1D1B;
+  background: #DCE8D5;
+  border: 1px solid #b5ccaa;
   padding: 5px 12px;
   border-radius: 6px;
   margin-bottom: 18px;
@@ -517,8 +518,8 @@ ul, ol {
   align-items: center;
   gap: 8px;
   font-size: 13px;
-  font-weight: 600;
-  color: #2D2D2D;
+  font-weight: 500;
+  color: #1D1D1B;
   padding: 4px 0;
 }
 
@@ -526,22 +527,22 @@ ul, ol {
   width: 20px;
   height: 20px;
   border-radius: 50%;
-  background: rgba(0,167,157,0.12);
-  color: #00A79D;
+  background: #DCE8D5;
+  color: #1D1D1B;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-/* Decision Point Proof Strip — P0-1 */
+/* Decision-Point Proof Strip — P0-1 (Light Yellow) */
 .proof-strip {
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 12px;
   padding: 12px 16px;
-  background: #FFEECF;
-  border: 1px solid #F5C181;
+  background: #FFF1C7;
+  border: 1px solid #F4B183;
   border-radius: 10px;
   margin-bottom: 22px;
   flex-wrap: wrap;
@@ -552,14 +553,14 @@ ul, ol {
   align-items: center;
   gap: 6px;
   font-size: 12px;
-  font-weight: 700;
-  color: #007065;
+  font-weight: 600;
+  color: #1D1D1B;
 }
 
 .proof-strip__link {
   font-size: 12px;
   font-weight: 700;
-  color: #007065;
+  color: #1D1D1B;
   text-decoration: underline;
   text-underline-offset: 2px;
   cursor: pointer;
@@ -569,7 +570,7 @@ ul, ol {
 }
 
 .proof-strip__link:hover {
-  color: #00A79D;
+  color: #E65100;
 }
 
 /* Pricing Display */
@@ -584,7 +585,7 @@ ul, ol {
 .price-current {
   font-size: 32px;
   font-weight: 800;
-  color: #007065;
+  color: #1D1D1B;
   letter-spacing: -0.02em;
 }
 
@@ -598,16 +599,15 @@ ul, ol {
 .price-savings {
   font-size: 13px;
   font-weight: 700;
-  color: #007065;
-  background: #FFEECF;
-  border: 1px solid #F5C181;
+  color: #1D1D1B;
+  background: #F4B183;
   padding: 3px 10px;
   border-radius: 4px;
 }
 
 .buy-box__per-serving {
   font-size: 13px;
-  color: #666666;
+  color: #555555;
   margin-bottom: 18px;
   font-weight: 500;
 }
@@ -615,13 +615,13 @@ ul, ol {
 /* Member Discount / EMI Note */
 .buy-box__member-note {
   font-size: 12px;
-  color: #007065;
-  background: rgba(0,112,101,0.05);
-  border-left: 3px solid #007065;
+  color: #1D1D1B;
+  background: #FFF1C7;
+  border-left: 3px solid #F4B183;
   padding: 8px 12px;
   border-radius: 0 6px 6px 0;
   margin-bottom: 20px;
-  font-weight: 600;
+  font-weight: 500;
   display: flex;
   align-items: center;
   gap: 8px;
@@ -641,8 +641,8 @@ ul, ol {
 
 .pack-selector__label {
   font-size: 14px;
-  font-weight: 700;
-  color: #2D2D2D;
+  font-weight: 600;
+  color: #1D1D1B;
 }
 
 .pack-selector__options {
@@ -662,26 +662,26 @@ ul, ol {
 }
 
 .pack-card:hover {
-  border-color: #F5C181;
+  border-color: #F4B183;
 }
 
 .pack-card.active {
-  border-color: #00A79D;
-  background: rgba(0,167,157,0.03);
-  box-shadow: 0 2px 10px rgba(0,167,157,0.12);
+  border-color: #1D1D1B;
+  background: #FFFDF7;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.08);
 }
 
 .pack-card__name {
   font-size: 14px;
-  font-weight: 700;
-  color: #2D2D2D;
+  font-weight: 600;
+  color: #1D1D1B;
   margin-bottom: 4px;
 }
 
 .pack-card__price {
   font-size: 17px;
-  font-weight: 800;
-  color: #007065;
+  font-weight: 700;
+  color: #1D1D1B;
 }
 
 .pack-card__mrp {
@@ -693,7 +693,7 @@ ul, ol {
 .pack-card__savings {
   font-size: 11px;
   font-weight: 700;
-  color: #945700;
+  color: #E65100;
   margin-top: 4px;
 }
 
@@ -701,10 +701,10 @@ ul, ol {
   position: absolute;
   top: -9px;
   right: 10px;
-  background: #F5C181;
-  color: #593500;
+  background: #F4B183;
+  color: #1D1D1B;
   font-size: 10px;
-  font-weight: 800;
+  font-weight: 700;
   padding: 1px 7px;
   border-radius: 4px;
   text-transform: uppercase;
@@ -716,9 +716,9 @@ ul, ol {
   color: #4A4A4A;
   margin-bottom: 20px;
   padding: 12px 14px;
-  background: #FAF6F0;
+  background: #FFFDF7;
   border-radius: 8px;
-  border-left: 3px solid #F5C181;
+  border-left: 3px solid #DCE8D5;
   line-height: 1.5;
   display: flex;
   align-items: flex-start;
@@ -735,8 +735,8 @@ ul, ol {
 
 .quantity-label {
   font-size: 14px;
-  font-weight: 700;
-  color: #2D2D2D;
+  font-weight: 600;
+  color: #1D1D1B;
 }
 
 .quantity-selector {
@@ -755,29 +755,29 @@ ul, ol {
   align-items: center;
   justify-content: center;
   font-size: 18px;
-  font-weight: 700;
-  color: #2D2D2D;
-  background: #FAF6F0;
+  font-weight: 600;
+  color: #1D1D1B;
+  background: #FFFDF7;
   transition: background 0.15s;
 }
 
 .qty-btn:hover {
-  background: #FFEECF;
+  background: #FFF1C7;
 }
 
 .qty-value {
   width: 44px;
   text-align: center;
   font-size: 15px;
-  font-weight: 700;
-  color: #2D2D2D;
+  font-weight: 600;
+  color: #1D1D1B;
 }
 
-/* Primary CTA Button */
+/* PRIMARY CTA BUTTON (Charcoal / Black with White Text) */
 .cta-primary {
   width: 100%;
   padding: 18px 32px;
-  background: #00A79D;
+  background: #1D1D1B;
   color: #FFFFFF;
   font-size: 16px;
   font-weight: 700;
@@ -786,7 +786,7 @@ ul, ol {
   text-transform: uppercase;
   transition: all 0.2s ease;
   margin-bottom: 10px;
-  box-shadow: 0 4px 16px rgba(0,167,157,0.3);
+  box-shadow: 0 4px 16px rgba(0,0,0,0.15);
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -794,8 +794,8 @@ ul, ol {
 }
 
 .cta-primary:hover {
-  background: #008D85;
-  box-shadow: 0 6px 20px rgba(0,167,157,0.4);
+  background: #333333;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.25);
 }
 
 .cta-primary:active {
@@ -803,14 +803,14 @@ ul, ol {
 }
 
 .cta-primary.added {
-  background: #007065;
-  box-shadow: 0 4px 12px rgba(0,112,101,0.3);
+  background: #2E7D32;
+  color: #FFFFFF;
 }
 
 .buy-box__reassurance {
   text-align: center;
   font-size: 12px;
-  color: #777777;
+  color: #666666;
   margin-top: 6px;
   font-weight: 500;
   display: flex;
@@ -827,7 +827,7 @@ ul, ol {
 /* AI PRODUCT ASSISTANT ENTRY CARD */
 .ai-assistant-card {
   margin-top: 20px;
-  background: #FAF6F0;
+  background: #FFFFFF;
   border: 1px solid #EFECE6;
   border-radius: 10px;
   padding: 14px;
@@ -838,8 +838,8 @@ ul, ol {
   align-items: center;
   gap: 8px;
   font-size: 13px;
-  font-weight: 700;
-  color: #007065;
+  font-weight: 600;
+  color: #1D1D1B;
   margin-bottom: 8px;
 }
 
@@ -851,10 +851,10 @@ ul, ol {
 
 .ai-chip {
   font-size: 11px;
-  font-weight: 600;
-  color: #007065;
-  background: #FFFFFF;
-  border: 1px solid #F5C181;
+  font-weight: 500;
+  color: #1D1D1B;
+  background: #FFFDF7;
+  border: 1px solid #EFECE6;
   padding: 4px 10px;
   border-radius: 14px;
   cursor: pointer;
@@ -862,29 +862,29 @@ ul, ol {
 }
 
 .ai-chip:hover {
-  background: #FFEECF;
-  border-color: #00A79D;
+  background: #FFF1C7;
+  border-color: #F4B183;
 }
 
 .ai-answer-box {
   margin-top: 10px;
-  background: #FFFFFF;
-  border: 1.5px solid #00A79D;
+  background: #FFFDF7;
+  border: 1.5px solid #1D1D1B;
   border-radius: 8px;
   padding: 10px 14px;
   font-size: 12.5px;
-  color: #333333;
+  color: #1D1D1B;
   line-height: 1.5;
   display: none;
 }
 
 /* ================================================================
-   04 — PRODUCT QUALITY TRUST STRIP (Restored Exact Source Facts)
+   04 — PRODUCT QUALITY TRUST STRIP (Warm Ivory Canvas)
    ================================================================ */
 .quality-strip {
-  background: #FFEECF;
-  border-top: 1px solid #F5C181;
-  border-bottom: 1px solid #F5C181;
+  background: #FFFDF7;
+  border-top: 1px solid #EFECE6;
+  border-bottom: 1px solid #EFECE6;
   padding: 24px 0;
 }
 
@@ -901,20 +901,19 @@ ul, ol {
   justify-content: center;
   gap: 10px;
   font-size: 14px;
-  font-weight: 700;
-  color: #007065;
+  font-weight: 600;
+  color: #1D1D1B;
 }
 
 .quality-item__icon {
   width: 36px;
   height: 36px;
   border-radius: 50%;
-  background: #FFFFFF;
-  border: 1px solid #F5C181;
+  background: #DCE8D5;
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #007065;
+  color: #1D1D1B;
 }
 
 /* ================================================================
@@ -927,8 +926,8 @@ ul, ol {
 
 .section-heading {
   font-size: 26px;
-  font-weight: 800;
-  color: #007065;
+  font-weight: 700;
+  color: #1D1D1B;
   text-align: center;
   margin-bottom: 8px;
   letter-spacing: -0.01em;
@@ -956,9 +955,9 @@ ul, ol {
   display: flex;
   gap: 20px;
   padding: 24px;
-  background: #FAF6F0;
+  background: #FFFDF7;
   border-radius: 12px;
-  border-left: 4px solid #F5C181;
+  border-left: 4px solid #DCE8D5;
   border-top: 1px solid #EFECE6;
   border-right: 1px solid #EFECE6;
   border-bottom: 1px solid #EFECE6;
@@ -970,9 +969,8 @@ ul, ol {
 }
 
 .why-story-card__icon {
-  color: #007065;
-  background: #FFEECF;
-  border: 1px solid #F5C181;
+  color: #1D1D1B;
+  background: #DCE8D5;
   width: 48px;
   height: 48px;
   border-radius: 10px;
@@ -984,8 +982,8 @@ ul, ol {
 
 .why-story-card__title {
   font-size: 16px;
-  font-weight: 800;
-  color: #007065;
+  font-weight: 700;
+  color: #1D1D1B;
   margin-bottom: 6px;
 }
 
@@ -996,13 +994,13 @@ ul, ol {
 }
 
 /* ================================================================
-   06 — TARGETED OUTCOMES / BENEFITS (Cream Background)
+   06 — TARGETED OUTCOMES / BENEFITS (Soft Light Yellow)
    ================================================================ */
 .benefits-section {
   padding: 68px 0;
-  background: #FFEECF;
-  border-top: 1px solid #F5C181;
-  border-bottom: 1px solid #F5C181;
+  background: #FFF1C7;
+  border-top: 1px solid #F4B183;
+  border-bottom: 1px solid #F4B183;
 }
 
 .benefits-layout {
@@ -1035,8 +1033,8 @@ ul, ol {
   background: #FFFFFF;
   padding: 24px;
   border-radius: 12px;
-  border: 1px solid #F5C181;
-  transition: box-shadow 0.2s ease, border-color 0.2s ease;
+  border: 1px solid #F4B183;
+  transition: box-shadow 0.2s ease;
 }
 
 .benefit-card:hover {
@@ -1044,8 +1042,9 @@ ul, ol {
 }
 
 .benefit-card__icon {
-  color: #00A79D;
-  background: rgba(0,167,157,0.1);
+  color: #1D1D1B;
+  background: #FFF1C7;
+  border: 1px solid #F4B183;
   width: 44px;
   height: 44px;
   border-radius: 10px;
@@ -1057,8 +1056,8 @@ ul, ol {
 
 .benefit-card__title {
   font-size: 16px;
-  font-weight: 800;
-  color: #007065;
+  font-weight: 700;
+  color: #1D1D1B;
   margin-bottom: 6px;
 }
 
@@ -1069,11 +1068,11 @@ ul, ol {
 }
 
 /* ================================================================
-   07 — HOW TO USE (Redesigned 2-Column Storytelling Layout)
+   07 — HOW TO USE (Warm Ivory Canvas)
    ================================================================ */
 .how-to-section {
   padding: 72px 0;
-  background: #FAF6F0;
+  background: #FFFDF7;
 }
 
 .how-to-layout {
@@ -1087,7 +1086,7 @@ ul, ol {
   background: #FFFFFF;
   border-radius: 16px;
   padding: 24px;
-  border: 2px solid #F5C181;
+  border: 1px solid #EFECE6;
   box-shadow: 0 6px 24px rgba(0,0,0,0.04);
   text-align: center;
 }
@@ -1103,13 +1102,13 @@ ul, ol {
   display: inline-flex;
   align-items: center;
   gap: 6px;
-  background: #FFEECF;
-  color: #007065;
+  background: #FFF1C7;
+  color: #1D1D1B;
   font-size: 12px;
-  font-weight: 700;
+  font-weight: 600;
   padding: 6px 14px;
   border-radius: 20px;
-  border: 1px solid #F5C181;
+  border: 1px solid #F4B183;
 }
 
 .how-to-steps {
@@ -1123,26 +1122,25 @@ ul, ol {
   padding: 22px 24px;
   border-radius: 14px;
   border: 1px solid #EFECE6;
-  border-left: 4px solid #00A79D;
+  border-left: 4px solid #DCE8D5;
   box-shadow: 0 4px 16px rgba(0,0,0,0.02);
   display: flex;
   align-items: flex-start;
   gap: 20px;
-  transition: transform 0.2s ease, border-color 0.2s ease;
+  transition: transform 0.2s ease;
 }
 
 .step-card:hover {
   transform: translateX(4px);
-  border-left-color: #F5C181;
+  border-left-color: #F4B183;
 }
 
 .step-card__icon-box {
   width: 48px;
   height: 48px;
   border-radius: 12px;
-  background: #FFEECF;
-  border: 1px solid #F5C181;
-  color: #007065;
+  background: #DCE8D5;
+  color: #1D1D1B;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1151,17 +1149,17 @@ ul, ol {
 
 .step-card__num {
   font-size: 11px;
-  font-weight: 800;
+  font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.08em;
-  color: #00A79D;
+  color: #555555;
   margin-bottom: 2px;
 }
 
 .step-card__title {
   font-size: 16px;
-  font-weight: 800;
-  color: #007065;
+  font-weight: 700;
+  color: #1D1D1B;
   margin-bottom: 4px;
 }
 
@@ -1172,13 +1170,13 @@ ul, ol {
 }
 
 /* ================================================================
-   08 — BRAND PROOF: INNOVATION MEETS INTEGRITY (Restored Exact Facts)
+   08 — BRAND PROOF: INNOVATION MEETS INTEGRITY (Soft Light Yellow)
    ================================================================ */
 .brand-proof-section {
   padding: 64px 0;
-  background: #FFEECF;
-  border-top: 1px solid #F5C181;
-  border-bottom: 1px solid #F5C181;
+  background: #FFF1C7;
+  border-top: 1px solid #F4B183;
+  border-bottom: 1px solid #F4B183;
   text-align: center;
 }
 
@@ -1192,7 +1190,7 @@ ul, ol {
 
 .brand-proof-card {
   background: #FFFFFF;
-  border: 1px solid #F5C181;
+  border: 1px solid #F4B183;
   padding: 28px 20px;
   border-radius: 14px;
 }
@@ -1200,32 +1198,34 @@ ul, ol {
 .brand-proof-card__stat {
   font-size: 38px;
   font-weight: 800;
-  color: #007065;
+  color: #1D1D1B;
   line-height: 1;
   margin-bottom: 8px;
 }
 
 .brand-proof-card__label {
   font-size: 14px;
-  font-weight: 700;
-  color: #2D2D2D;
+  font-weight: 600;
+  color: #1D1D1B;
 }
 
 /* ================================================================
-   09 — CLINICAL EVIDENCE (Deep Teal Authority Section)
+   09 — CLINICAL EVIDENCE (Sage Green Authority Section)
    ================================================================ */
 .science-section {
   padding: 72px 0;
-  background: #007065;
-  color: #FFFFFF;
+  background: #DCE8D5;
+  color: #1D1D1B;
+  border-top: 1px solid #b5ccaa;
+  border-bottom: 1px solid #b5ccaa;
 }
 
 .science-section .section-heading {
-  color: #FFFFFF;
+  color: #1D1D1B;
 }
 
 .science-section .section-subheading {
-  color: rgba(255,255,255,0.85);
+  color: #333333;
 }
 
 .studies-grid {
@@ -1237,24 +1237,24 @@ ul, ol {
 }
 
 .study-card {
-  background: rgba(255,255,255,0.08);
-  border: 1px solid rgba(255,255,255,0.18);
+  background: #FFFFFF;
+  border: 1px solid #b5ccaa;
   border-radius: 14px;
   padding: 28px;
-  transition: background 0.2s ease, border-color 0.2s ease;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 .study-card:hover {
-  background: rgba(255,255,255,0.13);
-  border-color: #F5C181;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.05);
 }
 
 .study-card__journal {
   font-size: 12px;
-  font-weight: 800;
+  font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.06em;
-  color: #F5C181;
+  color: #1D1D1B;
   margin-bottom: 10px;
   display: flex;
   align-items: center;
@@ -1264,13 +1264,13 @@ ul, ol {
 .study-card__title {
   font-size: 15px;
   font-weight: 500;
-  color: #FFFFFF;
+  color: #1D1D1B;
   line-height: 1.6;
 }
 
 .study-card__year {
   font-size: 12px;
-  color: rgba(255,255,255,0.65);
+  color: #666666;
   margin-top: 14px;
   font-weight: 600;
 }
@@ -1296,7 +1296,7 @@ ul, ol {
 .reviews-header__score {
   font-size: 56px;
   font-weight: 800;
-  color: #007065;
+  color: #1D1D1B;
   letter-spacing: -0.03em;
   line-height: 1;
 }
@@ -1306,7 +1306,7 @@ ul, ol {
 }
 
 .reviews-header__stars {
-  color: #E69B24;
+  color: #F4B183;
   margin-bottom: 4px;
   display: flex;
   gap: 2px;
@@ -1331,7 +1331,7 @@ ul, ol {
   border: 1.5px solid #EFECE6;
   border-radius: 24px;
   font-size: 13px;
-  font-weight: 600;
+  font-weight: 500;
   color: #444444;
   cursor: pointer;
   transition: all 0.2s ease;
@@ -1340,9 +1340,9 @@ ul, ol {
 
 .review-theme:hover,
 .review-theme.active {
-  border-color: #00A79D;
-  color: #007065;
-  background: #FFEECF;
+  border-color: #1D1D1B;
+  color: #1D1D1B;
+  background: #FFF1C7;
 }
 
 .reviews-grid {
@@ -1355,7 +1355,7 @@ ul, ol {
 
 .review-card {
   border: 1px solid #EFECE6;
-  background: #FAF6F0;
+  background: #FFFDF7;
   border-radius: 14px;
   padding: 26px;
   transition: box-shadow 0.2s ease;
@@ -1374,8 +1374,8 @@ ul, ol {
 
 .review-card__name {
   font-size: 15px;
-  font-weight: 800;
-  color: #2D2D2D;
+  font-weight: 700;
+  color: #1D1D1B;
 }
 
 .review-card__location {
@@ -1386,15 +1386,15 @@ ul, ol {
 }
 
 .review-card__stars {
-  color: #E69B24;
+  color: #F4B183;
   display: flex;
   gap: 2px;
 }
 
 .review-card__title {
   font-size: 15px;
-  font-weight: 800;
-  color: #007065;
+  font-weight: 700;
+  color: #1D1D1B;
   margin-bottom: 6px;
 }
 
@@ -1409,33 +1409,32 @@ ul, ol {
   align-items: center;
   gap: 4px;
   font-size: 11px;
-  font-weight: 700;
-  color: #007065;
-  background: #FFEECF;
-  border: 1px solid #F5C181;
+  font-weight: 600;
+  color: #1D1D1B;
+  background: #FFF1C7;
+  border: 1px solid #F4B183;
   padding: 3px 10px;
   border-radius: 4px;
   margin-top: 14px;
 }
 
 /* ================================================================
-   11 — DEEP-DIVE EDUCATION (Cream Background & Explicit Header Badge)
-   CRO Priority P0-2: Progressive Disclosure
+   11 — DEEP-DIVE EDUCATION (Warm Ivory Canvas & Header Badge)
    ================================================================ */
 .deepdive-section {
   padding: 72px 0;
-  background: #FFEECF;
-  border-top: 2px solid #F5C181;
-  border-bottom: 1px solid #F5C181;
+  background: #FFFDF7;
+  border-top: 2px solid #EFECE6;
+  border-bottom: 1px solid #EFECE6;
 }
 
 .deepdive-header-tag {
   display: table;
   margin: 0 auto 12px;
-  background: #007065;
-  color: #FFFFFF;
+  background: #DCE8D5;
+  color: #1D1D1B;
   font-size: 11px;
-  font-weight: 800;
+  font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.1em;
   padding: 4px 12px;
@@ -1450,7 +1449,6 @@ ul, ol {
   background: #FFFFFF;
 }
 
-/* Shared Accordion Styling */
 .accordion {
   max-width: 860px;
   margin: 0 auto;
@@ -1467,8 +1465,8 @@ ul, ol {
   justify-content: space-between;
   padding: 20px 0;
   font-size: 16px;
-  font-weight: 700;
-  color: #2D2D2D;
+  font-weight: 600;
+  color: #1D1D1B;
   text-align: left;
   cursor: pointer;
   transition: color 0.2s ease;
@@ -1476,7 +1474,7 @@ ul, ol {
 }
 
 .accordion-trigger:hover {
-  color: #00A79D;
+  color: #E65100;
 }
 
 .accordion-icon {
@@ -1489,7 +1487,7 @@ ul, ol {
 
 .accordion-item.open .accordion-icon {
   transform: rotate(45deg);
-  color: #00A79D;
+  color: #1D1D1B;
 }
 
 .accordion-content {
@@ -1510,11 +1508,11 @@ ul, ol {
 }
 
 /* ================================================================
-   13 — EXPLORE SIMILAR PRODUCTS (Website Ecosystem Discovery)
+   13 — EXPLORE SIMILAR PRODUCTS (Preserve Real Packaging Colors)
    ================================================================ */
 .related-section {
   padding: 72px 0;
-  background: #FAF6F0;
+  background: #FFFDF7;
   border-top: 1px solid #EFECE6;
 }
 
@@ -1543,7 +1541,7 @@ ul, ol {
 .related-card__img {
   width: 100%;
   aspect-ratio: 1;
-  background: #FAF6F0;
+  background: #FFFDF7;
   overflow: hidden;
 }
 
@@ -1562,7 +1560,7 @@ ul, ol {
 
 .related-card__category {
   font-size: 11px;
-  font-weight: 800;
+  font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.05em;
   margin-bottom: 4px;
@@ -1571,15 +1569,15 @@ ul, ol {
 .related-card__title {
   font-size: 15px;
   font-weight: 700;
-  color: #2D2D2D;
+  color: #1D1D1B;
   margin-bottom: 8px;
   line-height: 1.35;
 }
 
 .related-card__rating {
   font-size: 12px;
-  font-weight: 700;
-  color: #007065;
+  font-weight: 600;
+  color: #1D1D1B;
   margin-bottom: 12px;
   display: flex;
   align-items: center;
@@ -1597,15 +1595,15 @@ ul, ol {
 
 .related-card__price {
   font-size: 17px;
-  font-weight: 800;
-  color: #007065;
+  font-weight: 700;
+  color: #1D1D1B;
 }
 
 .related-card__btn {
-  background: #00A79D;
+  background: #1D1D1B;
   color: #FFFFFF;
   font-size: 12px;
-  font-weight: 700;
+  font-weight: 600;
   padding: 8px 16px;
   border-radius: 6px;
   text-transform: uppercase;
@@ -1613,7 +1611,7 @@ ul, ol {
 }
 
 .related-card__btn:hover {
-  background: #007065;
+  background: #333333;
 }
 
 /* Category Accent Styles for Packaging Fidelity */
@@ -1622,19 +1620,19 @@ ul, ol {
 .related-card--green .related-card__category { color: #2E7D32; }
 
 /* ================================================================
-   14 — FINAL CTA (Cream Background)
+   14 — FINAL CTA (Soft Light Yellow)
    ================================================================ */
 .final-cta {
   padding: 72px 0;
-  background: #FFEECF;
-  border-top: 1px solid #F5C181;
+  background: #FFF1C7;
+  border-top: 1px solid #F4B183;
   text-align: center;
 }
 
 .final-cta__heading {
   font-size: 26px;
-  font-weight: 800;
-  color: #007065;
+  font-weight: 700;
+  color: #1D1D1B;
   margin-bottom: 10px;
 }
 
@@ -1653,10 +1651,10 @@ ul, ol {
 }
 
 /* ================================================================
-   15 — FOOTER
+   15 — FOOTER (Neutral Charcoal)
    ================================================================ */
 .site-footer {
-  background: #007065;
+  background: #1D1D1B;
   color: rgba(255,255,255,0.75);
   padding: 40px 0;
   text-align: center;
@@ -1664,7 +1662,7 @@ ul, ol {
 }
 
 .site-footer a {
-  color: #F5C181;
+  color: #F4B183;
 }
 
 .site-footer__disclaimer {
@@ -1700,8 +1698,8 @@ ul, ol {
 
 .sticky-cta__price {
   font-size: 20px;
-  font-weight: 800;
-  color: #007065;
+  font-weight: 700;
+  color: #1D1D1B;
 }
 
 .sticky-cta__mrp {
