@@ -1,0 +1,1292 @@
+/* ================================================================
+   WELLBEING NUTRITION — KOREAN MARINE COLLAGEN PDP
+   CRO Prototype — Design System + Components
+   
+   Color Palette:
+     Cream:     #FFEECF  (warm backgrounds)
+     Peach:     #F5C181  (small accent only)
+     Teal:      #00A79D  (primary CTA / interactive)
+     Deep Teal: #007065  (headings / authority)
+     White:     #FFFFFF
+   
+   Typography: Manrope (Google Fonts)
+   ================================================================ */
+
+/* ---- RESET & BASE ---- */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  font-family: 'Manrope', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.6;
+  color: #2D2D2D;
+  background-color: #FFFFFF;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+a {
+  color: #00A79D;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+a:hover, a:focus {
+  color: #007065;
+}
+
+button {
+  font-family: 'Manrope', sans-serif;
+  cursor: pointer;
+  border: none;
+  background: none;
+  font-size: inherit;
+}
+
+ul, ol {
+  list-style: none;
+}
+
+/* ---- UTILITY ---- */
+.container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0,0,0,0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* ================================================================
+   01 — ANNOUNCEMENT BAR
+   ================================================================ */
+.announcement-bar {
+  background-color: #007065;
+  color: #FFFFFF;
+  text-align: center;
+  padding: 8px 16px;
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+}
+
+.announcement-bar span {
+  margin: 0 8px;
+  opacity: 0.5;
+}
+
+/* ================================================================
+   02 — NAVIGATION
+   ================================================================ */
+.site-nav {
+  background: #FFFFFF;
+  border-bottom: 1px solid rgba(0,0,0,0.06);
+  padding: 12px 0;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.site-nav .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.site-nav__logo {
+  font-size: 18px;
+  font-weight: 700;
+  color: #007065;
+  letter-spacing: -0.01em;
+}
+
+.site-nav__actions {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.site-nav__link {
+  font-size: 14px;
+  font-weight: 500;
+  color: #2D2D2D;
+  transition: color 0.2s;
+}
+
+.site-nav__link:hover {
+  color: #00A79D;
+}
+
+.site-nav__cart {
+  position: relative;
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  font-weight: 500;
+  color: #2D2D2D;
+  gap: 4px;
+}
+
+.cart-count {
+  background: #00A79D;
+  color: #fff;
+  font-size: 10px;
+  font-weight: 700;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ================================================================
+   03 — HERO + BUY BOX
+   ================================================================ */
+.hero {
+  padding: 32px 0 48px;
+}
+
+.hero .container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 48px;
+  align-items: start;
+}
+
+/* -- Image Gallery -- */
+.gallery {
+  position: sticky;
+  top: 80px;
+}
+
+.gallery__main {
+  width: 100%;
+  aspect-ratio: 1;
+  border-radius: 12px;
+  overflow: hidden;
+  background: #FAF5EE;
+  margin-bottom: 12px;
+}
+
+.gallery__main img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.gallery__thumbs {
+  display: flex;
+  gap: 8px;
+  overflow-x: auto;
+  padding-bottom: 4px;
+}
+
+.gallery__thumb {
+  width: 64px;
+  height: 64px;
+  border-radius: 8px;
+  overflow: hidden;
+  border: 2px solid transparent;
+  cursor: pointer;
+  flex-shrink: 0;
+  transition: border-color 0.2s;
+  background: #FAF5EE;
+}
+
+.gallery__thumb:hover,
+.gallery__thumb:focus {
+  border-color: #00A79D;
+}
+
+.gallery__thumb.active {
+  border-color: #007065;
+}
+
+.gallery__thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* -- Buy Box -- */
+.buy-box {
+  padding-top: 4px;
+}
+
+.buy-box__category {
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #00A79D;
+  margin-bottom: 8px;
+}
+
+.buy-box__title {
+  font-size: 28px;
+  font-weight: 700;
+  color: #007065;
+  line-height: 1.25;
+  margin-bottom: 8px;
+}
+
+.buy-box__subtitle {
+  font-size: 15px;
+  font-weight: 400;
+  color: #555;
+  margin-bottom: 16px;
+  line-height: 1.5;
+}
+
+/* Rating */
+.buy-box__rating {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 16px;
+  flex-wrap: wrap;
+}
+
+.stars {
+  color: #F5C181;
+  font-size: 16px;
+  letter-spacing: 1px;
+}
+
+.rating-number {
+  font-weight: 700;
+  font-size: 15px;
+  color: #2D2D2D;
+}
+
+.review-count {
+  font-size: 14px;
+  color: #666;
+}
+
+.review-count a {
+  color: #00A79D;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+/* Source badge */
+.buy-box__source {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 12px;
+  font-weight: 500;
+  color: #007065;
+  background: rgba(0,112,101,0.06);
+  padding: 4px 10px;
+  border-radius: 4px;
+  margin-bottom: 16px;
+}
+
+/* Key benefits strip */
+.buy-box__benefits {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+  margin-bottom: 20px;
+}
+
+.benefit-tag {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 13px;
+  font-weight: 500;
+  color: #2D2D2D;
+  padding: 6px 0;
+}
+
+.benefit-tag__icon {
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #00A79D;
+  font-size: 14px;
+}
+
+/* Proof strip */
+.proof-strip {
+  display: flex;
+  gap: 16px;
+  padding: 12px 16px;
+  background: #FFEECF;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+}
+
+.proof-strip__item {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 12px;
+  font-weight: 600;
+  color: #007065;
+}
+
+.proof-strip__icon {
+  font-size: 14px;
+}
+
+.proof-strip__link {
+  font-size: 12px;
+  font-weight: 600;
+  color: #00A79D;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  cursor: pointer;
+}
+
+/* Pricing */
+.buy-box__price {
+  margin-bottom: 4px;
+}
+
+.price-current {
+  font-size: 28px;
+  font-weight: 800;
+  color: #007065;
+}
+
+.price-mrp {
+  font-size: 16px;
+  font-weight: 500;
+  color: #999;
+  text-decoration: line-through;
+  margin-left: 8px;
+}
+
+.price-savings {
+  font-size: 13px;
+  font-weight: 600;
+  color: #00A79D;
+  background: rgba(0,167,157,0.08);
+  padding: 2px 8px;
+  border-radius: 4px;
+  margin-left: 8px;
+}
+
+.buy-box__per-serving {
+  font-size: 13px;
+  color: #666;
+  margin-bottom: 20px;
+}
+
+/* Pack selector */
+.pack-selector {
+  margin-bottom: 20px;
+}
+
+.pack-selector__label {
+  font-size: 14px;
+  font-weight: 600;
+  color: #2D2D2D;
+  margin-bottom: 8px;
+}
+
+.pack-selector__options {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+}
+
+.pack-card {
+  border: 2px solid rgba(0,0,0,0.08);
+  border-radius: 8px;
+  padding: 12px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  position: relative;
+  background: #fff;
+}
+
+.pack-card:hover {
+  border-color: rgba(0,167,157,0.4);
+}
+
+.pack-card.active {
+  border-color: #00A79D;
+  background: rgba(0,167,157,0.03);
+}
+
+.pack-card__name {
+  font-size: 14px;
+  font-weight: 600;
+  color: #2D2D2D;
+  margin-bottom: 4px;
+}
+
+.pack-card__price {
+  font-size: 16px;
+  font-weight: 800;
+  color: #007065;
+}
+
+.pack-card__mrp {
+  font-size: 12px;
+  color: #999;
+  text-decoration: line-through;
+}
+
+.pack-card__savings {
+  font-size: 11px;
+  font-weight: 600;
+  color: #F5C181;
+  margin-top: 2px;
+}
+
+/* Dosage */
+.buy-box__dosage {
+  font-size: 13px;
+  color: #555;
+  margin-bottom: 16px;
+  padding: 8px 12px;
+  background: #FAF5EE;
+  border-radius: 6px;
+}
+
+/* Quantity selector */
+.quantity-row {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+
+.quantity-label {
+  font-size: 14px;
+  font-weight: 600;
+  color: #2D2D2D;
+}
+
+.quantity-selector {
+  display: flex;
+  align-items: center;
+  border: 1px solid rgba(0,0,0,0.12);
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.qty-btn {
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  font-weight: 600;
+  color: #2D2D2D;
+  background: #F8F8F8;
+  transition: background 0.15s;
+}
+
+.qty-btn:hover {
+  background: #EEE;
+}
+
+.qty-btn:focus-visible {
+  outline: 2px solid #00A79D;
+  outline-offset: -2px;
+}
+
+.qty-value {
+  width: 40px;
+  text-align: center;
+  font-size: 15px;
+  font-weight: 600;
+  color: #2D2D2D;
+  border: none;
+  background: none;
+}
+
+/* CTA */
+.cta-primary {
+  width: 100%;
+  padding: 16px 32px;
+  background: #00A79D;
+  color: #FFFFFF;
+  font-size: 16px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  border-radius: 8px;
+  text-transform: uppercase;
+  transition: background 0.2s, transform 0.1s;
+  margin-bottom: 8px;
+}
+
+.cta-primary:hover {
+  background: #009189;
+}
+
+.cta-primary:active {
+  transform: scale(0.99);
+}
+
+.cta-primary:focus-visible {
+  outline: 3px solid #F5C181;
+  outline-offset: 2px;
+}
+
+.cta-primary.added {
+  background: #007065;
+}
+
+.buy-box__reassurance {
+  text-align: center;
+  font-size: 12px;
+  color: #888;
+  margin-top: 4px;
+}
+
+.buy-box__reassurance span {
+  margin: 0 6px;
+  opacity: 0.4;
+}
+
+/* ================================================================
+   04 — TRUST BAR
+   ================================================================ */
+.trust-bar {
+  background: #FFEECF;
+  padding: 32px 0;
+}
+
+.trust-bar .container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+  text-align: center;
+}
+
+.trust-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+}
+
+.trust-item__icon {
+  font-size: 24px;
+  color: #007065;
+}
+
+.trust-item__text {
+  font-size: 14px;
+  font-weight: 600;
+  color: #007065;
+}
+
+.trust-item__sub {
+  font-size: 12px;
+  color: #555;
+  font-weight: 400;
+}
+
+/* ================================================================
+   05 — WHY THIS PRODUCT
+   ================================================================ */
+.why-section {
+  padding: 56px 0;
+}
+
+.section-heading {
+  font-size: 24px;
+  font-weight: 700;
+  color: #007065;
+  text-align: center;
+  margin-bottom: 8px;
+}
+
+.section-subheading {
+  font-size: 15px;
+  color: #666;
+  text-align: center;
+  margin-bottom: 36px;
+  max-width: 540px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.why-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.why-card {
+  text-align: center;
+  padding: 24px 16px;
+  border-radius: 10px;
+  background: #FAF5EE;
+}
+
+.why-card__icon {
+  font-size: 28px;
+  margin-bottom: 12px;
+  color: #00A79D;
+}
+
+.why-card__title {
+  font-size: 15px;
+  font-weight: 700;
+  color: #007065;
+  margin-bottom: 6px;
+}
+
+.why-card__text {
+  font-size: 13px;
+  color: #555;
+  line-height: 1.5;
+}
+
+/* ================================================================
+   06 — BENEFITS
+   ================================================================ */
+.benefits-section {
+  padding: 56px 0;
+  background: #FFFFFF;
+}
+
+.benefits-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.benefit-card {
+  text-align: center;
+  padding: 28px 16px;
+  border: 1px solid rgba(0,0,0,0.06);
+  border-radius: 10px;
+  transition: box-shadow 0.2s;
+}
+
+.benefit-card:hover {
+  box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+}
+
+.benefit-card__icon {
+  font-size: 32px;
+  margin-bottom: 12px;
+}
+
+.benefit-card__title {
+  font-size: 15px;
+  font-weight: 700;
+  color: #007065;
+  margin-bottom: 6px;
+}
+
+.benefit-card__text {
+  font-size: 13px;
+  color: #555;
+  line-height: 1.5;
+}
+
+/* ================================================================
+   07 — HOW TO USE
+   ================================================================ */
+.how-to-section {
+  padding: 56px 0;
+  background: #FFEECF;
+}
+
+.how-to-steps {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.step {
+  text-align: center;
+}
+
+.step__number {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: #007065;
+  color: #FFF;
+  font-size: 20px;
+  font-weight: 800;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 12px;
+}
+
+.step__title {
+  font-size: 16px;
+  font-weight: 700;
+  color: #007065;
+  margin-bottom: 4px;
+}
+
+.step__text {
+  font-size: 13px;
+  color: #555;
+  line-height: 1.5;
+}
+
+/* ================================================================
+   08 — SCIENCE / EVIDENCE
+   ================================================================ */
+.science-section {
+  padding: 56px 0;
+  background: #007065;
+  color: #FFFFFF;
+}
+
+.science-section .section-heading {
+  color: #FFFFFF;
+}
+
+.science-section .section-subheading {
+  color: rgba(255,255,255,0.75);
+}
+
+.studies-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+.study-card {
+  background: rgba(255,255,255,0.08);
+  border: 1px solid rgba(255,255,255,0.12);
+  border-radius: 8px;
+  padding: 20px;
+}
+
+.study-card__journal {
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: #F5C181;
+  margin-bottom: 6px;
+}
+
+.study-card__title {
+  font-size: 14px;
+  font-weight: 500;
+  color: #FFFFFF;
+  line-height: 1.5;
+}
+
+.study-card__year {
+  font-size: 12px;
+  color: rgba(255,255,255,0.55);
+  margin-top: 8px;
+}
+
+/* ================================================================
+   09 — REVIEWS / SOCIAL PROOF
+   ================================================================ */
+.reviews-section {
+  padding: 56px 0;
+}
+
+.reviews-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
+  margin-bottom: 12px;
+  flex-wrap: wrap;
+}
+
+.reviews-header__score {
+  font-size: 48px;
+  font-weight: 800;
+  color: #007065;
+}
+
+.reviews-header__meta {
+  text-align: left;
+}
+
+.reviews-header__stars {
+  color: #F5C181;
+  font-size: 20px;
+  letter-spacing: 2px;
+  margin-bottom: 2px;
+}
+
+.reviews-header__count {
+  font-size: 14px;
+  color: #666;
+}
+
+.review-themes {
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+  margin-bottom: 32px;
+  flex-wrap: wrap;
+}
+
+.review-theme {
+  padding: 6px 14px;
+  border: 1px solid rgba(0,0,0,0.1);
+  border-radius: 20px;
+  font-size: 13px;
+  font-weight: 500;
+  color: #2D2D2D;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.review-theme:hover,
+.review-theme.active {
+  border-color: #00A79D;
+  color: #00A79D;
+  background: rgba(0,167,157,0.04);
+}
+
+.reviews-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+.review-card {
+  border: 1px solid rgba(0,0,0,0.06);
+  border-radius: 10px;
+  padding: 20px;
+  transition: box-shadow 0.2s;
+}
+
+.review-card:hover {
+  box-shadow: 0 2px 12px rgba(0,0,0,0.05);
+}
+
+.review-card__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 8px;
+}
+
+.review-card__name {
+  font-size: 14px;
+  font-weight: 700;
+  color: #2D2D2D;
+}
+
+.review-card__location {
+  font-size: 12px;
+  font-weight: 400;
+  color: #888;
+}
+
+.review-card__stars {
+  color: #F5C181;
+  font-size: 14px;
+}
+
+.review-card__title {
+  font-size: 14px;
+  font-weight: 700;
+  color: #007065;
+  margin-bottom: 4px;
+}
+
+.review-card__text {
+  font-size: 13px;
+  color: #555;
+  line-height: 1.55;
+}
+
+.review-card__theme {
+  display: inline-block;
+  font-size: 11px;
+  font-weight: 600;
+  color: #00A79D;
+  background: rgba(0,167,157,0.06);
+  padding: 2px 8px;
+  border-radius: 4px;
+  margin-top: 8px;
+}
+
+/* ================================================================
+   10 — DEEP DIVE / EDUCATION
+   ================================================================ */
+.deepdive-section {
+  padding: 56px 0;
+  background: #FAF5EE;
+}
+
+.deepdive-section .section-heading {
+  margin-bottom: 4px;
+}
+
+.deepdive-section .section-subheading {
+  margin-bottom: 32px;
+}
+
+/* ================================================================
+   11 — FAQ
+   ================================================================ */
+.faq-section {
+  padding: 56px 0;
+}
+
+/* Shared accordion styles */
+.accordion {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.accordion-item {
+  border-bottom: 1px solid rgba(0,0,0,0.08);
+}
+
+.accordion-trigger {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 0;
+  font-size: 15px;
+  font-weight: 600;
+  color: #2D2D2D;
+  text-align: left;
+  cursor: pointer;
+  transition: color 0.2s;
+  gap: 12px;
+}
+
+.accordion-trigger:hover {
+  color: #00A79D;
+}
+
+.accordion-trigger:focus-visible {
+  outline: 2px solid #00A79D;
+  outline-offset: 2px;
+}
+
+.accordion-icon {
+  font-size: 20px;
+  font-weight: 400;
+  color: #999;
+  transition: transform 0.3s ease;
+  flex-shrink: 0;
+}
+
+.accordion-item.open .accordion-icon {
+  transform: rotate(45deg);
+}
+
+.accordion-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.35s ease, padding 0.35s ease;
+}
+
+.accordion-item.open .accordion-content {
+  max-height: 600px;
+}
+
+.accordion-content__inner {
+  padding: 0 0 16px;
+  font-size: 14px;
+  color: #555;
+  line-height: 1.65;
+}
+
+/* ================================================================
+   12 — FINAL CTA
+   ================================================================ */
+.final-cta {
+  padding: 56px 0;
+  background: #FFEECF;
+  text-align: center;
+}
+
+.final-cta__heading {
+  font-size: 24px;
+  font-weight: 700;
+  color: #007065;
+  margin-bottom: 8px;
+}
+
+.final-cta__text {
+  font-size: 15px;
+  color: #555;
+  margin-bottom: 24px;
+  max-width: 480px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.final-cta .cta-primary {
+  max-width: 320px;
+  margin: 0 auto;
+}
+
+/* ================================================================
+   13 — FOOTER
+   ================================================================ */
+.site-footer {
+  background: #007065;
+  color: rgba(255,255,255,0.7);
+  padding: 32px 0;
+  text-align: center;
+  font-size: 13px;
+}
+
+.site-footer a {
+  color: rgba(255,255,255,0.9);
+}
+
+.site-footer__disclaimer {
+  font-size: 11px;
+  margin-top: 8px;
+  opacity: 0.6;
+}
+
+/* ================================================================
+   STICKY MOBILE CTA
+   ================================================================ */
+.sticky-cta {
+  display: none;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: #FFFFFF;
+  border-top: 1px solid rgba(0,0,0,0.08);
+  padding: 10px 16px;
+  z-index: 200;
+  box-shadow: 0 -2px 12px rgba(0,0,0,0.06);
+}
+
+.sticky-cta__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.sticky-cta__price {
+  font-size: 20px;
+  font-weight: 800;
+  color: #007065;
+}
+
+.sticky-cta__mrp {
+  font-size: 12px;
+  color: #999;
+  text-decoration: line-through;
+}
+
+.sticky-cta .cta-primary {
+  width: auto;
+  padding: 12px 28px;
+  font-size: 14px;
+  margin-bottom: 0;
+  flex-shrink: 0;
+}
+
+/* ================================================================
+   RESPONSIVE
+   ================================================================ */
+
+/* Tablet */
+@media (max-width: 1024px) {
+  .hero .container {
+    gap: 32px;
+  }
+  
+  .why-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .trust-bar .container {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+  }
+}
+
+/* Tablet & below */
+@media (max-width: 768px) {
+  .hero .container {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .gallery {
+    position: relative;
+    top: auto;
+  }
+
+  .buy-box__title {
+    font-size: 24px;
+  }
+
+  .benefits-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .studies-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .reviews-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .why-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .how-to-steps {
+    gap: 24px;
+  }
+  
+  .site-nav__link {
+    display: none;
+  }
+
+  .sticky-cta {
+    display: block;
+  }
+
+  body {
+    padding-bottom: 64px;
+  }
+
+  .announcement-bar {
+    font-size: 11px;
+  }
+
+  .section-heading {
+    font-size: 20px;
+  }
+
+  .price-current {
+    font-size: 24px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+  .container {
+    padding: 0 16px;
+  }
+
+  .hero {
+    padding: 20px 0 32px;
+  }
+
+  .buy-box__benefits {
+    grid-template-columns: 1fr;
+  }
+
+  .pack-selector__options {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .proof-strip {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .trust-bar .container {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+  }
+
+  .why-grid {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .benefits-grid {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .how-to-steps {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .gallery__thumb {
+    width: 56px;
+    height: 56px;
+  }
+
+  .buy-box__title {
+    font-size: 22px;
+  }
+
+  .reviews-header__score {
+    font-size: 40px;
+  }
+}
+
+/* Small mobile */
+@media (max-width: 375px) {
+  body {
+    font-size: 15px;
+  }
+
+  .buy-box__title {
+    font-size: 20px;
+  }
+
+  .price-current {
+    font-size: 22px;
+  }
+
+  .cta-primary {
+    padding: 14px 24px;
+    font-size: 15px;
+  }
+}
