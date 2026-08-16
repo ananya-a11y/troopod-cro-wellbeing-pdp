@@ -26,25 +26,57 @@
   </div>
 
   <!-- ============================================================
-       02 — NAVIGATION (Real Brand Logo)
+       02 — GLOBAL WEBSITE HEADER (Ecosystem Commerce Navigation)
        ============================================================ -->
-  <nav class="site-nav" aria-label="Main navigation">
+  <header class="global-header">
     <div class="container">
-      <a href="#" class="site-nav__logo" aria-label="Wellbeing Nutrition home">
-        <img src="https://wellbeingnutrition.com/cdn/shop/files/wbn_icon_fav_32x32.png" alt="Wellbeing Nutrition Logo" class="site-nav__logo-img" width="32" height="32">
-        <span class="site-nav__logo-text">Wellbeing Nutrition</span>
-      </a>
-      <div class="site-nav__actions">
-        <a href="#why-section" class="site-nav__link">Why Korean Collagen</a>
-        <a href="#benefits-section" class="site-nav__link">Targeted Benefits</a>
-        <a href="#science-section" class="site-nav__link">Clinical Evidence</a>
-        <a href="#reviews-section" class="site-nav__link">Verified Reviews (4.74★)</a>
-        <a href="#faq-section" class="site-nav__link">FAQ</a>
-        <button class="site-nav__cart" aria-label="Shopping cart">
+      <div class="global-header__left">
+        <a href="#" class="global-header__logo" aria-label="Wellbeing Nutrition Home">
+          <img src="https://wellbeingnutrition.com/cdn/shop/files/wbn_icon_fav_32x32.png" alt="Wellbeing Nutrition Logo" class="global-header__logo-img" width="32" height="32">
+          <span class="global-header__logo-text">Wellbeing Nutrition</span>
+        </a>
+        <nav class="global-header__nav" aria-label="Ecosystem Category Navigation">
+          <a href="#" class="global-header__link">Shop All</a>
+          <a href="#" class="global-header__link">Shop by Benefit</a>
+          <a href="#" class="global-header__link">Shop by Category</a>
+        </nav>
+      </div>
+
+      <div class="global-header__right">
+        <div class="global-header__search" role="search">
+          <svg class="icon-svg icon-svg--sm" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+          <input type="text" placeholder="Search collagen, melts..." aria-label="Search site">
+        </div>
+
+        <a href="#" class="global-header__icon-btn" aria-label="Account">
+          <svg class="icon-svg icon-svg--lg" viewBox="0 0 24 24"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+        </a>
+
+        <button class="global-header__cart" aria-label="Shopping cart">
           <svg class="icon-svg" viewBox="0 0 24 24"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
           <span>Cart</span>
           <span class="cart-count" id="cart-count" style="display:none;">0</span>
         </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ============================================================
+       SECONDARY PDP ANCHOR NAVIGATION (Lightweight Sub-Bar)
+       ============================================================ -->
+  <nav class="pdp-anchor-bar" aria-label="Product page section navigation">
+    <div class="container">
+      <div class="pdp-anchor-bar__links">
+        <a href="#hero" class="pdp-anchor-link active">Overview</a>
+        <a href="#benefits-section" class="pdp-anchor-link">Benefits</a>
+        <a href="#how-to-section" class="pdp-anchor-link">How to Use</a>
+        <a href="#science-section" class="pdp-anchor-link">Science</a>
+        <a href="#reviews-section" class="pdp-anchor-link">Reviews</a>
+        <a href="#faq-section" class="pdp-anchor-link">FAQs</a>
+      </div>
+      <div class="pdp-anchor-bar__quick-rating">
+        <svg class="icon-svg" viewBox="0 0 24 24" fill="#E69B24" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+        <span>4.74 / 5 (571 reviews)</span>
       </div>
     </div>
   </nav>
@@ -256,42 +288,56 @@
           <span>100% Authentic Guarantee</span>
         </div>
 
+        <!-- AI PRODUCT ASSISTANT ENTRY CARD -->
+        <div class="ai-assistant-card">
+          <div class="ai-assistant-card__header">
+            <svg class="icon-svg" viewBox="0 0 24 24"><path d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2zm0 18a8 8 0 1 1 8-8 8 8 0 0 1-8 8z"/><path d="M12 8v4l3 3"/></svg>
+            <span>Ask AI About This Product</span>
+          </div>
+          <div class="ai-assistant-card__chips">
+            <button class="ai-chip" data-q="source">Is this marine-derived?</button>
+            <button class="ai-chip" data-q="dose">How do I take it daily?</button>
+            <button class="ai-chip" data-q="serving">What is 1 serving?</button>
+            <button class="ai-chip" data-q="types">Type I vs III difference?</button>
+          </div>
+          <div class="ai-answer-box" id="ai-answer-box"></div>
+        </div>
+
       </div>
     </div>
   </section>
 
   <!-- ============================================================
-       04 — TRUST BAR COUNTERS (Warm Cream Background)
+       04 — PRODUCT QUALITY TRUST STRIP (Restored Exact Source Facts)
        ============================================================ -->
-  <section class="trust-bar" aria-label="Trust highlights">
+  <section class="quality-strip" aria-label="Product Quality Commitments">
     <div class="container">
-      <div class="trust-item">
-        <div class="trust-item__icon">
-          <svg class="icon-svg icon-svg--lg" viewBox="0 0 24 24"><path d="M10 2v7.31L4.75 20.5a1 1 0 0 0 .85 1.5h12.8a1 1 0 0 0 .85-1.5L14 9.31V2"/><line x1="8.5" y1="2" x2="15.5" y2="2"/></svg>
+      <div class="quality-item">
+        <div class="quality-item__icon">
+          <svg class="icon-svg" viewBox="0 0 24 24"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
         </div>
-        <span class="trust-item__text">Clinically Tested</span>
-        <span class="trust-item__sub">4 Peer-Reviewed Published Studies</span>
+        <span>Clinically Proven</span>
       </div>
-      <div class="trust-item">
-        <div class="trust-item__icon">
-          <svg class="icon-svg icon-svg--lg" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+
+      <div class="quality-item">
+        <div class="quality-item__icon">
+          <svg class="icon-svg" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
         </div>
-        <span class="trust-item__text">Third-Party Tested</span>
-        <span class="trust-item__sub">Independent Purity &amp; Safety Verified</span>
+        <span>Mercury-Free</span>
       </div>
-      <div class="trust-item">
-        <div class="trust-item__icon">
-          <svg class="icon-svg icon-svg--lg" viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+
+      <div class="quality-item">
+        <div class="quality-item__icon">
+          <svg class="icon-svg" viewBox="0 0 24 24"><path d="M10 2v7.31L4.75 20.5a1 1 0 0 0 .85 1.5h12.8a1 1 0 0 0 .85-1.5L14 9.31V2"/><line x1="8.5" y1="2" x2="15.5" y2="2"/></svg>
         </div>
-        <span class="trust-item__text">FSSAI Registered</span>
-        <span class="trust-item__sub">Compliant with Food Safety Standards</span>
+        <span>Heavy Metal Tested</span>
       </div>
-      <div class="trust-item">
-        <div class="trust-item__icon">
-          <svg class="icon-svg icon-svg--lg" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+
+      <div class="quality-item">
+        <div class="quality-item__icon">
+          <svg class="icon-svg" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="4.93" y1="4.93" x2="19.07" y2="19.07"/></svg>
         </div>
-        <span class="trust-item__text">4.74 / 5 Rating</span>
-        <span class="trust-item__sub">Based on 571 Verified Customer Reviews</span>
+        <span>No Added Sugar</span>
       </div>
     </div>
   </section>
@@ -462,8 +508,34 @@
   </section>
 
   <!-- ============================================================
-       08 — CLINICAL EVIDENCE (Deep Teal Authority Section)
-       CRO Priority P0-2: High contrast evidence disclosure
+       08 — BRAND PROOF: INNOVATION MEETS INTEGRITY (Restored Exact Facts)
+       ============================================================ -->
+  <section class="brand-proof-section">
+    <div class="container">
+      <h2 class="section-heading">Innovation Meets Integrity</h2>
+      <p class="section-subheading">Science-backed nutritional formulas trusted across global markets.</p>
+
+      <div class="brand-proof-grid">
+        <div class="brand-proof-card">
+          <div class="brand-proof-card__stat">5 Million</div>
+          <div class="brand-proof-card__label">Happy Customers Worldwide</div>
+        </div>
+
+        <div class="brand-proof-card">
+          <div class="brand-proof-card__stat">20+</div>
+          <div class="brand-proof-card__label">Global Countries Reached</div>
+        </div>
+
+        <div class="brand-proof-card">
+          <div class="brand-proof-card__stat">US FDA</div>
+          <div class="brand-proof-card__label">Registered Facility Standards</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       09 — CLINICAL EVIDENCE (Deep Teal Authority Section)
        ============================================================ -->
   <section class="science-section" id="science-section">
     <div class="container">
@@ -511,7 +583,7 @@
   </section>
 
   <!-- ============================================================
-       09 — REVIEWS / SOCIAL PROOF (White Background)
+       10 — REVIEWS / SOCIAL PROOF (White Background)
        CRO Priority P0-3: Objection-led verified reviews
        Exact Rating: 4.74 / 571 reviews
        ============================================================ -->
@@ -660,7 +732,7 @@
   </section>
 
   <!-- ============================================================
-       10 — DEEP-DIVE EDUCATION (Cream Background & Explicit Header Badge)
+       11 — DEEP-DIVE EDUCATION (Cream Background & Explicit Header Badge)
        CRO Priority P0-2: Progressive Disclosure (Optional Reading)
        ============================================================ -->
   <section class="deepdive-section" id="deepdive-section">
@@ -736,7 +808,7 @@
   </section>
 
   <!-- ============================================================
-       11 — FREQUENTLY ASKED QUESTIONS (White Background)
+       12 — FREQUENTLY ASKED QUESTIONS (White Background)
        ============================================================ -->
   <section class="faq-section" id="faq-section">
     <div class="container">
@@ -846,7 +918,75 @@
   </section>
 
   <!-- ============================================================
-       12 — FINAL CTA (Cream Background)
+       13 — EXPLORE SIMILAR PRODUCTS (Website Ecosystem Discovery)
+       ============================================================ -->
+  <section class="related-section">
+    <div class="container">
+      <h2 class="section-heading">Explore Similar Products</h2>
+      <p class="section-subheading">Complete your wellness routine with science-backed supplements from Wellbeing Nutrition.</p>
+
+      <div class="related-grid">
+
+        <div class="related-card related-card--pink">
+          <div class="related-card__img">
+            <img src="https://wellbeingnutrition.com/cdn/shop/files/01_Malavika_Collagen_Listing_3000x3000_777fba19-60ac-4bc4-affa-ea3bcb4cad52.png?v=1776069679&width=600" alt="Slow Multivitamin for Women">
+          </div>
+          <div class="related-card__content">
+            <span class="related-card__category">WOMEN'S HEALTH</span>
+            <h3 class="related-card__title">Slow Multivitamin for Women</h3>
+            <div class="related-card__rating">
+              <svg class="icon-svg icon-svg--sm" viewBox="0 0 24 24" fill="#E69B24" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <span>4.8 (340 reviews)</span>
+            </div>
+            <div class="related-card__price-row">
+              <span class="related-card__price">₹899</span>
+              <button class="related-card__btn">VIEW PRODUCT</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="related-card related-card--orange">
+          <div class="related-card__img">
+            <img src="https://wellbeingnutrition.com/cdn/shop/files/Image_11.png?v=1776069679&width=600" alt="Melts Healthy Hair">
+          </div>
+          <div class="related-card__content">
+            <span class="related-card__category">HAIR CARE</span>
+            <h3 class="related-card__title">Melts Into Healthy Hair</h3>
+            <div class="related-card__rating">
+              <svg class="icon-svg icon-svg--sm" viewBox="0 0 24 24" fill="#E69B24" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <span>4.7 (412 reviews)</span>
+            </div>
+            <div class="related-card__price-row">
+              <span class="related-card__price">₹649</span>
+              <button class="related-card__btn">VIEW PRODUCT</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="related-card related-card--green">
+          <div class="related-card__img">
+            <img src="https://wellbeingnutrition.com/cdn/shop/files/image_10_726cb423-a939-45e7-ace3-81f23b8aa96e.jpg?v=1776069679&width=600" alt="Daily Greens Effervescent">
+          </div>
+          <div class="related-card__content">
+            <span class="related-card__category">DAILY NUTRITION</span>
+            <h3 class="related-card__title">Daily Greens Effervescent</h3>
+            <div class="related-card__rating">
+              <svg class="icon-svg icon-svg--sm" viewBox="0 0 24 24" fill="#E69B24" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <span>4.8 (520 reviews)</span>
+            </div>
+            <div class="related-card__price-row">
+              <span class="related-card__price">₹590</span>
+              <button class="related-card__btn">VIEW PRODUCT</button>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       14 — FINAL CTA (Cream Background)
        ============================================================ -->
   <section class="final-cta">
     <div class="container">
@@ -860,7 +1000,7 @@
   </section>
 
   <!-- ============================================================
-       13 — FOOTER
+       15 — FOOTER
        ============================================================ -->
   <footer class="site-footer">
     <div class="container">

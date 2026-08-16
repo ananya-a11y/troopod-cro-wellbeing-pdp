@@ -1,16 +1,16 @@
 /* ================================================================
    WELLBEING NUTRITION — KOREAN MARINE COLLAGEN PDP
-   CRO Prototype — Visual & Structural Craft Pass
+   CRO Prototype — Final Refinement Pass & Design System
    
    Color Palette System:
-     Deep Teal: #007065 (Authority, Headings, Dark Science Section)
+     Deep Teal: #007065 (Authority, Headings, Clinical Section)
      Teal:      #00A79D (Primary CTA, Interactive elements, Links)
      Warm Peach:#F5C181 (Key accents, Benefits, Energy cues, Badges)
      Cream:     #FFEECF (Warm section backgrounds, Trust strips)
-     White:     #FFFFFF (Buy box, Card surfaces)
-     Neutral:   #2D2D2D (Text), #555555 (Muted text), #EFECE6 (Subtle borders)
+     White:     #FFFFFF (Canvas, Buy box, Cards, Reviews, FAQs, Related Products)
+     Neutral:   #FAF6F0 (Subtle canvas shift), #2D2D2D (Text), #555555 (Muted text), #EFECE6 (Borders)
    
-   Typography: Manrope (Google Fonts) — Enforced Consistently
+   Typography: Manrope (Google Fonts) — Strictly Enforced Hierarchy
    ================================================================ */
 
 /* ---- RESET & BASE ---- */
@@ -84,7 +84,7 @@ ul, ol {
   border: 0;
 }
 
-/* LINEWORK SVG ICON STYLES */
+/* LINEWORK SVG ICON SYSTEM */
 .icon-svg {
   display: inline-block;
   width: 18px;
@@ -96,6 +96,11 @@ ul, ol {
   stroke-linejoin: round;
   flex-shrink: 0;
   vertical-align: middle;
+}
+
+.icon-svg--sm {
+  width: 14px;
+  height: 14px;
 }
 
 .icon-svg--lg {
@@ -115,7 +120,7 @@ ul, ol {
   background: linear-gradient(90deg, #007065 0%, #00877a 100%);
   color: #FFFFFF;
   text-align: center;
-  padding: 10px 16px;
+  padding: 9px 16px;
   font-size: 13px;
   font-weight: 600;
   letter-spacing: 0.03em;
@@ -148,66 +153,112 @@ ul, ol {
 }
 
 /* ================================================================
-   02 — NAVIGATION (Real Brand Logo)
+   02 — GLOBAL WEBSITE HEADER (Ecosystem Commerce Navigation)
    ================================================================ */
-.site-nav {
+.global-header {
   background: #FFFFFF;
   border-bottom: 1px solid #EFECE6;
-  padding: 12px 0;
-  position: sticky;
-  top: 0;
-  z-index: 100;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.02);
+  padding: 14px 0;
+  position: relative;
+  z-index: 102;
 }
 
-.site-nav .container {
+.global-header .container {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  gap: 24px;
 }
 
-.site-nav__logo {
+.global-header__left {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+}
+
+.global-header__logo {
   display: flex;
   align-items: center;
   gap: 10px;
   text-decoration: none;
 }
 
-.site-nav__logo-img {
+.global-header__logo-img {
   height: 32px;
   width: auto;
 }
 
-.site-nav__logo-text {
-  font-size: 18px;
+.global-header__logo-text {
+  font-size: 19px;
   font-weight: 800;
   color: #007065;
   letter-spacing: -0.02em;
 }
 
-.site-nav__actions {
+.global-header__nav {
   display: flex;
   align-items: center;
-  gap: 24px;
+  gap: 20px;
 }
 
-.site-nav__link {
+.global-header__link {
   font-size: 14px;
   font-weight: 600;
-  color: #444444;
+  color: #333333;
   transition: color 0.2s;
 }
 
-.site-nav__link:hover {
+.global-header__link:hover {
   color: #00A79D;
 }
 
-.site-nav__cart {
+.global-header__right {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+.global-header__search {
+  display: flex;
+  align-items: center;
+  background: #FAF6F0;
+  border: 1px solid #EFECE6;
+  border-radius: 20px;
+  padding: 6px 14px;
+  gap: 8px;
+  width: 220px;
+}
+
+.global-header__search input {
+  border: none;
+  background: none;
+  font-size: 13px;
+  color: #333333;
+  width: 100%;
+}
+
+.global-header__search input:focus {
+  outline: none;
+}
+
+.global-header__icon-btn {
+  color: #007065;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: color 0.2s;
+}
+
+.global-header__icon-btn:hover {
+  color: #00A79D;
+}
+
+.global-header__cart {
   position: relative;
   display: flex;
   align-items: center;
   font-size: 14px;
-  font-weight: 600;
+  font-weight: 700;
   color: #007065;
   gap: 8px;
   background: #FFEECF;
@@ -217,7 +268,7 @@ ul, ol {
   transition: background 0.2s;
 }
 
-.site-nav__cart:hover {
+.global-header__cart:hover {
   background: #f8e1ba;
 }
 
@@ -232,6 +283,53 @@ ul, ol {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+/* ================================================================
+   SECONDARY PDP ANCHOR NAVIGATION (Lightweight Sub-Bar)
+   ================================================================ */
+.pdp-anchor-bar {
+  background: #FAF6F0;
+  border-bottom: 1px solid #EFECE6;
+  padding: 10px 0;
+  position: sticky;
+  top: 0;
+  z-index: 101;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+}
+
+.pdp-anchor-bar .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.pdp-anchor-bar__links {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.pdp-anchor-link {
+  font-size: 13px;
+  font-weight: 600;
+  color: #555555;
+  transition: color 0.2s;
+}
+
+.pdp-anchor-link:hover,
+.pdp-anchor-link.active {
+  color: #007065;
+  font-weight: 700;
+}
+
+.pdp-anchor-bar__quick-rating {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 12px;
+  font-weight: 700;
+  color: #007065;
 }
 
 /* ================================================================
@@ -250,10 +348,10 @@ ul, ol {
   align-items: start;
 }
 
-/* -- Gallery -- */
+/* Gallery */
 .gallery {
   position: sticky;
-  top: 88px;
+  top: 130px;
 }
 
 .gallery__main {
@@ -309,7 +407,7 @@ ul, ol {
   object-fit: cover;
 }
 
-/* -- Buy Box -- */
+/* Buy Box */
 .buy-box {
   padding-top: 2px;
 }
@@ -352,7 +450,7 @@ ul, ol {
   line-height: 1.55;
 }
 
-/* Rating — Exact 4.74 / 571 reviews */
+/* Rating — Exact Source Value: 4.74 / 571 reviews */
 .buy-box__rating {
   display: flex;
   align-items: center;
@@ -726,52 +824,97 @@ ul, ol {
   opacity: 0.4;
 }
 
-/* ================================================================
-   04 — TRUST BAR COUNTERS (Cream Background)
-   ================================================================ */
-.trust-bar {
-  background: #FFEECF;
-  border-top: 1px solid #F5C181;
-  border-bottom: 1px solid #F5C181;
-  padding: 38px 0;
+/* AI PRODUCT ASSISTANT ENTRY CARD */
+.ai-assistant-card {
+  margin-top: 20px;
+  background: #FAF6F0;
+  border: 1px solid #EFECE6;
+  border-radius: 10px;
+  padding: 14px;
 }
 
-.trust-bar .container {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 24px;
-  text-align: center;
-}
-
-.trust-item {
+.ai-assistant-card__header {
   display: flex;
-  flex-direction: column;
   align-items: center;
   gap: 8px;
+  font-size: 13px;
+  font-weight: 700;
+  color: #007065;
+  margin-bottom: 8px;
 }
 
-.trust-item__icon {
+.ai-assistant-card__chips {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+
+.ai-chip {
+  font-size: 11px;
+  font-weight: 600;
   color: #007065;
   background: #FFFFFF;
   border: 1px solid #F5C181;
-  width: 48px;
-  height: 48px;
-  border-radius: 50%;
+  padding: 4px 10px;
+  border-radius: 14px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.ai-chip:hover {
+  background: #FFEECF;
+  border-color: #00A79D;
+}
+
+.ai-answer-box {
+  margin-top: 10px;
+  background: #FFFFFF;
+  border: 1.5px solid #00A79D;
+  border-radius: 8px;
+  padding: 10px 14px;
+  font-size: 12.5px;
+  color: #333333;
+  line-height: 1.5;
+  display: none;
+}
+
+/* ================================================================
+   04 — PRODUCT QUALITY TRUST STRIP (Restored Exact Source Facts)
+   ================================================================ */
+.quality-strip {
+  background: #FFEECF;
+  border-top: 1px solid #F5C181;
+  border-bottom: 1px solid #F5C181;
+  padding: 24px 0;
+}
+
+.quality-strip .container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  text-align: center;
+}
+
+.quality-item {
   display: flex;
   align-items: center;
   justify-content: center;
-}
-
-.trust-item__text {
-  font-size: 15px;
+  gap: 10px;
+  font-size: 14px;
   font-weight: 700;
   color: #007065;
 }
 
-.trust-item__sub {
-  font-size: 12px;
-  color: #593500;
-  font-weight: 500;
+.quality-item__icon {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: #FFFFFF;
+  border: 1px solid #F5C181;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #007065;
 }
 
 /* ================================================================
@@ -926,7 +1069,7 @@ ul, ol {
 }
 
 /* ================================================================
-   07 — HOW TO USE (Redesigned Split Layout with Product Visual)
+   07 — HOW TO USE (Redesigned 2-Column Storytelling Layout)
    ================================================================ */
 .how-to-section {
   padding: 72px 0;
@@ -1029,8 +1172,47 @@ ul, ol {
 }
 
 /* ================================================================
-   08 — CLINICAL EVIDENCE (Deep Teal Authority Section)
-   CRO Priority P0-2: High contrast evidence disclosure
+   08 — BRAND PROOF: INNOVATION MEETS INTEGRITY (Restored Exact Facts)
+   ================================================================ */
+.brand-proof-section {
+  padding: 64px 0;
+  background: #FFEECF;
+  border-top: 1px solid #F5C181;
+  border-bottom: 1px solid #F5C181;
+  text-align: center;
+}
+
+.brand-proof-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+  max-width: 900px;
+  margin: 32px auto 0;
+}
+
+.brand-proof-card {
+  background: #FFFFFF;
+  border: 1px solid #F5C181;
+  padding: 28px 20px;
+  border-radius: 14px;
+}
+
+.brand-proof-card__stat {
+  font-size: 38px;
+  font-weight: 800;
+  color: #007065;
+  line-height: 1;
+  margin-bottom: 8px;
+}
+
+.brand-proof-card__label {
+  font-size: 14px;
+  font-weight: 700;
+  color: #2D2D2D;
+}
+
+/* ================================================================
+   09 — CLINICAL EVIDENCE (Deep Teal Authority Section)
    ================================================================ */
 .science-section {
   padding: 72px 0;
@@ -1094,8 +1276,8 @@ ul, ol {
 }
 
 /* ================================================================
-   09 — REVIEWS / SOCIAL PROOF (White Background)
-   CRO Priority P0-3: Objection-led verified reviews
+   10 — REVIEWS / SOCIAL PROOF (White Background)
+   Exact Rating: 4.74 / 571 reviews
    ================================================================ */
 .reviews-section {
   padding: 72px 0;
@@ -1237,7 +1419,7 @@ ul, ol {
 }
 
 /* ================================================================
-   10 — DEEP-DIVE EDUCATION (Cream Background & Explicit Header Badge)
+   11 — DEEP-DIVE EDUCATION (Cream Background & Explicit Header Badge)
    CRO Priority P0-2: Progressive Disclosure
    ================================================================ */
 .deepdive-section {
@@ -1261,7 +1443,7 @@ ul, ol {
 }
 
 /* ================================================================
-   11 — FREQUENTLY ASKED QUESTIONS (White Background)
+   12 — FREQUENTLY ASKED QUESTIONS (White Background)
    ================================================================ */
 .faq-section {
   padding: 72px 0;
@@ -1328,7 +1510,119 @@ ul, ol {
 }
 
 /* ================================================================
-   12 — FINAL CTA (Cream Background)
+   13 — EXPLORE SIMILAR PRODUCTS (Website Ecosystem Discovery)
+   ================================================================ */
+.related-section {
+  padding: 72px 0;
+  background: #FAF6F0;
+  border-top: 1px solid #EFECE6;
+}
+
+.related-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  margin-top: 36px;
+}
+
+.related-card {
+  background: #FFFFFF;
+  border-radius: 14px;
+  border: 1px solid #EFECE6;
+  overflow: hidden;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.related-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.06);
+}
+
+.related-card__img {
+  width: 100%;
+  aspect-ratio: 1;
+  background: #FAF6F0;
+  overflow: hidden;
+}
+
+.related-card__img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.related-card__content {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.related-card__category {
+  font-size: 11px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 4px;
+}
+
+.related-card__title {
+  font-size: 15px;
+  font-weight: 700;
+  color: #2D2D2D;
+  margin-bottom: 8px;
+  line-height: 1.35;
+}
+
+.related-card__rating {
+  font-size: 12px;
+  font-weight: 700;
+  color: #007065;
+  margin-bottom: 12px;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.related-card__price-row {
+  margin-top: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 12px;
+  border-top: 1px solid #EFECE6;
+}
+
+.related-card__price {
+  font-size: 17px;
+  font-weight: 800;
+  color: #007065;
+}
+
+.related-card__btn {
+  background: #00A79D;
+  color: #FFFFFF;
+  font-size: 12px;
+  font-weight: 700;
+  padding: 8px 16px;
+  border-radius: 6px;
+  text-transform: uppercase;
+  transition: background 0.2s;
+}
+
+.related-card__btn:hover {
+  background: #007065;
+}
+
+/* Category Accent Styles for Packaging Fidelity */
+.related-card--pink .related-card__category { color: #D81B60; }
+.related-card--orange .related-card__category { color: #E65100; }
+.related-card--green .related-card__category { color: #2E7D32; }
+
+/* ================================================================
+   14 — FINAL CTA (Cream Background)
    ================================================================ */
 .final-cta {
   padding: 72px 0;
@@ -1359,12 +1653,12 @@ ul, ol {
 }
 
 /* ================================================================
-   13 — FOOTER
+   15 — FOOTER
    ================================================================ */
 .site-footer {
   background: #007065;
   color: rgba(255,255,255,0.75);
-  padding: 38px 0;
+  padding: 40px 0;
   text-align: center;
   font-size: 13px;
 }
@@ -1451,6 +1745,19 @@ ul, ol {
     grid-template-columns: 1fr;
     gap: 20px;
   }
+
+  .brand-proof-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .related-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .global-header__search {
+    display: none;
+  }
 }
 
 @media (max-width: 768px) {
@@ -1479,9 +1786,19 @@ ul, ol {
   .reviews-grid {
     grid-template-columns: 1fr;
   }
+
+  .quality-strip .container {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+  }
   
-  .site-nav__link {
+  .global-header__nav {
     display: none;
+  }
+
+  .pdp-anchor-bar__links {
+    overflow-x: auto;
+    padding-bottom: 4px;
   }
 
   .sticky-cta {
@@ -1525,9 +1842,13 @@ ul, ol {
     gap: 8px;
   }
 
-  .trust-bar .container {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 16px;
+  .quality-strip .container {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .related-grid {
+    grid-template-columns: 1fr;
   }
 
   .gallery__thumb {
