@@ -25,21 +25,26 @@ The original product page contains strong proof and product information, but the
 The redesign optimizes the user journey through five distinct states:
 `UNDERSTAND → TRUST → CHOOSE → BUY → EXPLORE`
 
-### Visual & UX Structural Redesign
+### Visual & UX Structural Redesign Highlights
 
-1. **Editorial 2-Column Staggered Layout for "Why Korean Marine Collagen?"**:
-   - Replaced generic template boxes with an editorial 2-column composition: Left visual anchor (Korean Marine tub) + Right staggered numbered differentiator rows (`01`, `02`, `03`, `04`).
-   - Allows shoppers to scan the 4 key product differentiators in under 5 seconds.
-2. **Connected 3-Step Routine Flow ("Scoop, Mix, Drink")**:
-   - Replaced plain bordered boxes with a connected horizontal routine flow (`STEP 01 SCOOP`, `STEP 02 MIX`, `STEP 03 DRINK`) with subtle green icon containers and orange step badges.
-3. **Subordinate Dosage Callout Hierarchy**:
-   - Positioned below the Pack Selector and before Quantity / CTA with lightweight containment (`#FFFFFF` background, thin border, green accent) so it supports the decision without competing with the primary CTA.
-4. **Commerce Recommendation Module ("Explore Similar Products")**:
-   - Built equal-height, compact D2C recommendation cards displaying 3 distinct real Wellbeing Nutrition products:
-     - *Beauty Korean Marine Collagen Peptides (Mango Peach Flavour)*
-     - *Beauty Collagen Peptides (Strawberry Watermelon Flavour)*
-     - *Glow Korean Marine Collagen (Tropical Bliss with Liposomal Glutathione & Vitamin C)*
-   - Images use `object-fit: contain` in clean `#FAFAFA` containers, allowing each product's authentic packaging colors to shine naturally.
+1. **In-Buy-Box "Explore Similar Products" Module (Matching Source Image 1)**:
+   - Positioned directly inside the Hero Buy Box below the primary Add to Cart CTA & Reassurance row.
+   - Displays 3 side-by-side products matching exact source image assets:
+     - *Beauty Korean Marine Collagen Peptides Mango Peach Flavour*
+     - *Beauty Collagen Strawberry Watermelon Flavour*
+     - *Glow Korean Marine Collagen Peptides with Liposomal Glutathione & Vitamin C | Tropical Bliss Flavour | 250g*
+2. **6-Badge Product Quality Strip (Matching Source Image 2)**:
+   - Soft ice-blue background tint (`#F0F7FF`) with 6 exact linework badges:
+     - `Clinically Proven` (Circle with cross)
+     - `Mercury Free` (Circle with diagonal slash)
+     - `Heavy Metal Tested` (Gold bars/bricks with diagonal slash)
+     - `No Added Sugar` (Sugar cubes with diagonal slash)
+     - `No Preservatives` (Laboratory flask with diagonal slash)
+     - `Non GMO` (Test tube with leaf & diagonal slash)
+3. **Pinteresty 3-Step Daily Routine Cards ("Scoop, Mix, Drink")**:
+   - Features real high-resolution photography (`BOP_2...` scoop photo, `01_Malavika...` mix photo, `image_-3...` drink lifestyle photo) in rounded card containers with smooth image scale hover micro-effects (`transform: scale(1.08)`).
+4. **Interactive Testimonial Carousel Slider**:
+   - Smooth review carousel with Prev (`←`) and Next (`→`) navigation controls, pagination dots, category filter tabs (`Taste`, `Skin`, `Hair & Nails`, `Daily Mixability`), and smooth slide transitions.
 
 ---
 
@@ -50,8 +55,9 @@ The redesign optimizes the user journey through five distinct states:
 1. **BLACK / CHARCOAL (`#1D1D1B`):** Primary typography, headings, navigation links, price, and Primary Add-to-Cart CTA.
 2. **WHITE (`#FFFFFF`):** Main page background canvas, buy box container, review cards, FAQ background, and recommendation cards.
 3. **ORANGE (`#E65100`):** Offer badges, savings tags, active navigation indicators, filled star ratings, and highlight accents.
-4. **GREEN (`#2E7D32` / `#1B5E20`):** Trust verification checkmarks, product quality strip icons, clinical authority section background, and verified badges.
-5. **Typography:** **Poppins** (Google Fonts) — Enforced across 700–800 (Title/Price), 700 (Headings/CTA), 600 (Subheadings/Badges), 400–500 (Body/Metadata).
+4. **GREEN (`#2E7D32` / `#1B5E20`):** Trust verification checkmarks, clinical authority section background, and verified badges.
+5. **ICE-BLUE TINT (`#F0F7FF`):** Dedicated background tint for the 6-badge Product Quality Strip matching source design.
+6. **Typography:** **Poppins** (Google Fonts) — Enforced across 700–800 (Title/Price), 700 (Headings/CTA), 600 (Subheadings/Badges), 400–500 (Body/Metadata).
 
 ---
 
@@ -60,13 +66,10 @@ The redesign optimizes the user journey through five distinct states:
 | Change | User Friction Addressed | Design Response & Hypothesis | Primary Metric | Guardrail Metric |
 |--------|-------------------------|------------------------------|----------------|------------------|
 | **1. Buy-Box Clarity** | Price strikethroughs and variant choices create decision friction. | High-contrast price formatting + clear pack selector cards simplify selection. | **Add-to-Cart Rate** | Variant selection rate |
-| **2. Decision-Point Proof Strip** | Clinical evidence and quality certifications are buried deep below the fold. | Placing concise proof (Clinically Tested, Third-Party Tested, FSSAI) near the Buy Box reduces uncertainty. | **Add-to-Cart Rate** | Exit rate from hero |
-| **3. Subordinate Dosage Callout** | Heavy warning-style dosage note competes with the CTA. | Subordinated dosage note sits cleanly before CTA without visual distraction. | **Add-to-Cart Rate** | Time to CTA click |
-| **4. Editorial Why Section** | Generic feature boxes fail to communicate product differentiation. | Staggered 2-column editorial layout highlights 4 key differentiators in ~5s scan time. | **Scroll Progression** | Bounce rate |
-| **5. Connected Routine Flow** | Plain instructions don't feel like an accessible habit. | Connected 3-step routine flow (Scoop, Mix, Drink) lowers habit adoption friction. | **Feature Engagement** | Exit rate |
-| **6. Verified Customer Reviews** | Generic praise does not resolve taste or mixability doubts. | Structuring real reviews by key themes (Taste, Skin, Hair/Nails, Mixability) resolves doubt. | **Review Filter Engagement** | Bounce rate |
-| **7. Related Product Discovery** | The PDP becomes a conversion dead-end for complementary products. | Compact D2C recommendation cards displaying 3 distinct real products drive cross-selling. | **Related Product CTR** | Primary PDP conversion |
-| **8. Visual Hierarchy Restraint** | Overly colourful UI dilutes primary CTA focus. | Restrained 4-color palette (Black/White/Orange/Green) creates strong semantic scanning. | **Session Engagement** | Overall session duration |
+| **2. In-Buy-Box Product Discovery** | Shoppers scroll past bottom recommendations without noticing alternative flavors. | Placing 3 distinct product flavor cards inside the Buy Box drives immediate cross-selling. | **Related Product CTR** | Hero bounce rate |
+| **3. Decision-Point Proof Strip** | Clinical evidence and quality certifications are buried deep below the fold. | Placing 6 concise quality badges (Clinically Proven, Mercury Free, etc.) in a soft ice-blue bar reduces uncertainty. | **Add-to-Cart Rate** | Exit rate from hero |
+| **4. Pinteresty 3-Step Routine** | Plain text routines do not inspire habit adoption. | Real photography + hover micro-effects (Scoop, Mix, Drink) lower habit adoption friction. | **Routine Section Engagement** | Exit rate |
+| **5. Interactive Testimonial Slider** | Static review blocks overload page scroll. | Interactive carousel slider with Prev/Next controls and category filters increases review engagement. | **Review Slider Engagement** | Bounce rate |
 
 ---
 
@@ -83,11 +86,11 @@ The redesign optimizes the user journey through five distinct states:
 | **Pack of 4** | ₹6,476 (MRP ₹7,196) | ₹6,476 (MRP ₹7,196) — Save ₹720 | Verified Exact |
 | **Member Price** | Member Price ₹1,658 (Save 8%) | Member Price ₹1,658 (Save 8%) | Verified Exact |
 | **Description** | *Boost your body's collagen levels naturally...* | Preserved verbatim from PDP | Verified Verbatim |
-| **Trust Facts** | Clinically Proven, Mercury-Free, Heavy Metal Tested, No Added Sugar | Displayed in Product Quality Strip | Verified Exact Wording |
-| **Brand Proof** | Innovation Meets Integrity, 5 Million, 20+ Clinical Studies, US FDA | Restored in Brand Proof Section | Verified Exact Wording |
+| **Quality Facts** | Clinically Proven, Mercury Free, Heavy Metal Tested, No Added Sugar, No Preservatives, Non GMO | Displayed in 6-Badge Product Quality Strip | Verified Exact Match (Image 2) |
+| **Brand Proof** | Innovation Meets Integrity, 5 Million, 20+ Clinical Studies, US FDA | Displayed in Brand Proof Section | Verified Exact Wording |
 | **Clinical Studies** | 4 Peer-Reviewed Publications | J. Cosmet. Dermatol. (2015, 2021), J. Med. Food (2022), Orthop. Rev. (2025) | Verified Exact Citations |
-| **Testimonials** | Real source reviews | Shrushti ("No Fishy Taste"), Ashutosh J, Avni R, Reena S, Priya D | Verified Verbatim |
-| **Recommendation Assets**| Real Wellbeing Nutrition products | Mango Peach, Strawberry Watermelon, Tropical Bliss Glutathione | Verified Real Sourced Assets |
+| **Testimonials** | Real source reviews | Shrushti ("No Fishy Taste"), Ashutosh J, Avni R, Priya D, Reena S | Verified Verbatim |
+| **Recommendation Assets**| Real Wellbeing Nutrition products | Mango Peach, Strawberry Watermelon, Tropical Bliss Glutathione | Verified Real Sourced Assets (Image 1) |
 
 ---
 
@@ -97,9 +100,9 @@ The redesign optimizes the user journey through five distinct states:
 troopod-cro-wellbeing-pdp/
 ├── index.html          # Complete PDP HTML with global header, Poppins & 4-color palette
 ├── css/
-│   └── styles.css      # Locked 4-color design system & UX structural styles
+│   └── styles.css      # Locked 4-color design system & visual slider/grid styles
 ├── js/
-│   └── script.js       # Pack selection, quantity, accordions, gallery, filters & AI assistant
+│   └── script.js       # Pack selection, quantity, accordions, gallery, review slider & AI assistant
 ├── README.md           # CRO decision framework, visual redesign & fact audit documentation
 └── .gitignore
 ```

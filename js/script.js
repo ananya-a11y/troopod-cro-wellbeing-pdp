@@ -1,17 +1,17 @@
 /* ================================================================
    WELLBEING NUTRITION — KOREAN MARINE COLLAGEN PDP
-   CRO Prototype — Interactions (Final Refinement Pass)
+   CRO Prototype — Interactions (Final Visual & Slider Pass)
    
    Features:
    - Pack selector (updates price, savings, per-unit)
    - Quantity selector (+/−)
-   - Add to Cart (visual feedback)
+   - Add to Cart (visual feedback & cart counter)
    - FAQ accordion (open/close)
    - Deep-dive accordion
    - Anchor navigation (smooth scroll)
    - Sticky mobile CTA (tracks selected pack)
    - Image gallery thumbnails
-   - Review objection theme filter
+   - Review Objection Slider / Carousel (Prev/Next, dots, theme filters)
    - AI Product Assistant (verified answer chips)
    ================================================================ */
 
@@ -200,12 +200,12 @@
         }
 
         item.classList.toggle('open', !isOpen);
-        trigger.setAttribute('aria-expanded', !isOpen);
+        trigger.setAttribute('aria-expanded', !isOpen ? 'true' : 'false');
       });
     });
   }
 
-  /* ---- IMAGE GALLERY ---- */
+  /* ---- GALLERY THUMBNAILS ---- */
   function initGallery() {
     var thumbs = document.querySelectorAll('.gallery__thumb');
     var mainImg = document.getElementById('gallery-main-img');
@@ -213,45 +213,121 @@
 
     thumbs.forEach(function (thumb) {
       thumb.addEventListener('click', function () {
-        var img = thumb.querySelector('img');
-        if (!img) return;
-        var src = img.src;
-        mainImg.src = src.replace(/width=\d+/, 'width=900');
-        
         thumbs.forEach(function (t) { t.classList.remove('active'); });
         thumb.classList.add('active');
+
+        var img = thumb.querySelector('img');
+        if (img) {
+          mainImg.style.opacity = '0';
+          setTimeout(function () {
+            mainImg.src = img.src.replace('&width=120', '&width=900');
+            mainImg.alt = img.alt;
+            mainImg.style.opacity = '1';
+          }, 150);
+        }
       });
     });
   }
 
-  /* ---- REVIEW THEME FILTER ---- */
-  function initReviewThemes() {
-    var themes = document.querySelectorAll('.review-theme');
-    var cards = document.querySelectorAll('.review-card');
+  /* ---- REVIEWS TESTIMONIAL SLIDER ---- */
+  function initReviewSlider() {
+    var track = document.getElementById('reviews-slider-track');
+    var prevBtn = document.getElementById('reviews-prev');
+    var nextBtn = document.getElementById('reviews-next');
+    var dotsContainer = document.getElementById('reviews-dots');
+    var themeButtons = document.querySelectorAll('.review-theme');
     
-    if (!themes.length || !cards.length) return;
+    if (!track) return;
 
-    themes.forEach(function (theme) {
-      theme.addEventListener('click', function () {
-        var filter = theme.getAttribute('data-theme');
+    var cards = Array.from(track.querySelectorAll('.review-card'));
+    var currentIndex = 0;
+    var activeFilter = 'all';
 
-        var wasActive = theme.classList.contains('active');
-        themes.forEach(function (t) { t.classList.remove('active'); });
+    function getVisibleCards() {
+      if (activeFilter === 'all') {
+        return cards;
+      }
+      return cards.filter(function (card) {
+        return card.getAttribute('data-theme') === activeFilter;
+      });
+    }
 
-        if (!wasActive) {
-          theme.classList.add('active');
+    function updateSlider() {
+      var visibleCards = getVisibleCards();
+
+      // Show/hide cards according to filter
+      cards.forEach(function (card) {
+        if (activeFilter === 'all' || card.getAttribute('data-theme') === activeFilter) {
+          card.style.display = 'block';
+        } else {
+          card.style.display = 'none';
         }
+      });
 
-        cards.forEach(function (card) {
-          if (wasActive || !filter) {
-            card.style.display = '';
-            return;
-          }
-          var cardTheme = card.getAttribute('data-theme');
-          card.style.display = (cardTheme === filter) ? '' : 'none';
-        });
+      if (currentIndex >= visibleCards.length) {
+        currentIndex = Math.max(0, visibleCards.length - 1);
+      }
+
+      var cardWidth = visibleCards[0] ? visibleCards[0].offsetWidth + 24 : 0;
+      track.style.transform = 'translateX(-' + (currentIndex * cardWidth) + 'px)';
+
+      renderDots(visibleCards.length);
+    }
+
+    function renderDots(count) {
+      if (!dotsContainer) return;
+      dotsContainer.innerHTML = '';
+      if (count <= 1) return;
+
+      for (var i = 0; i < count; i++) {
+        (function (index) {
+          var dot = document.createElement('div');
+          dot.className = 'reviews-dot' + (index === currentIndex ? ' active' : '');
+          dot.addEventListener('click', function () {
+            currentIndex = index;
+            updateSlider();
+          });
+          dotsContainer.appendChild(dot);
+        })(i);
+      }
+    }
+
+    if (prevBtn) {
+      prevBtn.addEventListener('click', function () {
+        var visibleCards = getVisibleCards();
+        if (currentIndex > 0) {
+          currentIndex--;
+        } else {
+          currentIndex = Math.max(0, visibleCards.length - 1);
+        }
+        updateSlider();
+      });
+    }
+
+    if (nextBtn) {
+      nextBtn.addEventListener('click', function () {
+        var visibleCards = getVisibleCards();
+        if (currentIndex < visibleCards.length - 1) {
+          currentIndex++;
+        } else {
+          currentIndex = 0;
+        }
+        updateSlider();
+      });
+    }
+
+    themeButtons.forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        themeButtons.forEach(function (b) { b.classList.remove('active'); });
+        btn.classList.add('active');
+        activeFilter = btn.getAttribute('data-theme');
+        currentIndex = 0;
+        updateSlider();
       });
     });
+
+    window.addEventListener('resize', updateSlider);
+    updateSlider();
   }
 
   /* ---- AI PRODUCT ASSISTANT ---- */
@@ -262,73 +338,48 @@
 
     chips.forEach(function (chip) {
       chip.addEventListener('click', function () {
-        var key = chip.getAttribute('data-q');
-        var answer = aiAnswers[key] || "Product facts verified from the official Wellbeing Nutrition Korean Marine Collagen PDP.";
-        
-        answerBox.innerHTML = '<strong>Verified AI Answer:</strong> ' + answer;
-        answerBox.style.display = 'block';
-      });
-    });
-  }
+        var qKey = chip.getAttribute('data-q');
+        var answer = aiAnswers[qKey];
 
-  /* ---- STICKY CTA VISIBILITY ---- */
-  function initStickyCta() {
-    var sticky = document.querySelector('.sticky-cta');
-    var hero = document.querySelector('.hero');
-    if (!sticky || !hero) return;
-
-    function checkVisibility() {
-      var rect = hero.getBoundingClientRect();
-      if (rect.bottom < 0) {
-        sticky.style.transform = 'translateY(0)';
-      } else {
-        sticky.style.transform = 'translateY(100%)';
-      }
-    }
-
-    sticky.style.transition = 'transform 0.3s ease';
-    sticky.style.transform = 'translateY(100%)';
-
-    window.addEventListener('scroll', checkVisibility, { passive: true });
-    checkVisibility();
-  }
-
-  /* ---- SMOOTH SCROLL FOR ANCHOR LINKS ---- */
-  function initSmoothScroll() {
-    document.querySelectorAll('a[href^="#"]').forEach(function (link) {
-      link.addEventListener('click', function (e) {
-        var targetId = link.getAttribute('href');
-        if (targetId === '#') return;
-        
-        var target = document.querySelector(targetId);
-        if (target) {
-          e.preventDefault();
-          var offset = 100;
-          var position = target.getBoundingClientRect().top + window.pageYOffset - offset;
-          window.scrollTo({ top: position, behavior: 'smooth' });
+        if (answer) {
+          answerBox.innerHTML = '<strong>Verified AI Answer:</strong> ' + answer;
+          answerBox.style.display = 'block';
         }
       });
     });
   }
 
-  /* ---- INITIALIZATION ---- */
-  function init() {
+  /* ---- ANCHOR NAVIGATION SMOOTH SCROLL ---- */
+  function initAnchorNav() {
+    var links = document.querySelectorAll('.pdp-anchor-link');
+    if (!links.length) return;
+
+    links.forEach(function (link) {
+      link.addEventListener('click', function (e) {
+        var targetId = link.getAttribute('href');
+        if (targetId && targetId.startsWith('#')) {
+          var targetEl = document.querySelector(targetId);
+          if (targetEl) {
+            e.preventDefault();
+            links.forEach(function (l) { l.classList.remove('active'); });
+            link.classList.add('active');
+            var offsetTop = targetEl.getBoundingClientRect().top + window.pageYOffset - 110;
+            window.scrollTo({ top: offsetTop, behavior: 'smooth' });
+          }
+        }
+      });
+    });
+  }
+
+  /* ---- INIT ALL ---- */
+  document.addEventListener('DOMContentLoaded', function () {
     initPackSelector();
     initQuantitySelector();
     initAddToCart();
     initAccordions();
     initGallery();
-    initReviewThemes();
+    initReviewSlider();
     initAiAssistant();
-    initStickyCta();
-    initSmoothScroll();
-    updatePriceDisplay();
-    updateStickyPrice();
-  }
-
-  if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', init);
-  } else {
-    init();
-  }
+    initAnchorNav();
+  });
 })();
