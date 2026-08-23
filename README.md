@@ -59,7 +59,7 @@ The redesign optimizes the user journey through five distinct states:
 3. **ORANGE (`#E65100`):** Offer badges, savings tags, active navigation indicators, filled star ratings, and highlight accents.
 4. **GREEN (`#2E7D32` / `#1B5E20`):** Trust verification checkmarks, clinical authority badges, and light greenish deep-dive background (`#EAF4EA`).
 5. **ICE-BLUE TINT (`#EEF6FF` / `#F0F7FF`):** Dedicated background tint & DNA graphic backdrop for Product Quality Strip and Clinical Evidence section.
-6. **Typography:** **Poppins** (Google Fonts) — Enforced across 700–800 (Title/Price), 700 (Headings/CTA), 600 (Subheadings/Badges), 400–500 (Body/Metadata).
+6. **Typography:** **Georgia** (Google Fonts) — Enforced across 700–800 (Title/Price), 700 (Headings/CTA), 600 (Subheadings/Badges), 400–500 (Body/Metadata).
 
 ---
 
