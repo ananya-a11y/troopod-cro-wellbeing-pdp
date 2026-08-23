@@ -8,7 +8,8 @@
   <meta name="robots" content="noindex, nofollow">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@500;600&family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="icon" href="https://wellbeingnutrition.com/cdn/shop/files/wbn_icon_fav_32x32.png">
   <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
@@ -16,7 +17,7 @@
   <!-- ============================================================
        01 — ANNOUNCEMENT BAR (Black / White / Orange)
        ============================================================ -->
-  <div class="announcement-bar" role="banner">
+  <div class="announcement-bar" role="complementary" aria-label="Store offers">
     <span class="announcement-bar__badge">PREPAID OFFER</span>
     <span class="announcement-bar__item">Free Express Shipping on Prepaid Orders</span>
     <span class="announcement-bar__divider">•</span>
@@ -49,7 +50,7 @@
         </div>
 
         <a href="#" class="global-header__icon-btn" aria-label="Account">
-          <svg class="icon-svg icon-svg--lg" viewBox="0 0 24 24"><path d="M20 21v-2a4 4 0 0 4-4H8a4 4 0 0 4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+          <svg class="icon-svg icon-svg--lg" viewBox="0 0 24 24"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
         </a>
 
         <button class="global-header__cart" aria-label="Shopping cart">
@@ -85,12 +86,38 @@
   <!-- ============================================================
        03 — HERO + BUY BOX
        ============================================================ -->
+  <!-- STICKY DESKTOP BUY BAR (appears once the hero CTA scrolls away) -->
+  <div class="desk-buybar" aria-hidden="false">
+    <div class="container">
+      <div class="desk-buybar__left">
+        <img class="desk-buybar__thumb" src="https://wellbeingnutrition.com/cdn/shop/files/MARINE_P-1.jpg?v=1754640121&width=120" alt="" width="46" height="46">
+        <div>
+          <div class="desk-buybar__name">Pure Korean Marine Collagen Peptides</div>
+          <div class="desk-buybar__meta">4.74 &#9733; &middot; 571 reviews &middot; Unflavored</div>
+        </div>
+      </div>
+      <div class="desk-buybar__right">
+        <div>
+          <span class="desk-buybar__price" id="deskbar-price">&#8377;1,745</span>
+          <span class="desk-buybar__mrp" id="deskbar-mrp">MRP &#8377;1,799</span>
+        </div>
+        <button class="cta-primary js-add-to-cart" aria-label="Add to Cart">
+          <span>ADD TO CART</span>
+        </button>
+      </div>
+    </div>
+  </div>
+
   <section class="hero" id="hero">
     <div class="container">
 
       <!-- Product Image Gallery -->
       <div class="gallery" aria-label="Product gallery">
         <div class="gallery__main">
+          <div class="gallery__badge">
+            <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <span>4.74 &middot; 571 reviews</span>
+          </div>
           <img id="gallery-main-img"
                src="https://wellbeingnutrition.com/cdn/shop/files/MARINE_P-1.jpg?v=1754640121&width=900"
                alt="Pure Korean Marine Collagen Peptides Unflavored pack front"
@@ -225,25 +252,25 @@
             <span class="pack-selector__label">Select Pack Variant:</span>
           </div>
           <div class="pack-selector__options" role="radiogroup" aria-label="Select Pack">
-            <div class="pack-card active" role="radio" aria-pressed="true" aria-label="Pack of 1 — ₹1,745" tabindex="0">
+            <div class="pack-card active" role="radio" aria-checked="true" aria-label="Pack of 1 — ₹1,745" tabindex="0">
               <p class="pack-card__name">Pack of 1</p>
               <p class="pack-card__price">₹1,745</p>
               <p class="pack-card__mrp">MRP ₹1,799</p>
               <p class="pack-card__savings">Save ₹54 (3% OFF)</p>
             </div>
-            <div class="pack-card" role="radio" aria-pressed="false" aria-label="Pack of 2 — ₹3,418" tabindex="0">
+            <div class="pack-card" role="radio" aria-checked="false" aria-label="Pack of 2 — ₹3,418" tabindex="0">
               <p class="pack-card__name">Pack of 2</p>
               <p class="pack-card__price">₹3,418</p>
               <p class="pack-card__mrp">MRP ₹3,598</p>
               <p class="pack-card__savings">Save ₹180 (5% OFF)</p>
             </div>
-            <div class="pack-card" role="radio" aria-pressed="false" aria-label="Pack of 3 — ₹5,019" tabindex="0">
+            <div class="pack-card" role="radio" aria-checked="false" aria-label="Pack of 3 — ₹5,019" tabindex="0">
               <p class="pack-card__name">Pack of 3</p>
               <p class="pack-card__price">₹5,019</p>
               <p class="pack-card__mrp">MRP ₹5,397</p>
               <p class="pack-card__savings">Save ₹378 (7% OFF)</p>
             </div>
-            <div class="pack-card" role="radio" aria-pressed="false" aria-label="Pack of 4 — ₹6,476" tabindex="0">
+            <div class="pack-card pack-card--flag" data-flag="Best Value" role="radio" aria-checked="false" aria-label="Pack of 4 — ₹6,476" tabindex="0">
               <p class="pack-card__name">Pack of 4</p>
               <p class="pack-card__price">₹6,476</p>
               <p class="pack-card__mrp">MRP ₹7,196</p>
@@ -280,9 +307,9 @@
         <div class="buy-box__reassurance">
           <svg class="icon-svg" viewBox="0 0 24 24"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
           <span>Secure Checkout</span>
-          <span>•</span>
+          <span aria-hidden="true">•</span>
           <span>Free Shipping</span>
-          <span>•</span>
+          <span aria-hidden="true">•</span>
           <span>100% Authentic Guarantee</span>
         </div>
 
@@ -403,11 +430,37 @@
     </div>
   </section>
 
+
+  <!-- ============================================================
+       04B — INFINITE TRUST TICKER
+       ============================================================ -->
+  <section class="trust-marquee" aria-label="Brand trust highlights">
+    <div class="trust-marquee__track">
+        <span class="trust-marquee__item"><svg class="icon-svg" viewBox="0 0 24 24"><path d="M10 2v7.31L4.75 20.5a1 1 0 0 0 .85 1.5h12.8a1 1 0 0 0 .85-1.5L14 9.31V2"/></svg>Clinically Tested Formula</span>
+        <span class="trust-marquee__item"><svg class="icon-svg" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>Deep-Sea Korean Source</span>
+        <span class="trust-marquee__item"><svg class="icon-svg" viewBox="0 0 24 24"><path d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2z"/></svg>Mercury Free</span>
+        <span class="trust-marquee__item"><svg class="icon-svg" viewBox="0 0 24 24"><path d="M12 2 15.09 8.26 22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>571 Verified Reviews</span>
+        <span class="trust-marquee__item"><svg class="icon-svg" viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/></svg>5 Million Customers</span>
+        <span class="trust-marquee__item"><svg class="icon-svg" viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/></svg>FSSAI Registered</span>
+        <span class="trust-marquee__item"><svg class="icon-svg" viewBox="0 0 24 24"><path d="M9 13h7v7H9z"/></svg>No Added Sugar</span>
+        <span class="trust-marquee__item"><svg class="icon-svg" viewBox="0 0 24 24"><path d="M1 3h15v13H1zM16 8h4l3 3v5h-7V8z"/></svg>Free Express Shipping</span>
+        <span class="trust-marquee__item"><svg class="icon-svg" viewBox="0 0 24 24"><path d="M10 2v7.31L4.75 20.5a1 1 0 0 0 .85 1.5h12.8a1 1 0 0 0 .85-1.5L14 9.31V2"/></svg>Clinically Tested Formula</span>
+        <span class="trust-marquee__item"><svg class="icon-svg" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>Deep-Sea Korean Source</span>
+        <span class="trust-marquee__item"><svg class="icon-svg" viewBox="0 0 24 24"><path d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2z"/></svg>Mercury Free</span>
+        <span class="trust-marquee__item"><svg class="icon-svg" viewBox="0 0 24 24"><path d="M12 2 15.09 8.26 22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>571 Verified Reviews</span>
+        <span class="trust-marquee__item"><svg class="icon-svg" viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/></svg>5 Million Customers</span>
+        <span class="trust-marquee__item"><svg class="icon-svg" viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/></svg>FSSAI Registered</span>
+        <span class="trust-marquee__item"><svg class="icon-svg" viewBox="0 0 24 24"><path d="M9 13h7v7H9z"/></svg>No Added Sugar</span>
+        <span class="trust-marquee__item"><svg class="icon-svg" viewBox="0 0 24 24"><path d="M1 3h15v13H1zM16 8h4l3 3v5h-7V8z"/></svg>Free Express Shipping</span>
+    </div>
+  </section>
+
   <!-- ============================================================
        05 — WHY KOREAN MARINE COLLAGEN (Editorial 2-Column Staggered Layout)
        ============================================================ -->
   <section class="why-section" id="why-section">
     <div class="container">
+      <span class="section-eyebrow">The Source</span>
       <h2 class="section-heading">Why Korean Marine Collagen?</h2>
       <p class="section-subheading">Targeted collagen support, ethically sourced and formulated for optimal daily absorption.</p>
       
@@ -456,11 +509,64 @@
     </div>
   </section>
 
+
+  <!-- ============================================================
+       05B — MARINE vs BOVINE COMPARISON
+       Every row is sourced from copy already present on this page
+       (Why section items 01/03, FAQ "Is marine better than bovine").
+       ============================================================ -->
+  <section class="compare-section" id="compare-section">
+    <div class="container">
+      <span class="section-eyebrow">The Difference</span>
+      <h2 class="section-heading">Marine vs. Regular Collagen</h2>
+      <p class="section-subheading">Why molecular size is the single most important spec on a collagen label.</p>
+
+      <div class="compare-wrap">
+        <div class="compare-row compare-row--head">
+          <div>&nbsp;</div>
+          <div class="compare-col--ours">Korean Marine (This Product)</div>
+          <div>Regular / Bovine Collagen</div>
+        </div>
+
+        <div class="compare-row">
+          <div class="compare-col--label">Peptide molecular size</div>
+          <div class="compare-col--ours"><svg class="icon-svg" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>Low molecular weight (&lt;3000 Da)</div>
+          <div class="compare-col--them"><svg class="icon-svg" viewBox="0 0 24 24"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>Larger peptide chains</div>
+        </div>
+
+        <div class="compare-row">
+          <div class="compare-col--label">Absorption speed</div>
+          <div class="compare-col--ours"><svg class="icon-svg" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>Up to 1.5&times; faster</div>
+          <div class="compare-col--them"><svg class="icon-svg" viewBox="0 0 24 24"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>Baseline absorption</div>
+        </div>
+
+        <div class="compare-row">
+          <div class="compare-col--label">Source</div>
+          <div class="compare-col--ours"><svg class="icon-svg" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>Deep-sea wild-caught fish skin &amp; scales</div>
+          <div class="compare-col--them"><svg class="icon-svg" viewBox="0 0 24 24"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>Bovine hide &amp; connective tissue</div>
+        </div>
+
+        <div class="compare-row">
+          <div class="compare-col--label">Skin hydration &amp; elasticity</div>
+          <div class="compare-col--ours"><svg class="icon-svg" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>Superior, per peer-reviewed studies</div>
+          <div class="compare-col--them"><svg class="icon-svg" viewBox="0 0 24 24"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>Standard</div>
+        </div>
+
+        <div class="compare-row">
+          <div class="compare-col--label">Heavy metal &amp; mercury testing</div>
+          <div class="compare-col--ours"><svg class="icon-svg" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>Third-party tested, mercury free</div>
+          <div class="compare-col--them"><svg class="icon-svg" viewBox="0 0 24 24"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>Varies by brand</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- ============================================================
        06 — TARGETED BEAUTY & WELLNESS OUTCOMES
        ============================================================ -->
   <section class="benefits-section" id="benefits-section">
     <div class="container">
+      <span class="section-eyebrow">What It Does</span>
       <h2 class="section-heading">Targeted Beauty &amp; Wellness Outcomes</h2>
       <p class="section-subheading">Replenishes declining natural collagen levels to restore elasticity, strength, and hydration.</p>
       
@@ -512,6 +618,7 @@
        ============================================================ -->
   <section class="how-to-section" id="how-to-section">
     <div class="container">
+      <span class="section-eyebrow">How To Use</span>
       <h2 class="section-heading">Simple 3-Step Daily Routine</h2>
       <p class="section-subheading">Effortlessly integrates into your daily health routine without changing the taste of your favorite drinks.</p>
       
@@ -560,22 +667,68 @@
     </div>
   </section>
 
+
+  <!-- ============================================================
+       07B — WHAT TO EXPECT TIMELINE
+       Copy derived only from claims already on this page:
+       FAQ "4 to 8 weeks", review "nails stronger within 6 weeks",
+       review "fine lines reduced over 2 months".
+       ============================================================ -->
+  <section class="timeline-section" id="timeline-section">
+    <div class="container">
+      <span class="section-eyebrow">The Journey</span>
+      <h2 class="section-heading">What to Expect, Week by Week</h2>
+      <p class="section-subheading">A realistic timeline based on the clinical research and verified customer reviews already cited on this page.</p>
+
+      <div class="timeline">
+        <div class="timeline__progress"></div>
+
+        <div class="timeline-step">
+          <div class="timeline-step__dot">W1&ndash;2</div>
+          <h3 class="timeline-step__title">The Habit Forms</h3>
+          <p class="timeline-step__text">One unflavored scoop dissolves into your coffee or smoothie. No taste change, no clumping &mdash; so the routine actually sticks.</p>
+        </div>
+
+        <div class="timeline-step">
+          <div class="timeline-step__dot">W4</div>
+          <h3 class="timeline-step__title">Hydration Shifts</h3>
+          <p class="timeline-step__text">The earliest point at which users report better skin hydration and glow, per the 4&ndash;8 week window in our FAQ.</p>
+        </div>
+
+        <div class="timeline-step">
+          <div class="timeline-step__dot">W6</div>
+          <h3 class="timeline-step__title">Nails &amp; Hair</h3>
+          <p class="timeline-step__text">&ldquo;Nails became stronger within 6 weeks; hairstylist noticed improvement in hair.&rdquo; &mdash; Reena S, verified review.</p>
+        </div>
+
+        <div class="timeline-step">
+          <div class="timeline-step__dot">W8+</div>
+          <h3 class="timeline-step__title">Fine Lines Soften</h3>
+          <p class="timeline-step__text">&ldquo;Fine lines reduced over 2 months.&rdquo; &mdash; Priya D, verified review. Consistency is what compounds the result.</p>
+        </div>
+      </div>
+
+      <p class="timeline-note">Individual results vary. Timeline reflects the clinical windows and verified reviews cited elsewhere on this page.</p>
+    </div>
+  </section>
+
   <!-- ============================================================
        08 — BRAND PROOF: INNOVATION MEETS INTEGRITY
        ============================================================ -->
   <section class="brand-proof-section">
     <div class="container">
+      <span class="section-eyebrow">The Brand</span>
       <h2 class="section-heading">Innovation Meets Integrity</h2>
       <p class="section-subheading">Science-backed nutritional formulas trusted across global markets.</p>
 
       <div class="brand-proof-grid">
         <div class="brand-proof-card">
-          <div class="brand-proof-card__stat">5 Million</div>
+          <div class="brand-proof-card__stat" data-count="5" data-suffix=" Million">5 Million</div>
           <div class="brand-proof-card__label">Happy Customers Worldwide</div>
         </div>
 
         <div class="brand-proof-card">
-          <div class="brand-proof-card__stat">20+</div>
+          <div class="brand-proof-card__stat" data-count="20" data-suffix="+">20+</div>
           <div class="brand-proof-card__label">Clinical Studies</div>
         </div>
 
@@ -592,6 +745,7 @@
        ============================================================ -->
   <section class="science-section" id="science-section">
     <div class="container">
+      <span class="section-eyebrow">The Evidence</span>
       <h2 class="section-heading">Peer-Reviewed Clinical Studies</h2>
       <p class="section-subheading">Published scientific research supporting hydrolyzed marine collagen peptides.</p>
       
@@ -806,6 +960,7 @@
        ============================================================ -->
   <section class="deepdive-section" id="deepdive-section">
     <div class="container">
+      <span class="section-eyebrow">Deep Dive</span>
       <h2 class="section-heading">Want to Go Deeper into the Science?</h2>
       <p class="section-subheading">An interactive visual breakdown of how Korean Marine Collagen Peptides work inside the body.</p>
 
@@ -974,6 +1129,7 @@
        ============================================================ -->
   <section class="faq-section" id="faq-section">
     <div class="container">
+      <span class="section-eyebrow">Good To Know</span>
       <h2 class="section-heading">Frequently Asked Questions</h2>
       <p class="section-subheading">Verified answers to common purchase questions.</p>
 
