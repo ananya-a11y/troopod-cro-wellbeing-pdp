@@ -1312,7 +1312,7 @@ ul, ol {
   padding: 80px 0;
   background:
     linear-gradient(rgba(232, 244, 255, .55), rgba(240, 247, 255, .68)),
-    url('../images/science_bg.png') center / cover no-repeat;
+    url('../images/science_bg.jpg') center / cover no-repeat;
   background-attachment: scroll;
   color: #1D1D1B;
   position: relative;
@@ -2769,7 +2769,7 @@ ul, ol {
 .science-section {
   background:
     linear-gradient(rgba(232,244,255,.55), rgba(240,247,255,.68)),
-    url('../images/science_bg.png') center / cover no-repeat;
+    url('../images/science_bg.jpg') center / cover no-repeat;
   background-attachment: scroll;
   padding: 92px 0;
 }

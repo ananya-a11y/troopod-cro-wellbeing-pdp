@@ -43,7 +43,7 @@ The redesign optimizes the user journey through five distinct states:
 3. **Pinteresty 3-Step Daily Routine Cards ("Scoop, Mix, Drink")**:
    - Features exact user-provided photography (`step1_scoop.png`, `step2_mix.png`, `step3_drink.png`) in rounded card containers with smooth image scale hover micro-effects (`transform: scale(1.08)`).
 4. **DNA Science Backdrop for Peer-Reviewed Studies (Zero Orange Traces)**:
-   - Replaced solid green backdrop with user's exact attached DNA helix background image (`images/science_bg.png`) using an optimized semi-transparent light blue overlay (`rgba(235, 245, 255, 0.45)`) so the DNA helix and water droplets shine through vividly.
+   - Replaced solid green backdrop with user's exact attached DNA helix background image (`images/science_bg.jpg`) using an optimized semi-transparent light blue overlay (`rgba(235, 245, 255, 0.45)`) so the DNA helix and water droplets shine through vividly.
    - Removed all orange traces from the study journal headers (`#005580` deep ocean blue linework).
 5. **Light Greenish Canvas for "Want to Go Deeper into the Science?"**:
    - Updated `.deepdive-section` to a soft light greenish background canvas (`#EAF4EA`) featuring the Pinteresty Science Flow Infographic.
